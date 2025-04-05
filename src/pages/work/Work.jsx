@@ -27,7 +27,8 @@ import { Link } from 'react-router-dom';
 const ContactPage = () => {
   const [loading, setLoading] = useState(true);
   const [imageSrc, setImageSrc] = useState(
-    "https://s3-alpha-sig.figma.com/img/dd4f/9d43/80fbdbdcfb9e32c6aa893ccf48e17ab7?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=hM0j71Ag3zLOcuf96uHUVKrTOK5FT2T2FJF5tgI9PUw6nnLzdOzj7jqU8KwxbXLN2uuHGFQTLi2uwGHbIriUOZ5tGL9LkC9nEdrOY60j8APQmlW07YErej5A0~2a05x7LgvTUvl1EpeXMliZmdSkFfMzNYu13ITOs316cW2hWxH5dQoyw9W0wOS2mSibs6CfjA4tt1dgcrs6rRMhYpMib8SY7UkhRjnd~JNQzQ8yTD0RjhpGWnZ3BTjy8788RwF1jKK2~kXQiywfsOl7i4mYkTyRPqgSN3n-ZF3jE9-Hgv0wbEHcUk~B6u1T6c5pwABzMKyFxyD44M4YjObN~Z~sCg__"
+    "https://firebasestorage.googleapis.com/v0/b/foolee-inc.appspot.com/o/fooliz.-website-assets%2Fwork-page-video.gif?alt=media&token=2d7469a5-4f7d-4ed1-a3ee-e797e6bda9b5"
+    // "https://s3-alpha-sig.figma.com/img/dd4f/9d43/80fbdbdcfb9e32c6aa893ccf48e17ab7?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=hM0j71Ag3zLOcuf96uHUVKrTOK5FT2T2FJF5tgI9PUw6nnLzdOzj7jqU8KwxbXLN2uuHGFQTLi2uwGHbIriUOZ5tGL9LkC9nEdrOY60j8APQmlW07YErej5A0~2a05x7LgvTUvl1EpeXMliZmdSkFfMzNYu13ITOs316cW2hWxH5dQoyw9W0wOS2mSibs6CfjA4tt1dgcrs6rRMhYpMib8SY7UkhRjnd~JNQzQ8yTD0RjhpGWnZ3BTjy8788RwF1jKK2~kXQiywfsOl7i4mYkTyRPqgSN3n-ZF3jE9-Hgv0wbEHcUk~B6u1T6c5pwABzMKyFxyD44M4YjObN~Z~sCg__"
   );
   
   // Create refs for scrolling
