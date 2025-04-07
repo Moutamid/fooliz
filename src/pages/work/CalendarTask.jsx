@@ -21,6 +21,8 @@ export default function Imgtogether() {
         src="https://firebasestorage.googleapis.com/v0/b/foolee-inc.appspot.com/o/fooliz.-website-assets%2Flong-screenshots%2FCalenderApp.png?alt=media&token=4f01dc1a-003e-4558-b67d-7c0a536f5536"
         alt="Talk Image"
         className="hidden"
+        onClick={() => window.open('https://www.moutamid.com/fooliz-old/mobile/calendar-task/download/', '_blank')}
+        style={{ cursor: 'pointer' }}
         onLoad={() => {
           setImageLoaded(true);
           setTimeout(() => setLoading(false), 10); // Minimal delay for a seamless transition
@@ -35,6 +37,8 @@ export default function Imgtogether() {
             src="https://firebasestorage.googleapis.com/v0/b/foolee-inc.appspot.com/o/fooliz.-website-assets%2Flong-screenshots%2FCalenderApp.png?alt=media&token=4f01dc1a-003e-4558-b67d-7c0a536f5536"
             alt="Talk Image"
             className="w-full h-auto object-cover"
+            onClick={() => window.open('https://www.moutamid.com/fooliz-old/mobile/calendar-task/download/', '_blank')}
+            style={{ cursor: 'pointer' }}
           />
           <div className="mb-[-100px]">
             <Footer />

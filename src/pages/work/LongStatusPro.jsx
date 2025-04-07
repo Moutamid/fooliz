@@ -21,6 +21,8 @@ export default function Imgtogether() {
         src="https://firebasestorage.googleapis.com/v0/b/foolee-inc.appspot.com/o/fooliz.-website-assets%2Flong-screenshots%2FLongStatusPro.png?alt=media&token=e7a455e6-c082-40b0-b67c-cd1a3f69b9cb"
         alt="Talk Image"
         className="hidden"
+        onClick={() => window.open('https://www.moutamid.com/fooliz-old/mobile/long-status-pro/download/', '_blank')}
+        style={{ cursor: 'pointer' }}
         onLoad={() => {
           setImageLoaded(true);
           setTimeout(() => setLoading(false), 10); // Minimal delay for a seamless transition
@@ -35,6 +37,8 @@ export default function Imgtogether() {
             src="https://firebasestorage.googleapis.com/v0/b/foolee-inc.appspot.com/o/fooliz.-website-assets%2Flong-screenshots%2FLongStatusPro.png?alt=media&token=e7a455e6-c082-40b0-b67c-cd1a3f69b9cb"
             alt="Talk Image"
             className="w-full h-auto object-cover"
+            onClick={() => window.open('https://www.moutamid.com/fooliz-old/mobile/long-status-pro/download/', '_blank')}
+            style={{ cursor: 'pointer' }}
           />
           <div className="mb-[-100px]">
             <Footer />

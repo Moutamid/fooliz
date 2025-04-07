@@ -21,6 +21,8 @@ export default function Imgtogether() {
         src="https://firebasestorage.googleapis.com/v0/b/foolee-inc.appspot.com/o/fooliz.-website-assets%2Flong-screenshots%2FDA-IPTV.png?alt=media&token=169c1001-7716-445a-8baa-136fe5e70902"
         alt="Talk Image"
         className="hidden"
+        onClick={() => window.open('https://www.moutamid.com/fooliz-old/mobile/da-iptv/download/', '_blank')}
+        style={{ cursor: 'pointer' }}
         onLoad={() => {
           setImageLoaded(true);
           setTimeout(() => setLoading(false), 10); // Minimal delay for a seamless transition
@@ -35,6 +37,8 @@ export default function Imgtogether() {
             src="https://firebasestorage.googleapis.com/v0/b/foolee-inc.appspot.com/o/fooliz.-website-assets%2Flong-screenshots%2FDA-IPTV.png?alt=media&token=169c1001-7716-445a-8baa-136fe5e70902"
             alt="Talk Image"
             className="w-full h-auto object-cover"
+            onClick={() => window.open('https://www.moutamid.com/fooliz-old/mobile/da-iptv/download/', '_blank')}
+            style={{ cursor: 'pointer' }}
           />
           <div className="mb-[-100px]">
             <Footer />

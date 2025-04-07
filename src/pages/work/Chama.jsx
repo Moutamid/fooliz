@@ -21,6 +21,8 @@ export default function Imgtogether() {
         src="https://firebasestorage.googleapis.com/v0/b/foolee-inc.appspot.com/o/fooliz.-website-assets%2Flong-screenshots%2FChama.png?alt=media&token=d5ade2b3-1fe3-43d9-9af3-fee92c0b10d8"
         alt="Talk Image"
         className="hidden"
+        onClick={() => window.open('https://www.moutamid.com/fooliz-old/mobile/chama/download/', '_blank')}
+        style={{ cursor: 'pointer' }}
         onLoad={() => {
           setImageLoaded(true);
           setTimeout(() => setLoading(false), 10); // Minimal delay for a seamless transition
@@ -35,6 +37,8 @@ export default function Imgtogether() {
             src="https://firebasestorage.googleapis.com/v0/b/foolee-inc.appspot.com/o/fooliz.-website-assets%2Flong-screenshots%2FChama.png?alt=media&token=d5ade2b3-1fe3-43d9-9af3-fee92c0b10d8"
             alt="Talk Image"
             className="w-full h-auto object-cover"
+            onClick={() => window.open('https://www.moutamid.com/fooliz-old/mobile/chama/download/', '_blank')}
+            style={{ cursor: 'pointer' }}
           />
           <div className="mb-[-100px]">
             <Footer />
