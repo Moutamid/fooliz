@@ -36,7 +36,7 @@
   --nav-mobile-background-color: #29343a; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #29343a; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: rgba(255, 255, 255, 0.8); /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #e3a127; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: var(--default-yellow); /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -597,9 +597,23 @@ h6 {
   overflow: hidden;
   background: var(--background-color);
   transition: all 0.6s ease-out;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#preloader:before {
+#preloader::before {
+  content: "";
+  width: 300px; /* Adjust size as needed */
+  height: 300px; /* Adjust size as needed */
+  background-image: url('../img/abstract/happy-girl.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* #preloader:before {
   content: "";
   position: fixed;
   top: calc(50% - 30px);
@@ -610,9 +624,9 @@ h6 {
   width: 60px;
   height: 60px;
   animation: animate-preloader 1.5s linear infinite;
-}
+} */
 
-@keyframes animate-preloader {
+/* @keyframes animate-preloader {
   0% {
     transform: rotate(0deg);
   }
@@ -620,7 +634,7 @@ h6 {
   100% {
     transform: rotate(360deg);
   }
-}
+} */
 
 /*--------------------------------------------------------------
 # Scroll Top Button
@@ -2173,6 +2187,31 @@ section,
   .portfolio .entry-overlay {
     padding: 20px;
   }
+}
+
+.show-more-button {
+  background-color: var(--accent-color);
+  border: none;
+  color: var(--contrast-color);
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px color-mix(in srgb, var(--accent-color), transparent 70%);
+  margin-top: 30px;
+}
+
+.show-more-button:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 15%);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px color-mix(in srgb, var(--accent-color), transparent 60%);
+}
+
+.show-more-button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 10px color-mix(in srgb, var(--accent-color), transparent 70%);
 }
 
 /*--------------------------------------------------------------
