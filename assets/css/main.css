@@ -19,18 +19,18 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #191f18; /* Background color for the entire website, including individual sections */
+  --background-color: #091107; /* Background color for the entire website, including individual sections */
   --default-color: rgba(255, 255, 255, 0.8); /* Default color used for the majority of the text content across the entire website */
   --heading-color: #e0e9f2; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #e3a127; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #1b262c; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
-  --default-pink: #f0578b;
-  --default-lemon: #e1e783;
-  --default-green: #32602f;
+  --default-pink: #f5578c;
+  --default-lemon: #e3f47f;
+  --default-green: #e3f47f;
   --default-yellow: #e3f47f;
-  --default-beige: #edf3cd;
-  --default-black: #191f18;
+  --default-beige: #eef2cc;
+  --default-black: #091107;
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -182,7 +182,7 @@ h6 {
 }
 
 .header .header-container {
-  background: var(--background-color);
+  background: var(--default-beige);
   border-radius: 50px;
   padding: 5px 25px 5px 30px;
   /* box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1); */
@@ -191,17 +191,17 @@ h6 {
 }
 
 /* When scrolled, make header fully visible */
-body.scrolled .header .header-container {
-  /* opacity: 1; */
+/* body.scrolled .header .header-container {
+   opacity: 1;
   background: var(--default-beige);
-}
+} */
 
 .header .logo {
   line-height: 1;
 }
 
 .header .logo img {
-  max-height: 36px;
+  max-height: 23px;
   margin-right: 8px;
 }
 
@@ -217,9 +217,10 @@ body.scrolled .header .header-container {
 .header .btn-getstarted,
 .header .btn-getstarted:focus {
   color: var(--default-black);
-  background: var(--default-yellow);
-  font-size: 14px;
-  padding: 8px 20px;
+  background: var(--default-lemon);
+  font-size: 20px;
+  padding: 3px 7px;
+  font-family: Benzin-Bold;
   margin: 0 0 0 30px;
   border-radius: 50px;
   transition: 0.3s;
@@ -227,8 +228,10 @@ body.scrolled .header .header-container {
 
 .header .btn-getstarted:hover,
 .header .btn-getstarted:focus:hover {
-  color: var(--contrast-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 15%);
+  color: var(--default-beige);
+  background: var(--default-pink);
+  
+  /* background: color-mix(in srgb, var(--accent-color), transparent 15%); */
 }
 
 @media (max-width: 1200px) {
@@ -244,6 +247,10 @@ body.scrolled .header .header-container {
 
   .header .logo {
     order: 1;
+  }
+
+  .header .logo img {
+    max-height: 18px;
   }
 
   .header .btn-getstarted {
@@ -280,11 +287,11 @@ body.scrolled .header .header-container {
 
   .navmenu a,
   .navmenu a:focus {
-    color: var(--nav-color);
+    color: var(--default-black);
     padding: 18px 15px;
-    font-size: 16px;
-    font-family: var(--nav-font);
-    font-weight: 400;
+    /* font-size: 16px; */
+    font-family: Benzin-Regular;/* var(--nav-font) */
+    /* font-weight: 400; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -307,7 +314,7 @@ body.scrolled .header .header-container {
   .navmenu li:hover>a,
   .navmenu .active,
   .navmenu .active:focus {
-    color: #e3f47f;
+    color: var(--default-pink);
   }
 
   .navmenu .dropdown ul {
