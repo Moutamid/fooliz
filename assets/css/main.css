@@ -17,6 +17,19 @@
   --nav-font: "Raleway",  sans-serif;
 }
 
+@font-face {
+  font-family: Benzin-Bold;
+  src: url("../fonts/Benzin-Bold.ttf");
+}
+@font-face {
+  font-family: Benzin-Regular;
+  src: url("../fonts/Benzin-Regular.ttf");
+}
+@font-face {
+  font-family: FiraSans-Italic;
+  src: url("../fonts/FiraSansExtraCondensed-LightItalic.ttf");
+}
+
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #091107; /* Background color for the entire website, including individual sections */
@@ -27,8 +40,7 @@
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
   --default-pink: #f5578c;
   --default-lemon: #e3f47f;
-  --default-green: #e3f47f;
-  --default-yellow: #e3f47f;
+  --default-green: #316026;
   --default-beige: #eef2cc;
   --default-black: #091107;
 }
@@ -40,7 +52,7 @@
   --nav-mobile-background-color: #29343a; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #29343a; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: rgba(255, 255, 255, 0.8); /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: var(--default-yellow); /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: var(--default-lemon); /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -93,28 +105,124 @@ h6 {
   font-family: var(--heading-font);
 }
 
-@font-face {
-  font-family: Benzin-Bold;
-  src: url("../fonts/Benzin-Bold.ttf");
-}
-@font-face {
-  font-family: Benzin-Regular;
-  src: url("../fonts/Benzin-Regular.ttf");
-}
-
 .title-font {
-  font-family: Benzin-Bold;
+  font-family: Arial;
   color: #e3f47f;
   
 }
 
-.title-font .font-regular {
-  font-family: Benzin-Regular;
+.title-font .font-design-that {
+  font-family: FiraSans-Italic;
+  color: var(--default-beige);
+  font-size: 80px;
 }
 
-.title-font .font-bold {
+.title-font .font-slaps {
+  font-family: FiraSans-Italic;
+  font-size: 80px;
+}
+
+.title-font .font-apps-that {
+  font-family: Benzin-Regular;
+  color: var(--default-beige);
+  font-size: 60px;
+}
+
+.title-font .font-work {
   font-family: Benzin-Bold;
-  color: var(--default-green);
+  color: var(--default-pink);
+  font-size: 60px;
+}
+
+/* 1200px */
+@media (max-width: 1100px) {
+  .title-font .font-design-that {
+  font-size: 70px;
+}
+
+.title-font .font-slaps {
+  font-size: 70px;
+}
+
+.title-font .font-apps-that {
+  font-size: 50px;
+}
+
+.title-font .font-work {
+  font-size: 50px;
+}
+}
+/* 
+@media (max-width: 1000px) {
+  .title-font .font-design-that {
+  font-size: 30px;
+}
+
+.title-font .font-slaps {
+  font-size: 50px;
+}
+
+.title-font .font-apps-that {
+  font-size: 40px;
+}
+
+.title-font .font-work {
+  font-size: 40px;
+}
+} */
+
+@media (max-width: 767px) {
+  .title-font .font-design-that {
+  font-size: 70px;
+}
+
+.title-font .font-slaps {
+  font-size: 70px;
+}
+
+.title-font .font-apps-that {
+  font-size: 40px;
+}
+
+.title-font .font-work {
+  font-size: 40px;
+}
+}
+
+@media (max-width: 480px) {
+  .title-font .font-design-that {
+  font-size: 55px;
+}
+
+.title-font .font-slaps {
+  font-size: 55px;
+}
+
+.title-font .font-apps-that {
+  font-size: 40px;
+}
+
+.title-font .font-work {
+  font-size: 40px;
+}
+}
+
+@media (max-width: 450px) {
+  .title-font .font-design-that {
+  font-size: 40px;
+}
+
+.title-font .font-slaps {
+  font-size: 40px;
+}
+
+.title-font .font-apps-that {
+  font-size: 30px;
+}
+
+.title-font .font-work {
+  font-size: 30px;
+}
 }
 
 /* PHP Email Form Messages
@@ -230,7 +338,7 @@ h6 {
 .header .btn-getstarted:focus:hover {
   color: var(--default-beige);
   background: var(--default-pink);
-  
+
   /* background: color-mix(in srgb, var(--accent-color), transparent 15%); */
 }
 
@@ -261,6 +369,12 @@ h6 {
 
   .header .navmenu {
     order: 3;
+  }
+}
+
+@media (max-width: 325px) {
+  .header .btn-getstarted{
+    font-size: 16px;
   }
 }
 
