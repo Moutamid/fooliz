@@ -114,6 +114,7 @@ h6 {
 
 .title-font .font-bold {
   font-family: Benzin-Bold;
+  color: var(--default-green);
 }
 
 /* PHP Email Form Messages
@@ -837,7 +838,7 @@ section,
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.02) 0px, rgba(255, 255, 255, 0.05) 1px, transparent 1px, transparent 10px);
+  /* background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.02) 0px, rgba(255, 255, 255, 0.05) 1px, transparent 1px, transparent 10px); */
   z-index: 1;
 }
 
