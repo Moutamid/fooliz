@@ -428,6 +428,7 @@ h6 {
   .navmenu li:hover>a,
   .navmenu .active,
   .navmenu .active:focus {
+    font-family: Benzin-Bold;
     color: var(--default-pink);
   }
 
@@ -1052,14 +1053,13 @@ section,
 .hero .cta-button .btn {
   display: inline-flex;
   align-items: center;
-  background-color: transparent;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 40%);
+  background-color: var(--default-pink);
   color: var(--default-color);
-  padding: 0.75rem 1.5rem;
+  padding: 0.5rem 3rem;
   border-radius: 50px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  letter-spacing: 1px;
+  font-size: 1.6rem;
+  font-family: Benzin-Bold;
+  letter-spacing: 1.5px;
   transition: all 0.3s ease;
 }
 
@@ -1073,9 +1073,8 @@ section,
 }
 
 .hero .cta-button .btn:hover {
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
-  color: var(--contrast-color);
+  background-color: var(--default-lemon);
+  color: var(--default-black);
 }
 
 .hero .cta-button .btn:hover i {
@@ -1296,17 +1295,20 @@ section,
 }
 
 .about .about-content .btn-primary {
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
-  padding: 0.5rem 1.5rem;
+  background-color: var(--default-pink);
+  padding: 0.7rem 2rem;
   border-radius: 50px;
-  font-weight: 500;
+  border-color: transparent;
+  font-family: Benzin-Bold;
+  font-size: 1rem;
   color: var(--contrast-color);
+  letter-spacing: 1.2px;
+  transition: all 0.3s ease;
 }
 
 .about .about-content .btn-primary:hover {
-  background-color: color-mix(in srgb, var(--accent-color), black 10%);
-  border-color: color-mix(in srgb, var(--accent-color), black 10%);
+  background-color: var(--default-lemon);
+  color: var(--default-black);
 }
 
 .about .testimonial-section {
@@ -1443,10 +1445,12 @@ section,
   display: inline-flex;
   align-items: center;
   padding: 12px 30px;
-  background-color: var(--accent-color);
+  background-color: var(--default-pink);
+  border-radius: 50px;
   color: var(--contrast-color);
-  border-radius: 4px;
-  font-weight: 500;
+  font-family: Benzin-Bold;
+  font-size: 15px;
+  letter-spacing: 1.2px;
   transition: all 0.3s ease;
 }
 
@@ -1456,8 +1460,8 @@ section,
 }
 
 .services .service-header .service-summary .service-btn:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 15%);
-  color: var(--contrast-color);
+  background-color: var(--default-lemon);
+  color: var(--default-black);
 }
 
 .services .service-header .service-summary .service-btn:hover i {
@@ -1833,14 +1837,17 @@ section,
 }
 
 .call-to-action .cta-buttons .btn.btn-primary {
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
+  background-color: var(--default-pink);
   color: var(--contrast-color);
+  border-radius: 50px;
+  border-color: transparent;
+  font-family: Benzin-Bold;
+  font-size: 15px;
 }
 
 .call-to-action .cta-buttons .btn.btn-primary:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 15%);
-  border-color: color-mix(in srgb, var(--accent-color), transparent 15%);
+  background-color: var(--default-lemon);
+  color: var(--default-black);
   transform: translateY(-2px);
 }
 
@@ -2105,11 +2112,11 @@ section,
 
 .portfolio .portfolio-filters li {
   font-size: 15px;
-  font-weight: 500;
+  font-family: Benzin-Bold;
   padding: 12px 25px;
   cursor: pointer;
-  background: var(--surface-color);
-  color: var(--default-color);
+  background: var(--default-lemon);
+  color: var(--default-black);
   border-radius: 30px;
   display: flex;
   align-items: center;
@@ -2123,9 +2130,9 @@ section,
 }
 
 .portfolio .portfolio-filters li:hover {
-  color: var(--accent-color);
+  color: var(--contrast-color);
   transform: translateY(-2px);
-  background: color-mix(in srgb, var(--accent-color), transparent 92%);
+  background: var(--default-pink);
 }
 
 .portfolio .portfolio-filters li:hover i {
@@ -2133,7 +2140,7 @@ section,
 }
 
 .portfolio .portfolio-filters li.filter-active {
-  background: var(--accent-color);
+  background: var(--default-pink);
   color: var(--contrast-color);
 }
 
@@ -2338,26 +2345,29 @@ section,
 }
 
 .show-more-button {
-  background-color: var(--accent-color);
-  border: none;
+  background-color: var(--default-pink);
   color: var(--contrast-color);
+  border-radius: 50px;
+  border-color: transparent;
   padding: 12px 30px;
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  border-radius: 8px;
+  font-size: 15px;
+  font-family: Benzin-Bold;
+  letter-spacing: 1.2px;
   transition: all 0.3s ease;
   box-shadow: 0 5px 15px color-mix(in srgb, var(--accent-color), transparent 70%);
   margin-top: 30px;
 }
 
 .show-more-button:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 15%);
+  background-color: var(--default-lemon);
+  color: var(--default-black);
   transform: translateY(-3px);
   box-shadow: 0 8px 20px color-mix(in srgb, var(--accent-color), transparent 60%);
 }
 
 .show-more-button:active {
+  background-color: var(--default-lemon);
+  color: var(--default-black);
   transform: translateY(0);
   box-shadow: 0 3px 10px color-mix(in srgb, var(--accent-color), transparent 70%);
 }
@@ -2906,25 +2916,28 @@ section,
 }
 
 .contact .contact-form-wrapper .btn-submit {
-  background-color: var(--accent-color);
-  border: none;
+  background-color: var(--default-pink);
+  border-radius: 50px;
+  border-color: transparent;
   color: var(--contrast-color);
   padding: 12px 30px;
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  border-radius: 8px;
+  font-size: 15px;
+  font-family: Benzin-Bold;
+  letter-spacing: 1.2px;
   transition: all 0.3s ease;
   box-shadow: 0 5px 15px color-mix(in srgb, var(--accent-color), transparent 70%);
 }
 
 .contact .contact-form-wrapper .btn-submit:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 15%);
+  background-color: var(--default-lemon);
+  color: var(--default-black);
   transform: translateY(-3px);
   box-shadow: 0 8px 20px color-mix(in srgb, var(--accent-color), transparent 60%);
 }
 
 .contact .contact-form-wrapper .btn-submit:active {
+  background-color: var(--default-lemon);
+  color: var(--default-black);
   transform: translateY(0);
   box-shadow: 0 3px 10px color-mix(in srgb, var(--accent-color), transparent 70%);
 }

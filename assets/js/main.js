@@ -251,7 +251,7 @@
     
     if (ShowMoreBtn) {
       // Reset button state
-      ShowMoreBtn.innerText = "Show more";
+      ShowMoreBtn.innerText = "show more";
       showMoreState.expanded = false;
       console.log('Show More state reset due to filter change');
       
@@ -280,7 +280,7 @@
       showMoreState.expanded = !showMoreState.expanded;
       
       // Update button text
-      ShowMoreBtn.innerText = showMoreState.expanded ? "Show less" : "Show more";
+      ShowMoreBtn.innerText = showMoreState.expanded ? "show less" : "show more";
       
       console.log('Show more state changed to:', showMoreState.expanded);
       
