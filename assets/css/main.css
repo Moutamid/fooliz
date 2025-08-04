@@ -102,7 +102,9 @@ h4,
 h5,
 h6 {
   color: var(--heading-color);
-  font-family: var(--heading-font);
+  font-family: Benzin-Bold;
+  letter-spacing: 1.4px;
+  /* font-family: var(--heading-font); */
 }
 
 .title-font {
@@ -327,7 +329,10 @@ h6 {
   color: var(--default-black);
   background: var(--default-lemon);
   font-size: 20px;
-  padding: 3px 7px;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 2px;
+  padding-bottom: 3px;
   font-family: Benzin-Bold;
   margin: 0 0 0 30px;
   border-radius: 50px;
@@ -1054,8 +1059,8 @@ section,
   display: inline-flex;
   align-items: center;
   background-color: var(--default-pink);
-  color: var(--default-color);
-  padding: 0.5rem 3rem;
+  color: var(--default-beige);
+  padding: 0.4rem 2.5rem;
   border-radius: 50px;
   font-size: 1.6rem;
   font-family: Benzin-Bold;
@@ -1065,6 +1070,7 @@ section,
 
 .hero .cta-button .btn span {
   margin-right: 0.5rem;
+  margin-bottom: 0.3rem;
 }
 
 .hero .cta-button .btn i {
@@ -1296,12 +1302,13 @@ section,
 
 .about .about-content .btn-primary {
   background-color: var(--default-pink);
-  padding: 0.7rem 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.7rem;
   border-radius: 50px;
   border-color: transparent;
   font-family: Benzin-Bold;
   font-size: 1rem;
-  color: var(--contrast-color);
+  color: var(--default-beige);
   letter-spacing: 1.2px;
   transition: all 0.3s ease;
 }
@@ -1444,10 +1451,13 @@ section,
 .services .service-header .service-summary .service-btn {
   display: inline-flex;
   align-items: center;
-  padding: 12px 30px;
+  padding-top: 8px;
+  padding-bottom: 12px;
+  padding-left: 30px;
+  padding-right: 30px;
   background-color: var(--default-pink);
   border-radius: 50px;
-  color: var(--contrast-color);
+  color: var(--default-beige);
   font-family: Benzin-Bold;
   font-size: 15px;
   letter-spacing: 1.2px;
@@ -1838,8 +1848,10 @@ section,
 
 .call-to-action .cta-buttons .btn.btn-primary {
   background-color: var(--default-pink);
-  color: var(--contrast-color);
+  color: var(--default-beige);
   border-radius: 50px;
+  padding-top: 3px;
+  padding-bottom: 5px;
   border-color: transparent;
   font-family: Benzin-Bold;
   font-size: 15px;
@@ -2346,10 +2358,13 @@ section,
 
 .show-more-button {
   background-color: var(--default-pink);
-  color: var(--contrast-color);
+  color: var(--default-beige);
   border-radius: 50px;
   border-color: transparent;
-  padding: 12px 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 9px;
+  padding-bottom: 12px;
   font-size: 15px;
   font-family: Benzin-Bold;
   letter-spacing: 1.2px;
@@ -2920,7 +2935,10 @@ section,
   border-radius: 50px;
   border-color: transparent;
   color: var(--contrast-color);
-  padding: 12px 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 9px;
+  padding-bottom: 12px;
   font-size: 15px;
   font-family: Benzin-Bold;
   letter-spacing: 1.2px;
