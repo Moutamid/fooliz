@@ -71,8 +71,8 @@
 
 .dark-background {
   --background-color: #060606;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
+  --default-color: var(--default-beige);
+  --heading-color: var(--default-beige);
   --surface-color: #252525;
   --contrast-color: #ffffff;
 }
@@ -86,7 +86,8 @@
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
 body {
-  color: var(--default-color);
+  color: var(--default-beige);
+  /* color: var(--default-color); */
   background-color: var(--background-color);
   font-family: FiraMono-Regular;
   /* font-family: var(--default-font); */
@@ -951,18 +952,18 @@ section,
   width: 120px;
   height: 1px;
   display: inline-block;
-  background: var(--accent-color);
+  background: var(--default-lemon);
   margin: 4px 10px;
 }
 
 .section-title div {
-  color: var(--heading-color);
+  color: var(--default-beige);
   margin: 0;
   margin: 0;
   font-size: 28px;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: var(--heading-font);
+  font-family: Benzin-Bold;
 }
 
 /*--------------------------------------------------------------
@@ -1300,34 +1301,71 @@ section,
   margin-bottom: 1rem;
 }
 
-.about .about-content .feature-item {
+.about .about-content .feature-item-green {
   padding: 1.25rem;
-  background-color: var(--surface-color);
   border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  background-color: var(--default-green);
   height: 100%;
   transition: all 0.3s ease;
 }
 
-.about .about-content .feature-item:hover {
+.about .about-content .feature-item-green:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-.about .about-content .feature-item i {
+.about .about-content .feature-item-green i {
   font-size: 1.75rem;
-  color: var(--accent-color);
   margin-bottom: 0.75rem;
+  color: var(--default-lemon);
   display: block;
 }
 
-.about .about-content .feature-item h5 {
+.about .about-content .feature-item-green h5 {
+  font-size: 1.15rem;
+  margin-bottom: 0.75rem;
+  color: var(--default-lemon);
+  font-weight: 600;
+}
+
+.about .about-content .feature-item-green p {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+  color: var(--default-lemon);
+}
+
+
+.about .about-content .feature-item-beige {
+  padding: 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  background-color: var(--default-beige);
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.about .about-content .feature-item-beige:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.about .about-content .feature-item-beige i {
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+  color: var(--default-black);
+  display: block;
+}
+
+.about .about-content .feature-item-beige h5 {
+  color: var(--default-black);
   font-size: 1.15rem;
   margin-bottom: 0.75rem;
   font-weight: 600;
 }
 
-.about .about-content .feature-item p {
+.about .about-content .feature-item-beige p {
+  color: var(--default-black);
   font-size: 0.9rem;
   margin-bottom: 0;
 }
@@ -1456,7 +1494,7 @@ section,
   margin-bottom: 0;
   font-weight: 700;
   line-height: 1.2;
-  color: var(--heading-color);
+  color: var(--default-lemon);
 }
 
 .services .service-header .service-intro .service-heading div {
@@ -1466,7 +1504,7 @@ section,
 
 .services .service-header .service-intro .service-heading span {
   display: block;
-  color: var(--accent-color);
+  color: var(--default-pink);
 }
 
 @media (max-width: 992px) {
@@ -1539,7 +1577,7 @@ section,
 
 .services .service-card .service-icon {
   margin-bottom: 25px;
-  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  background-color: var(--default-lemon);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1550,7 +1588,7 @@ section,
 
 .services .service-card .service-icon i {
   font-size: 32px;
-  color: var(--accent-color);
+  color: var(--default-black);
   transition: all 0.3s ease;
 }
 
@@ -1561,7 +1599,7 @@ section,
 }
 
 .services .service-card h3 a {
-  color: var(--heading-color);
+  color: var(--default-pink);
   transition: color 0.3s ease;
 }
 
@@ -1574,7 +1612,7 @@ section,
 }
 
 .services .service-card p {
-  color: var(--default-color);
+  color: var(--default-beige);
   transition: color 0.3s ease;
   margin-bottom: 0;
 }
@@ -1588,7 +1626,7 @@ section,
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--accent-color);
+  background-color: var(--default-lemon);
   opacity: 0;
   visibility: hidden;
   transform: translateY(20px);
@@ -1597,7 +1635,7 @@ section,
 
 .services .service-card .card-action i {
   font-size: 24px;
-  color: var(--contrast-color);
+  color: var(--default-black);
   transition: transform 0.3s ease;
 }
 
@@ -1612,7 +1650,7 @@ section,
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--surface-color);
+  background-color: var(--default-green);
   clip-path: polygon(70% 0, 100% 30%, 100% 100%, 0 100%, 0 0);
   z-index: -1;
   opacity: 0;
@@ -1627,19 +1665,19 @@ section,
 .services .service-card:hover::before {
   opacity: 1;
   visibility: visible;
-  background-color: var(--surface-color);
+  background-color: var(--default-green);
 }
 
 .services .service-card:hover h3 a {
-  color: var(--accent-color);
+  color: var(--default-lemon);
 }
 
 .services .service-card:hover h3 a:hover {
-  color: var(--accent-color);
+  color: var(--default-lemon);
 }
 
 .services .service-card:hover p {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: var(--default-lemon)
 }
 
 .services .service-card:hover .card-action {
@@ -1686,7 +1724,7 @@ section,
   content: "";
   position: absolute;
   width: 2px;
-  background-color: color-mix(in srgb, var(--accent-color), transparent 85%);
+  background-color: var(--default-lemon);
   top: 0;
   bottom: 0;
   left: 50%;
@@ -1717,7 +1755,7 @@ section,
   flex-shrink: 0;
   width: 80px;
   height: 80px;
-  background-color: var(--surface-color);
+  background-color: var(--default-pink);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1725,19 +1763,19 @@ section,
   position: relative;
   z-index: 1;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  border: 2px solid color-mix(in srgb, var(--accent-color), transparent 85%);
+  border: 2px solid var(--default-pink);
   transition: all 0.3s ease-in-out;
 }
 
 .steps .step-icon i {
   font-size: 32px;
-  color: var(--accent-color);
+  color: var(--default-lemon);
   transition: transform 0.3s ease-in-out;
 }
 
 .steps .step-info {
   flex: 1;
-  background-color: var(--surface-color);
+  background-color: var(--default-green);
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
@@ -1753,7 +1791,7 @@ section,
   font-family: var(--heading-font);
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--accent-color);
+  color: var(--default-lemon);
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 10px;
@@ -1763,11 +1801,11 @@ section,
   font-size: 1.3rem;
   margin-bottom: 15px;
   font-weight: 600;
-  color: var(--heading-color);
+  color: var(--default-lemon);
 }
 
 .steps p {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: var(--default-beige);
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 0;
