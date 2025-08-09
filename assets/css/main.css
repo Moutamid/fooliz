@@ -20,6 +20,11 @@
   src: url("../fonts/FiraSansExtraCondensed-LightItalic.ttf");
 }
 
+@font-face {
+  font-family: FiraMono-Regular;
+  src: url("../fonts/FiraMono-Regular.ttf");
+}
+
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root {
   --background-color: #091107;
@@ -83,7 +88,8 @@
 body {
   color: var(--default-color);
   background-color: var(--background-color);
-  font-family: var(--default-font);
+  font-family: FiraMono-Regular;
+  /* font-family: var(--default-font); */
 }
 
 a {
@@ -1064,7 +1070,7 @@ section,
 }
 
 .hero .description p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.7;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin: 0;
