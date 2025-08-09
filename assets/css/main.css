@@ -1,31 +1,39 @@
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Nunito Sans",  sans-serif;
-  --nav-font: "Raleway",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Nunito Sans", sans-serif;
+  --nav-font: "Raleway", sans-serif;
 }
 
 @font-face {
   font-family: Benzin-Bold;
   src: url("../fonts/Benzin-Bold.ttf");
 }
+
 @font-face {
   font-family: Benzin-Regular;
   src: url("../fonts/Benzin-Regular.ttf");
 }
+
 @font-face {
   font-family: FiraSans-Italic;
   src: url("../fonts/FiraSansExtraCondensed-LightItalic.ttf");
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --background-color: #091107; /* Background color for the entire website, including individual sections */
-  --default-color: rgba(255, 255, 255, 0.8); /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #e0e9f2; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #e3a127; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #1b262c; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+:root {
+  --background-color: #091107;
+  /* Background color for the entire website, including individual sections */
+  --default-color: rgba(255, 255, 255, 0.8);
+  /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #e0e9f2;
+  /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #e3a127;
+  /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #1b262c;
+  /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff;
+  /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
   --default-pink: #f5578c;
   --default-lemon: #e3f47f;
   --default-green: #316026;
@@ -35,12 +43,18 @@
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: rgba(255, 255, 255, 0.8);  /* The default color of the main navmenu links */
-  --nav-hover-color: #e3a127; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #29343a; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #29343a; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: rgba(255, 255, 255, 0.8); /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: var(--default-pink); /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: rgba(255, 255, 255, 0.8);
+  /* The default color of the main navmenu links */
+  --nav-hover-color: #e3a127;
+  /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #29343a;
+  /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #29343a;
+  /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: rgba(255, 255, 255, 0.8);
+  /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: var(--default-pink);
+  /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -98,7 +112,7 @@ h6 {
 .title-font {
   font-family: Arial;
   color: #e3f47f;
-  
+
 }
 
 .title-font .font-design-that {
@@ -127,21 +141,22 @@ h6 {
 /* 1200px */
 @media (max-width: 1100px) {
   .title-font .font-design-that {
-  font-size: 70px;
+    font-size: 70px;
+  }
+
+  .title-font .font-slaps {
+    font-size: 70px;
+  }
+
+  .title-font .font-apps-that {
+    font-size: 50px;
+  }
+
+  .title-font .font-work {
+    font-size: 50px;
+  }
 }
 
-.title-font .font-slaps {
-  font-size: 70px;
-}
-
-.title-font .font-apps-that {
-  font-size: 50px;
-}
-
-.title-font .font-work {
-  font-size: 50px;
-}
-}
 /* 
 @media (max-width: 1000px) {
   .title-font .font-design-that {
@@ -163,56 +178,56 @@ h6 {
 
 @media (max-width: 767px) {
   .title-font .font-design-that {
-  font-size: 70px;
-}
+    font-size: 70px;
+  }
 
-.title-font .font-slaps {
-  font-size: 70px;
-}
+  .title-font .font-slaps {
+    font-size: 70px;
+  }
 
-.title-font .font-apps-that {
-  font-size: 40px;
-}
+  .title-font .font-apps-that {
+    font-size: 40px;
+  }
 
-.title-font .font-work {
-  font-size: 40px;
-}
+  .title-font .font-work {
+    font-size: 40px;
+  }
 }
 
 @media (max-width: 480px) {
   .title-font .font-design-that {
-  font-size: 55px;
-}
+    font-size: 55px;
+  }
 
-.title-font .font-slaps {
-  font-size: 55px;
-}
+  .title-font .font-slaps {
+    font-size: 55px;
+  }
 
-.title-font .font-apps-that {
-  font-size: 40px;
-}
+  .title-font .font-apps-that {
+    font-size: 40px;
+  }
 
-.title-font .font-work {
-  font-size: 40px;
-}
+  .title-font .font-work {
+    font-size: 40px;
+  }
 }
 
 @media (max-width: 450px) {
   .title-font .font-design-that {
-  font-size: 40px;
-}
+    font-size: 40px;
+  }
 
-.title-font .font-slaps {
-  font-size: 40px;
-}
+  .title-font .font-slaps {
+    font-size: 40px;
+  }
 
-.title-font .font-apps-that {
-  font-size: 30px;
-}
+  .title-font .font-apps-that {
+    font-size: 30px;
+  }
 
-.title-font .font-work {
-  font-size: 30px;
-}
+  .title-font .font-work {
+    font-size: 30px;
+  }
 }
 
 /* PHP Email Form Messages
@@ -316,15 +331,23 @@ h6 {
 .header .btn-getstarted:focus {
   color: var(--default-black);
   background: var(--default-lemon);
-  font-size: 20px;
-  padding-left: 7px;
-  padding-right: 7px;
+  font-size: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
   padding-top: 2px;
-  padding-bottom: 3px;
+  padding-bottom: 4px;
   font-family: Benzin-Bold;
   margin: 0 0 0 30px;
   border-radius: 50px;
   transition: 0.3s;
+}
+
+@media (max-width: 450px) {
+  
+  .header .btn-getstarted {
+    padding-top: 4px;
+    padding-bottom: 2px;
+  }
 }
 
 .header .btn-getstarted:hover,
@@ -366,8 +389,8 @@ h6 {
 }
 
 @media (max-width: 325px) {
-  .header .btn-getstarted{
-    font-size: 16px;
+  .header .btn-getstarted {
+    font-size: 14px;
   }
 }
 
@@ -397,7 +420,8 @@ h6 {
     color: var(--default-black);
     padding: 18px 15px;
     /* font-size: 16px; */
-    font-family: Benzin-Regular;/* var(--nav-font) */
+    font-family: Benzin-Regular;
+    /* var(--nav-font) */
     /* font-weight: 400; */
     display: flex;
     align-items: center;
@@ -747,8 +771,10 @@ h6 {
 
 #preloader::before {
   content: "";
-  width: 300px; /* Adjust size as needed */
-  height: 300px; /* Adjust size as needed */
+  width: 300px;
+  /* Adjust size as needed */
+  height: 300px;
+  /* Adjust size as needed */
   background-image: url('../img/abstract/happy-girl.gif');
   background-size: contain;
   background-repeat: no-repeat;
@@ -1000,6 +1026,7 @@ section,
   letter-spacing: -1px;
   margin: 0;
 }
+
 /* 1200px */
 @media (max-width: 1395px) {
   .hero .main-heading h1 {
@@ -1048,8 +1075,8 @@ section,
   align-items: center;
   background-color: var(--default-pink);
   color: var(--default-beige);
-  padding-top: 0.4rem;
-  padding-bottom: 0.1rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.4rem;
   padding-left: 2.5rem;
   padding-right: 2.5rem;
   border-radius: 50px;
@@ -1076,6 +1103,14 @@ section,
 
 .hero .cta-button .btn:hover i {
   transform: translateX(5px);
+}
+
+@media (max-width: 450px) {
+  .hero .cta-button .btn {
+    padding-top: 0.4rem;
+    padding-bottom: 0.1rem;
+
+  }
 }
 
 .hero .visual-content {
@@ -1309,6 +1344,13 @@ section,
   color: var(--default-black);
 }
 
+@media (max-width: 450px) {
+  .about .about-content .btn-primary {
+    padding-top: 0.7rem;
+    padding-bottom: 0.5rem;
+  }
+}
+
 .about .testimonial-section {
   border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
@@ -1453,6 +1495,13 @@ section,
   font-size: 15px;
   letter-spacing: 1.2px;
   transition: all 0.3s ease;
+}
+
+@media (max-width: 450px) {
+  .services .service-header .service-summary .service-btn {
+    padding-top: 12px;
+    padding-bottom: 8px;
+  }
 }
 
 .services .service-header .service-summary .service-btn i {
@@ -1846,6 +1895,13 @@ section,
   border-color: transparent;
   font-family: Benzin-Bold;
   font-size: 15px;
+}
+
+@media (max-width: 450px) {
+  .call-to-action .cta-buttons .btn.btn-primary {
+    padding-top: 5px;
+    padding-bottom: 3px;
+  }
 }
 
 .call-to-action .cta-buttons .btn.btn-primary:hover {
@@ -2362,6 +2418,13 @@ section,
   transition: all 0.3s ease;
   box-shadow: 0 5px 15px color-mix(in srgb, var(--accent-color), transparent 70%);
   margin-top: 30px;
+}
+
+@media (max-width: 450px) {
+  .show-more-button {
+    padding-top: 12px;
+    padding-bottom: 9px;
+  }
 }
 
 .show-more-button:hover {
@@ -2935,6 +2998,13 @@ section,
   letter-spacing: 1.2px;
   transition: all 0.3s ease;
   box-shadow: 0 5px 15px color-mix(in srgb, var(--accent-color), transparent 70%);
+}
+
+@media (max-width: 450px) {
+  .contact .contact-form-wrapper .btn-submit {
+    padding-top: 12px;
+    padding-bottom: 9px;
+  }
 }
 
 .contact .contact-form-wrapper .btn-submit:hover {
