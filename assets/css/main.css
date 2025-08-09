@@ -1048,8 +1048,8 @@ section,
   align-items: center;
   background-color: var(--default-pink);
   color: var(--default-beige);
-  padding-top: 0.2rem;
-  padding-bottom: 0.4rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.2rem;
   padding-left: 2.5rem;
   padding-right: 2.5rem;
   border-radius: 50px;
