@@ -1048,7 +1048,10 @@ section,
   align-items: center;
   background-color: var(--default-pink);
   color: var(--default-beige);
-  padding: 0.4rem 2.5rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.4rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
   border-radius: 50px;
   font-size: 1.6rem;
   font-family: Benzin-Bold;
