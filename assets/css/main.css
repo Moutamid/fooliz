@@ -1075,8 +1075,8 @@ section,
   align-items: center;
   background-color: var(--default-pink);
   color: var(--default-beige);
-  padding-top: 0.2rem;
-  padding-bottom: 0.4rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
   padding-left: 2.5rem;
   padding-right: 2.5rem;
   border-radius: 50px;
@@ -1484,8 +1484,8 @@ section,
 .services .service-header .service-summary .service-btn {
   display: inline-flex;
   align-items: center;
-  padding-top: 8px;
-  padding-bottom: 12px;
+  padding-top: 9px;
+  padding-bottom: 10px;
   padding-left: 30px;
   padding-right: 30px;
   background-color: var(--default-pink);
