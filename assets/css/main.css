@@ -65,8 +65,10 @@
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #0d1d26;
-  --surface-color: #16262f;
+  --background-color: var(--default-green);
+  --surface-color: var(--default-black);
+  /* --background-color: #0d1d26; */
+  /* --surface-color: #16262f; */
 }
 
 .dark-background {
@@ -1871,15 +1873,15 @@ section,
 .call-to-action {
   padding-top: 80px;
   position: relative;
-  background-color: color-mix(in srgb, var(--accent-color), transparent 97%);
+  background-color: var(--default-beige);
   border-radius: 1rem;
   overflow: hidden;
   padding-bottom: 80px;
 }
 
 .call-to-action .badge {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
-  color: var(--accent-color);
+  background-color: var(--default-green);
+  color: var(--default-beige);
   padding: 0.5rem 1rem;
   font-size: 0.875rem;
   font-weight: 500;
@@ -1890,12 +1892,14 @@ section,
   font-size: clamp(1.75rem, 3vw, 2.5rem);
   font-weight: 700;
   line-height: 1.2;
+  color: var(--default-black);
   margin: 0;
 }
 
 .call-to-action p {
   font-size: 1.125rem;
   line-height: 1.6;
+  color: var(--default-black);
   opacity: 0.9;
 }
 
@@ -1904,7 +1908,7 @@ section,
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
-  background-color: var(--surface-color);
+  background-color: var(--default-green);
   border-radius: 0.5rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
@@ -1915,12 +1919,13 @@ section,
 }
 
 .call-to-action .features .feature-item i {
-  color: var(--accent-color);
+  color: var(--default-lemon);
   font-size: 1.25rem;
 }
 
 .call-to-action .features .feature-item span {
   font-weight: 500;
+  color: var(--default-lemon);
 }
 
 .call-to-action .cta-buttons .btn {
@@ -1938,7 +1943,7 @@ section,
   padding-bottom: 5px;
   border-color: transparent;
   font-family: Benzin-Bold;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 @media (max-width: 450px) {
@@ -2299,7 +2304,7 @@ section,
 }
 
 .portfolio .portfolio-entry .entry-image .entry-overlay .entry-meta {
-  color: var(--accent-color);
+  color: var(--default-lemon);
   font-size: 14px;
   font-weight: 500;
   text-transform: uppercase;
@@ -2308,7 +2313,7 @@ section,
 }
 
 .portfolio .portfolio-entry .entry-image .entry-overlay .entry-title {
-  color: var(--contrast-color);
+  color: var(--default-beige);
   font-size: 24px;
   font-weight: 600;
   margin: 0 0 20px;
@@ -2325,8 +2330,8 @@ section,
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--surface-color);
-  color: var(--accent-color);
+  background: var(--default-black);
+  color: var(--default-lemon);
   border-radius: 12px;
   font-size: 20px;
   transition: all 0.3s ease;
@@ -2335,8 +2340,8 @@ section,
 }
 
 .portfolio .portfolio-entry .entry-image .entry-overlay .entry-links a:hover {
-  background: var(--accent-color);
-  color: var(--contrast-color);
+  background: var(--default-pink);
+  color: var(--default-beige);
   transform: translateY(-2px);
 }
 
@@ -2460,7 +2465,7 @@ section,
   font-family: Benzin-Bold;
   letter-spacing: 1.2px;
   transition: all 0.3s ease;
-  box-shadow: 0 5px 15px color-mix(in srgb, var(--accent-color), transparent 70%);
+  /* box-shadow: 0 5px 15px color-mix(in srgb, var(--accent-color), transparent 70%); */
   margin-top: 30px;
 }
 
@@ -2475,14 +2480,14 @@ section,
   background-color: var(--default-lemon);
   color: var(--default-black);
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px color-mix(in srgb, var(--accent-color), transparent 60%);
+  /* box-shadow: 0 8px 20px color-mix(in srgb, var(--accent-color), transparent 60%); */
 }
 
 .show-more-button:active {
   background-color: var(--default-lemon);
   color: var(--default-black);
   transform: translateY(0);
-  box-shadow: 0 3px 10px color-mix(in srgb, var(--accent-color), transparent 70%);
+  /* box-shadow: 0 3px 10px color-mix(in srgb, var(--accent-color), transparent 70%); */
 }
 
 /*--------------------------------------------------------------
@@ -2490,8 +2495,8 @@ section,
 --------------------------------------------------------------*/
 .team .team-member {
   position: relative;
-  background-color: var(--surface-color);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  background-color: var(--default-black);
+  border: 1px solid var(--default-black);
   border-radius: 8px;
   transition: 0.3s;
 }
@@ -2522,13 +2527,13 @@ section,
   font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 5px;
-  color: var(--heading-color);
+  color: var(--default-beige);
 }
 
 .team .team-member .member-info span {
   font-size: 0.9rem;
   font-weight: 400;
-  color: color-mix(in srgb, var(--heading-color), transparent 30%);
+  color: var(--default-beige);
   display: block;
   margin-bottom: 15px;
 }
@@ -2536,7 +2541,7 @@ section,
 .team .team-member .member-info p {
   font-size: 0.9rem;
   margin-bottom: 20px;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: var(--default-beige);
 }
 
 .team .team-member .member-info .social {
@@ -2551,16 +2556,16 @@ section,
   width: 32px;
   height: 32px;
   font-size: 1rem;
-  color: var(--heading-color);
+  color: var(--default-lemon);
   transition: 0.3s;
   border-radius: 4px;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border: 1px solid var(--default-black);
 }
 
 .team .team-member .member-info .social a:hover {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 95%);
+  color: var(--default-pink);
+  border-color: var(--default-pink);
+  background: var(--default-black);
 }
 
 @media (max-width: 767px) {
