@@ -352,7 +352,7 @@ h6 {
 }
 
 @media (max-width: 450px) {
-  
+
   .header .btn-getstarted {
     padding-top: 4px;
     padding-bottom: 2px;
@@ -1337,6 +1337,13 @@ section,
   color: var(--default-lemon);
 }
 
+.about .about-content .feature-item-green .feature-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-left: -5px;
+  margin-bottom: 10px;
+  object-fit: containt;
+}
 
 .about .about-content .feature-item-beige {
   padding: 1.25rem;
@@ -1370,6 +1377,14 @@ section,
   color: var(--default-black);
   font-size: 0.9rem;
   margin-bottom: 0;
+}
+
+.about .about-content .feature-item-beige .feature-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-left: -5px;
+  margin-bottom: 10px;
+  object-fit: containt;
 }
 
 .about .about-content .btn-primary {
@@ -1594,6 +1609,12 @@ section,
   transition: all 0.3s ease;
 }
 
+.services .service-card .service-icon img {
+  width: 2.7rem;
+  height: 2.7rem;
+  object-fit: contain;
+}
+
 .services .service-card h3 {
   font-size: 28px;
   margin-bottom: 15px;
@@ -1775,6 +1796,12 @@ section,
   transition: transform 0.3s ease-in-out;
 }
 
+.steps .step-icon img {
+  width: 3.5rem;
+  height: 3.5rem;
+  object-fit: contain;
+}
+
 .steps .step-info {
   flex: 1;
   background-color: var(--default-green);
@@ -1854,6 +1881,12 @@ section,
     font-size: 20px;
   }
 
+  .steps .step-icon img {
+    width: 2rem;
+    height: 2rem;
+    object-fit: contain;
+  }
+
   .steps .step-info {
     padding: 15px;
   }
@@ -1921,6 +1954,12 @@ section,
 .call-to-action .features .feature-item i {
   color: var(--default-lemon);
   font-size: 1.25rem;
+}
+
+.call-to-action .features .feature-item img {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
 }
 
 .call-to-action .features .feature-item span {
@@ -2250,6 +2289,12 @@ section,
 .portfolio .portfolio-filters li.filter-active {
   background: var(--default-pink);
   color: var(--contrast-color);
+}
+
+.portfolio .portfolio-filters .portfolio-icon-img {
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
 }
 
 @media (max-width: 768px) {
@@ -2667,6 +2712,12 @@ section,
   color: var(--accent-color);
 }
 
+.pricing .plan-header .plan-icon img {
+  width: 3.5rem;
+  height: 3.5rem;
+  object-fit: contain;
+}
+
 .pricing .plan-header h3 {
   font-size: 24px;
   font-weight: 700;
@@ -2916,6 +2967,12 @@ section,
 
 .contact .contact-info-box .icon-box i {
   font-size: 24px;
+}
+
+.contact .contact-info-box .icon-box img {
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: contain;
 }
 
 .contact .contact-info-box .info-content h4 {
