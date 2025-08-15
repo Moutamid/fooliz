@@ -3719,6 +3719,86 @@ section,
 /*--------------------------------------------------------------
 # Portfolio Details Section
 --------------------------------------------------------------*/
+
+
+/* Portfolio Details Hero Image */
+.first-layout-portfolio {
+  position: relative;
+  width: 100vw;
+  height: auto;
+  margin-left: calc(-50vw + 50%);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+
+.first-layout-portfolio img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.first-layout-portfolio h1,
+.first-layout-portfolio p {
+  position: relative;
+  z-index: 2;
+  color: var(--default-beige);
+  margin-top: 2rem;
+  padding: 0 2rem;
+}
+
+.first-layout-portfolio h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.first-layout-portfolio p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+/* Mobile styles */
+@media (max-width: 991px) {
+  .first-layout-portfolio {
+    width: 100%;
+    margin-left: 0;
+    padding: 0;
+  }
+  
+  .first-layout-portfolio img {
+    height: 50vh;
+    object-fit: cover;
+  }
+  
+  .first-layout-portfolio h1 {
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .first-layout-portfolio p {
+    font-size: 1rem;
+    padding: 0 1rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .first-layout-portfolio h1 {
+    font-size: 1.8rem;
+  }
+  
+  .first-layout-portfolio p {
+    font-size: 0.9rem;
+  }
+}
+
 .portfolio-details {
   --section-spacing: 2.5rem;
 }
@@ -3729,7 +3809,7 @@ section,
 
 .portfolio-details .portfolio-details-media .main-image {
   margin-bottom: 1rem;
-  border-radius: 20px;
+  border-radius: 2px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
@@ -3777,7 +3857,7 @@ section,
 .portfolio-details .portfolio-details-media .thumbnail-grid img {
   height: 80px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 2px;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
@@ -3822,7 +3902,6 @@ section,
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 1.5rem;
 }
 
 .portfolio-details .portfolio-details-content .project-meta .badge-wrapper .project-badge {
@@ -3837,7 +3916,7 @@ section,
 
 .portfolio-details .portfolio-details-content .project-meta .date-client {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .portfolio-details .portfolio-details-content .project-meta .date-client .meta-item {
