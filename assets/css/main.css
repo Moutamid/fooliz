@@ -72,7 +72,7 @@
 }
 
 .dark-background {
-  --background-color: #060606;
+  --background-color: var(--default-green);
   --default-color: var(--default-beige);
   --heading-color: var(--default-beige);
   --surface-color: #252525;
@@ -104,6 +104,10 @@ a {
 a:hover {
   color: color-mix(in srgb, var(--accent-color), transparent 25%);
   text-decoration: none;
+}
+
+p {
+  color: var(--default-beige);
 }
 
 h1,
@@ -669,16 +673,16 @@ h6 {
 }
 
 .footer .footer-about .logo span {
-  color: var(--heading-color);
+  color: var(--default-lemon);
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 1px;
-  font-family: var(--heading-font);
+  font-family: Benzin-Bold;
 }
 
 .footer .footer-about p {
   font-size: 14px;
-  font-family: var(--heading-font);
+  font-family: Benzin-Regular;
 }
 
 .footer .social-links a {
@@ -688,16 +692,16 @@ h6 {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
+  border: 1px solid var(--default-beige);
   font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: var(--default-beige);
   margin-right: 10px;
   transition: 0.3s;
 }
 
 .footer .social-links a:hover {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
+  color: var(--default-lemon);
+  border-color: var(--default-lemon);
 }
 
 .footer h4 {
@@ -705,6 +709,7 @@ h6 {
   font-weight: bold;
   position: relative;
   padding-bottom: 12px;
+  color: var(--default-lemon);
 }
 
 .footer .footer-links {
@@ -734,13 +739,13 @@ h6 {
 }
 
 .footer .footer-links ul a {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: var(--default-beige);
   display: inline-block;
   line-height: 1;
 }
 
 .footer .footer-links ul a:hover {
-  color: var(--accent-color);
+  color: var(--default-pink);
 }
 
 .footer .footer-contact p {
@@ -877,7 +882,7 @@ h6 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.02) 0px, rgba(255, 255, 255, 0.05) 1px, transparent 1px, transparent 10px);
+  /* background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.02) 0px, rgba(255, 255, 255, 0.05) 1px, transparent 1px, transparent 10px); */
   z-index: 1;
 }
 
@@ -906,7 +911,12 @@ h6 {
   content: "/";
   display: inline-block;
   padding-right: 10px;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: var(--default-beige);
+}
+
+.page-title .breadcrumbs ol li a {
+  color: var(--default-lemon);
+  font-family: Benzin-Bold;
 }
 
 /*--------------------------------------------------------------
@@ -1075,7 +1085,8 @@ section,
 .hero .description p {
   font-size: 1.2rem;
   line-height: 1.7;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  /* font-family: Benzin-Regular; */
+  /* color: var(--default-beige); */
   margin: 0;
 }
 
@@ -1285,6 +1296,7 @@ section,
   font-size: 2.2rem;
   margin-bottom: 1.25rem;
   font-weight: 700;
+  color: var(--default-lemon);
 }
 
 @media (max-width: 768px) {
@@ -1296,7 +1308,7 @@ section,
 .about .about-content .lead {
   font-size: 1.15rem;
   margin-bottom: 1.25rem;
-  color: color-mix(in srgb, var(--heading-color), transparent 30%);
+  color: var(--default-beige);
 }
 
 .about .about-content p {
@@ -1419,6 +1431,7 @@ section,
 .about .testimonial-section .testimonial-intro h3 {
   font-size: 1.75rem;
   margin-bottom: 1.25rem;
+  color: var(--default-lemon);
   font-weight: 700;
 }
 
@@ -1435,7 +1448,8 @@ section,
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: var(--surface-color);
+  background-color: var(--default-lemon);
+  color: var(--default-black);
   border: 1px solid rgba(0, 0, 0, 0.08);
   display: flex;
   align-items: center;
@@ -1445,9 +1459,9 @@ section,
 }
 
 .about .testimonial-section .testimonial-intro .swiper-nav-buttons button:hover {
-  background-color: var(--accent-color);
+  background-color: var(--default-pink);
   border-color: var(--accent-color);
-  color: var(--contrast-color);
+  color: var(--default-beige);
 }
 
 .about .testimonial-section .testimonial-intro .swiper-nav-buttons button i {
@@ -1463,7 +1477,7 @@ section,
 }
 
 .about .testimonial-section .testimonial-item {
-  background-color: var(--surface-color);
+  background-color: var(--default-beige);
   border-radius: 10px;
   padding: 2rem;
   box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
@@ -1480,6 +1494,11 @@ section,
   margin-bottom: 0;
   font-size: 1rem;
   line-height: 1.6;
+  color: var(--default-black);
+}
+
+.about .testimonial-section .testimonial-item i {
+  color: var(--default-pink);
 }
 
 .about .testimonial-section .testimonial-item .client-info .client-img {
@@ -1492,11 +1511,12 @@ section,
 
 .about .testimonial-section .testimonial-item .client-info h6 {
   font-weight: 600;
+  color: var(--default-green);
 }
 
 .about .testimonial-section .testimonial-item .client-info span {
   font-size: 0.85rem;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: var(--default-black);
 }
 
 /*--------------------------------------------------------------
@@ -1539,7 +1559,7 @@ section,
 
 .services .service-header .service-summary p {
   margin-bottom: 25px;
-  color: var(--default-color);
+  color: var(--default-beige);
 }
 
 .services .service-header .service-summary .service-btn {
@@ -2812,6 +2832,517 @@ section,
   background-color: color-mix(in srgb, var(--default-color), transparent 80%);
 }
 
+/* PRICING CONSULTANCY CARD */
+
+.pricing .pricing-card-consultancy {
+  height: 100%;
+  background: var(--default-green);
+  border-radius: var(--card-border-radius);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--default-pink);
+}
+
+.pricing .pricing-card-consultancy:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.pricing .pricing-card-consultancy-consultancy.popular {
+  border: 2px solid var(--default-pink);
+}
+
+.pricing .pricing-card-consultancy.popular .plan-cta .btn-plan {
+  background-color: var(--default-pink);
+  color: var(--default-pink);
+}
+
+.pricing .pricing-card-consultancy.popular .plan-cta .btn-plan:hover {
+  background-color: var(--default-pink);
+}
+
+.pricing .pricing-card-consultancy .popular-tag {
+  position: absolute;
+  top: 20px;
+  right: -35px;
+  background-color: var(--default-pink);
+  color: var(--default-pink);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 40px;
+  transform: rotate(45deg);
+}
+
+.pricing .plan-header-consultancy {
+  padding: 30px 30px 20px;
+  text-align: center;
+}
+
+.pricing .plan-header-consultancy .plan-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--default-pink);
+}
+
+.pricing .plan-header-consultancy .plan-icon i {
+  font-size: 28px;
+  color: var(--default-pink);
+}
+
+.pricing .plan-header-consultancy .plan-icon img {
+  width: 3.5rem;
+  height: 3.5rem;
+  object-fit: contain;
+}
+
+.pricing .plan-header-consultancy h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--default-lemon);
+}
+
+.pricing .plan-header-consultancy p {
+  font-size: 15px;
+  color: var(--default-beige);
+  font-family: Benzin-Regular;
+}
+
+.pricing .plan-pricing-consultancy {
+  text-align: center;
+  padding: 10px 30px 20px;
+  position: relative;
+}
+
+.pricing .plan-pricing-consultancy .currency {
+  font-size: 24px;
+  vertical-align: top;
+  line-height: 1;
+  color: var(--default-lemon);
+  font-weight: 600;
+}
+
+.pricing .plan-pricing-consultancy .amount {
+  font-size: 60px;
+  font-weight: 700;
+  color: var(--default-lemon);
+  line-height: 1;
+}
+
+.pricing .plan-pricing-consultancy .period {
+  font-size: 16px;
+  color: var(--default-beige);
+}
+
+.pricing .plan-features-consultancy {
+  padding: 20px 30px;
+  flex: 1;
+}
+
+.pricing .plan-features-consultancy ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pricing .plan-features-consultancy ul li {
+  padding: 12px 0;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--default-beige);
+}
+
+.pricing .plan-features-consultancy ul li.disabled {
+  color: var(--default-pink);
+}
+
+.pricing .plan-features-consultancy ul li i {
+  font-size: 18px;
+}
+
+.pricing .plan-features-consultancy ul li i.bi-check-circle-fill {
+  color: var(--default-lemon);
+}
+
+.pricing .plan-features-consultancy ul li i.bi-x-circle-fill {
+  color: var(--default-lemon);
+}
+
+.pricing .plan-cta-consultancy {
+  padding: 10px 30px 30px;
+  text-align: center;
+}
+
+.pricing .plan-cta-consultancy .btn-plan {
+  display: inline-block;
+  width: 100%;
+  padding: 14px 32px;
+  background-color: var(--default-black);
+  color: var(--default-beige);
+  border-radius: 50px;
+  font-size: 22px;
+  font-weight: 600;
+  font-family: Benzin-Bold;
+  transition: all 0.3s;
+}
+
+.pricing .plan-cta-consultancy .btn-plan:hover {
+  background-color: var(--default-pink);
+}
+
+/* PRICING ONE-TIME CARD */
+
+.pricing .pricing-card-onetime {
+  height: 100%;
+  background: var(--default-pink);
+  border-radius: var(--card-border-radius);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--default-pink);
+}
+
+.pricing .pricing-card-onetime:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.pricing .pricing-card-onetime.popular {
+  border: 2px solid var(--default-pink);
+}
+
+.pricing .pricing-card-onetime.popular .plan-cta .btn-plan {
+  background-color: var(--default-pink);
+  color: var(--default-pink);
+}
+
+.pricing .pricing-card-onetime.popular .plan-cta .btn-plan:hover {
+  background-color: var(--default-pink);
+}
+
+.pricing .pricing-card-onetime .popular-tag {
+  position: absolute;
+  top: 20px;
+  right: -35px;
+  background-color: var(--default-pink);
+  color: var(--default-pink);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 40px;
+  transform: rotate(45deg);
+}
+
+.pricing .plan-header-onetime {
+  padding: 30px 30px 20px;
+  text-align: center;
+}
+
+.pricing .plan-header-onetime .plan-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--default-beige);
+}
+
+.pricing .plan-header-onetime .plan-icon i {
+  font-size: 28px;
+  color: var(--default-pink);
+}
+
+.pricing .plan-header-onetime .plan-icon img {
+  width: 3.5rem;
+  height: 3.5rem;
+  object-fit: contain;
+  color: var(--default-black);
+}
+
+.pricing .plan-header-onetime h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--default-lemon);
+}
+
+.pricing .plan-header-onetime p {
+  font-size: 15px;
+  color: var(--default-black);
+  font-family: Benzin-Regular;
+}
+
+.pricing .plan-pricing-onetime {
+  text-align: center;
+  padding: 10px 30px 20px;
+  position: relative;
+}
+
+.pricing .plan-pricing-onetime .currency {
+  font-size: 24px;
+  vertical-align: top;
+  line-height: 1;
+  color: var(--default-lemon);
+  font-weight: 600;
+}
+
+.pricing .plan-pricing-onetime .amount {
+  font-size: 60px;
+  font-weight: 700;
+  color: var(--default-lemon);
+  line-height: 1;
+}
+
+.pricing .plan-pricing-onetime .period {
+  font-size: 16px;
+  color: var(--default-black);
+}
+
+.pricing .plan-features-onetime {
+  padding: 20px 30px;
+  flex: 1;
+}
+
+.pricing .plan-features-onetime ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pricing .plan-features-onetime ul li {
+  padding: 12px 0;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--default-black);
+}
+
+.pricing .plan-features-onetime ul li.disabled {
+  color: var(--default-pink);
+}
+
+.pricing .plan-features-onetime ul li i {
+  font-size: 18px;
+}
+
+.pricing .plan-features-onetime ul li i.bi-check-circle-fill {
+  color: var(--default-lemon);
+}
+
+.pricing .plan-features-onetime ul li i.bi-x-circle-fill {
+  color: var(--default-lemon);
+}
+
+.pricing .plan-cta-onetime {
+  padding: 10px 30px 30px;
+  text-align: center;
+}
+
+.pricing .plan-cta-onetime .btn-plan {
+  display: inline-block;
+  width: 100%;
+  padding: 14px 32px;
+  background-color: var(--default-black);
+  color: var(--default-beige);
+  border-radius: 50px;
+  font-size: 22px;
+  font-weight: 600;
+  font-family: Benzin-Bold;
+  transition: all 0.3s;
+}
+
+.pricing .plan-cta-onetime .btn-plan:hover {
+  background-color: var(--default-pink);
+}
+
+/* PRICING SUBSCRIPTION CARD */
+
+.pricing .pricing-card-subscription {
+  height: 100%;
+  background: var(--default-beige);
+  border-radius: var(--card-border-radius);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--default-pink);
+}
+
+.pricing .pricing-card-subscription:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.pricing .pricing-card-subscription.popular {
+  border: 2px solid var(--default-pink);
+}
+
+.pricing .pricing-card-subscription.popular .plan-cta .btn-plan {
+  background-color: var(--default-pink);
+  color: var(--default-pink);
+}
+
+.pricing .pricing-card-subscription.popular .plan-cta .btn-plan:hover {
+  background-color: var(--default-pink);
+}
+
+.pricing .pricing-card-subscription .popular-tag {
+  position: absolute;
+  top: 20px;
+  right: -35px;
+  background-color: var(--default-pink);
+  color: var(--default-pink);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 40px;
+  transform: rotate(45deg);
+}
+
+.pricing .plan-header-subscription {
+  padding: 30px 30px 20px;
+  text-align: center;
+}
+
+.pricing .plan-header-subscription .plan-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--default-black);
+}
+
+.pricing .plan-header-subscription .plan-icon i {
+  font-size: 28px;
+  color: var(--default-pink);
+}
+
+.pricing .plan-header-subscription .plan-icon img {
+  width: 3.5rem;
+  height: 3.5rem;
+  object-fit: contain;
+}
+
+.pricing .plan-header-subscription h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--default-black);
+}
+
+.pricing .plan-header-subscription p {
+  font-size: 15px;
+  color: var(--default-black);
+  font-family: Benzin-Regular;
+}
+
+.pricing .plan-pricing-subscription {
+  text-align: center;
+  padding: 10px 30px 20px;
+  position: relative;
+}
+
+.pricing .plan-pricing-subscription .currency {
+  font-size: 24px;
+  vertical-align: top;
+  line-height: 1;
+  color: var(--default-green);
+  font-weight: 600;
+}
+
+.pricing .plan-pricing-subscription .amount {
+  font-size: 60px;
+  font-weight: 700;
+  color: var(--default-green);
+  line-height: 1;
+}
+
+.pricing .plan-pricing-subscription .period {
+  font-size: 16px;
+  color: var(--default-black);
+}
+
+.pricing .plan-features-subscription {
+  padding: 20px 30px;
+  flex: 1;
+}
+
+.pricing .plan-features-subscription ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pricing .plan-features-subscription ul li {
+  padding: 12px 0;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--default-black);
+}
+
+.pricing .plan-features-subscription ul li.disabled {
+  color: var(--default-pink);
+}
+
+.pricing .plan-features-subscription ul li i {
+  font-size: 18px;
+}
+
+.pricing .plan-features-subscription ul li i.bi-check-circle-fill {
+  color: var(--default-green);
+}
+
+.pricing .plan-features-subscription ul li i.bi-x-circle-fill {
+  color: var(--default-green);
+}
+
+.pricing .plan-cta-subscription {
+  padding: 10px 30px 30px;
+  text-align: center;
+}
+
+.pricing .plan-cta-subscription .btn-plan {
+  display: inline-block;
+  width: 100%;
+  padding: 14px 32px;
+  background-color: var(--default-black);
+  color: var(--default-beige);
+  border-radius: 50px;
+  font-size: 22px;
+  font-weight: 600;
+  font-family: Benzin-Bold;
+  transition: all 0.3s;
+}
+
+.pricing .plan-cta-subscription .btn-plan:hover {
+  background-color: var(--default-pink);
+}
+
 @media (max-width: 992px) {
   .pricing .pricing-card {
     max-width: 400px;
@@ -2844,12 +3375,12 @@ section,
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: var(--heading-color);
+  color: var(--default-lemon);
 }
 
 .faq .faq-description {
   font-size: 1rem;
-  color: var(--default-color);
+  color: var(--default-beige);
   margin-bottom: 2rem;
 }
 
@@ -2979,11 +3510,12 @@ section,
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 10px;
+  color: var(--default-lemon)
 }
 
 .contact .contact-info-box .info-content p {
   margin-bottom: 5px;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: var(--default-beige);
   font-size: 15px;
   line-height: 1.5;
 }
@@ -3218,7 +3750,7 @@ section,
 
 .portfolio-details .portfolio-details-media .main-image .portfolio-details-slider .swiper-button-next,
 .portfolio-details .portfolio-details-media .main-image .portfolio-details-slider .swiper-button-prev {
-  background-color: var(--contrast-color);
+  background-color: var(--default-lemon);
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -3228,18 +3760,18 @@ section,
 .portfolio-details .portfolio-details-media .main-image .portfolio-details-slider .swiper-button-next:after,
 .portfolio-details .portfolio-details-media .main-image .portfolio-details-slider .swiper-button-prev:after {
   font-size: 16px;
-  color: var(--accent-color);
+  color: var(--default-black);
   font-weight: bold;
 }
 
 .portfolio-details .portfolio-details-media .main-image .portfolio-details-slider .swiper-button-next:hover,
 .portfolio-details .portfolio-details-media .main-image .portfolio-details-slider .swiper-button-prev:hover {
-  background-color: var(--accent-color);
+  background-color: var(--default-pink);
 }
 
 .portfolio-details .portfolio-details-media .main-image .portfolio-details-slider .swiper-button-next:hover:after,
 .portfolio-details .portfolio-details-media .main-image .portfolio-details-slider .swiper-button-prev:hover:after {
-  color: var(--contrast-color);
+  color: var(--default-beige);
 }
 
 .portfolio-details .portfolio-details-media .thumbnail-grid img {
@@ -3269,13 +3801,13 @@ section,
   font-size: 13px;
   font-weight: 500;
   border-radius: 20px;
-  background-color: color-mix(in srgb, var(--heading-color), transparent 85%);
-  color: var(--heading-color);
+  background-color: var(--default-beige);
+  color: var(--default-black);
   transition: all 0.3s ease;
 }
 
 .portfolio-details .portfolio-details-media .tech-stack-badges span:hover {
-  background-color: color-mix(in srgb, var(--heading-color), transparent 70%);
+  background-color: var(--default-lemon);
   transform: translateY(-2px);
 }
 
@@ -3296,8 +3828,8 @@ section,
 .portfolio-details .portfolio-details-content .project-meta .badge-wrapper .project-badge {
   display: inline-block;
   padding: 8px 16px;
-  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
-  color: var(--accent-color);
+  background-color: var(--default-lemon);
+  color: var(--default-black);
   border-radius: 30px;
   font-weight: 600;
   font-size: 14px;
@@ -3312,12 +3844,12 @@ section,
   display: flex;
   align-items: center;
   font-size: 14px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: var(--default-beige);
 }
 
 .portfolio-details .portfolio-details-content .project-meta .date-client .meta-item i {
   margin-right: 6px;
-  color: var(--accent-color);
+  color: var(--default-lemon);
 }
 
 .portfolio-details .portfolio-details-content .project-title {
@@ -3325,7 +3857,7 @@ section,
   margin-bottom: 1rem;
   font-weight: 700;
   line-height: 1.2;
-  color: var(--heading-color);
+  color: var(--default-beige);
 }
 
 .portfolio-details .portfolio-details-content .project-website {
@@ -3336,13 +3868,14 @@ section,
 
 .portfolio-details .portfolio-details-content .project-website i {
   font-size: 22px;
-  color: var(--accent-color);
+  color: var(--default-lemon);
   margin-right: 8px;
 }
 
 .portfolio-details .portfolio-details-content .project-website a {
   font-weight: 500;
   transition: all 0.3s;
+  color: var(--default-lemon);
 }
 
 .portfolio-details .portfolio-details-content .project-website a:hover {
@@ -3356,7 +3889,7 @@ section,
 .portfolio-details .portfolio-details-content .project-overview .lead {
   font-size: 1.1rem;
   line-height: 1.7;
-  color: color-mix(in srgb, var(--default-color), transparent 15%);
+  color: var(--default-beige);
   margin-bottom: 1.5rem;
 }
 
@@ -3370,44 +3903,48 @@ section,
   padding: 1rem;
   font-weight: 600;
   font-size: 1rem;
-  color: var(--heading-color);
-  background-color: color-mix(in srgb, var(--surface-color), transparent 70%);
+  color: var(--default-beige);
+  background-color: var(--default-green);
   border-radius: 8px !important;
   box-shadow: none;
 }
 
 .portfolio-details .portfolio-details-content .project-overview .project-accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
-  background-color: var(--surface-color);
-  color: var(--accent-color);
+  background-color: var(--default-green);
+  color: var(--default-lemon);
   border-bottom-left-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
 }
 
 .portfolio-details .portfolio-details-content .project-overview .project-accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) i {
-  color: var(--accent-color);
+  color: var(--default-lemon);
 }
 
 .portfolio-details .portfolio-details-content .project-overview .project-accordion .accordion-item .accordion-header .accordion-button::after {
   background-size: 14px;
   width: 14px;
   height: 14px;
+  filter: brightness(0) saturate(100%) invert(95%) sepia(8%) saturate(1456%) hue-rotate(29deg) brightness(103%) contrast(95%);
+
 }
 
 .portfolio-details .portfolio-details-content .project-overview .project-accordion .accordion-item .accordion-header .accordion-button i {
   font-size: 1.1rem;
+  color: var(--default-lemon);
 }
 
 .portfolio-details .portfolio-details-content .project-overview .project-accordion .accordion-item .accordion-body {
   padding: 1rem;
-  background-color: var(--surface-color);
+  background-color: var(--default-beige);
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
+  color: var(--default-beige);
 }
 
 .portfolio-details .portfolio-details-content .project-overview .project-accordion .accordion-item .accordion-body p {
   margin-bottom: 0;
-  color: color-mix(in srgb, var(--default-color), transparent 25%);
+  color: var(--default-black);
   line-height: 1.6;
 }
 
@@ -3420,11 +3957,12 @@ section,
   align-items: center;
   font-size: 1.25rem;
   margin-bottom: 1.2rem;
+  color: var(--default-lemon);
 }
 
 .portfolio-details .portfolio-details-content .project-features h3 i {
   margin-right: 10px;
-  color: var(--accent-color);
+  color: var(--default-lemon);
   font-size: 1.1em;
 }
 
@@ -3438,11 +3976,11 @@ section,
   align-items: center;
   padding: 8px 0;
   font-size: 15px;
-  color: color-mix(in srgb, var(--default-color), transparent 15%);
+  color: var(--default-beige);
 }
 
 .portfolio-details .portfolio-details-content .project-features .feature-list li i {
-  color: var(--accent-color);
+  color: var(--default-lemon);
   margin-right: 10px;
   font-size: 1.1em;
 }
@@ -3456,15 +3994,17 @@ section,
 
 .portfolio-details .portfolio-details-content .cta-buttons .btn-view-project {
   padding: 12px 28px;
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
+  background-color: var(--default-pink);
+  color: var(--default-beige);
   border-radius: 30px;
   font-weight: 500;
+  font-family: Benzin-Bold;
   transition: all 0.3s ease;
 }
 
 .portfolio-details .portfolio-details-content .cta-buttons .btn-view-project:hover {
-  background-color: color-mix(in srgb, var(--accent-color), black 15%);
+  background-color: var(--default-lemon);
+  color: var(--default-black);
   transform: translateY(-3px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
