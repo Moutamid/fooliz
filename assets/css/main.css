@@ -2311,10 +2311,59 @@ section,
   color: var(--contrast-color);
 }
 
-.portfolio .portfolio-filters .portfolio-icon-img {
+/* .portfolio .portfolio-filters .portfolio-icon-img {
   width: 1.5rem;
   height: 1.5rem;
   object-fit: contain;
+} */
+
+.portfolio .portfolio-filters .portfolio-icon-img {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.3s ease;
+}
+
+.portfolio .portfolio-filters .all-projects-icon {
+  background-image: url('../img/icons/ui-uix-p.png');
+}
+
+.portfolio .portfolio-filters li:hover .all-projects-icon {
+  background-image: url('../img/icons/strategy.png');
+}
+
+.portfolio .portfolio-filters .ui-icon {
+  background-image: url('../img/icons/ui-uix-p.png');
+}
+
+.portfolio .portfolio-filters li:hover .ui-icon {
+  background-image: url('../img/icons/strategy.png');
+}
+
+.portfolio .portfolio-filters .development-icon {
+  background-image: url('../img/icons/ui-uix-p.png');
+}
+
+.portfolio .portfolio-filters li:hover .development-icon {
+  background-image: url('../img/icons/strategy.png');
+}
+
+.portfolio .portfolio-filters .creative-icon {
+  background-image: url('../img/icons/ui-uix-p.png');
+}
+
+.portfolio .portfolio-filters li:hover .creative-icon {
+  background-image: url('../img/icons/strategy.png');
+}
+
+.portfolio .portfolio-filters .marketing-icon {
+  background-image: url('../img/icons/ui-uix-p.png');
+}
+
+.portfolio .portfolio-filters li:hover .marketing-icon {
+  background-image: url('../img/icons/strategy.png');
 }
 
 @media (max-width: 768px) {
@@ -3743,25 +3792,24 @@ section,
   display: block;
 }
 
-.first-layout-portfolio h1,
-.first-layout-portfolio p {
+.first-layout-portfolio h1 {
   position: relative;
-  z-index: 2;
   color: var(--default-beige);
   margin-top: 2rem;
   padding: 0 2rem;
-}
-
-.first-layout-portfolio h1 {
-  font-size: 3rem;
+  font-size: 8rem;
   margin-bottom: 1rem;
 }
 
+/* 
 .first-layout-portfolio p {
+  position: relative;
+  color: var(--default-beige);
+  padding: 0 2rem;
   font-size: 1.2rem;
-  max-width: 600px;
+  max-width: 1600px;
   margin: 0 auto 2rem;
-}
+} */
 
 /* Mobile styles */
 @media (max-width: 991px) {
@@ -3770,18 +3818,18 @@ section,
     margin-left: 0;
     padding: 0;
   }
-  
+
   .first-layout-portfolio img {
     height: 50vh;
     object-fit: cover;
   }
-  
+
   .first-layout-portfolio h1 {
     font-size: 2rem;
     margin-top: 1.5rem;
     margin-bottom: 1rem;
   }
-  
+
   .first-layout-portfolio p {
     font-size: 1rem;
     padding: 0 1rem;
@@ -3791,9 +3839,12 @@ section,
 
 @media (max-width: 768px) {
   .first-layout-portfolio h1 {
-    font-size: 1.8rem;
+    font-size: 3rem;
+    text-align: start;
+    margin-left: -1.4rem;
+
   }
-  
+
   .first-layout-portfolio p {
     font-size: 0.9rem;
   }
@@ -3890,6 +3941,53 @@ section,
   background-color: var(--default-lemon);
   transform: translateY(-2px);
 }
+
+/* TOP LAYOUT */
+
+.portfolio-details-top {
+  padding: 0px;
+}
+
+.portfolio-details-top .portfolio-details-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-details-top .portfolio-details-content .project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.portfolio-details-top .portfolio-details-content .project-meta .badge-wrapper .project-badge {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: var(--default-lemon);
+  color: var(--default-black);
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.portfolio-details-top .portfolio-details-content .project-meta .date-client {
+  display: flex;
+  gap: 1rem;
+}
+
+.portfolio-details-top .portfolio-details-content .project-meta .date-client .meta-item {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: var(--default-beige);
+}
+
+.portfolio-details-top .portfolio-details-content .project-meta .date-client .meta-item i {
+  margin-right: 6px;
+  color: var(--default-lemon);
+}
+
+/* BOTTOM LAYOUT */
 
 .portfolio-details .portfolio-details-content {
   padding: 0 0 0 2rem;
@@ -4129,6 +4227,19 @@ section,
 }
 
 @media (max-width: 767.98px) {
+  .portfolio-details-top .portfolio-details-content .project-meta {
+    justify-content: space-around;
+
+  }
+
+  .portfolio-details-top .project-meta {
+    flex-direction: column;
+  }
+
+  .portfolio-details-top .project-meta .date-client {
+    flex-direction: column;
+  }
+
   .portfolio-details .project-meta {
     flex-direction: column;
     gap: 1rem;
