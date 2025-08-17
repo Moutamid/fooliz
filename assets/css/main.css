@@ -1606,9 +1606,14 @@ section,
 }
 
 .services .service-card {
-  padding: 40px 40px 40px 40px;
+  padding: 20px;
+  /* padding: 40px 40px 40px 40px; */
   margin-bottom: 30px;
-  border: 2px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-radius: 20px;
+  /* border: 3px solid var(--default-green); */
+  /* border: 4px solid color-mix(in srgb, var(--default-color), transparent 90%); */
+  /* clip-path: polygon(70% 0, 100% 30%, 100% 100%, 0 100%, 0 0); */
+  background-color: var(--default-beige);
   transition: all 0.3s ease;
 }
 
@@ -1619,8 +1624,8 @@ section,
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  width: 64px;
-  height: 64px;
+  width: 21rem;
+  height: 5rem;
 }
 
 .services .service-card .service-icon i {
@@ -1630,9 +1635,9 @@ section,
 }
 
 .services .service-card .service-icon img {
-  width: 2.7rem;
-  height: 2.7rem;
-  object-fit: contain;
+  width: 21rem;
+  height: 5rem;
+  object-fit: fill;
 }
 
 .services .service-card h3 {
@@ -1642,7 +1647,7 @@ section,
 }
 
 .services .service-card h3 a {
-  color: var(--default-pink);
+  color: var(--default-black);
   transition: color 0.3s ease;
 }
 
@@ -2933,8 +2938,8 @@ section,
 }
 
 .pricing .plan-header-consultancy .plan-icon {
-  width: 70px;
-  height: 70px;
+  width: 200px;
+  height: 200px;
   margin: 0 auto 20px;
   display: flex;
   align-items: center;
@@ -2955,7 +2960,7 @@ section,
 }
 
 .pricing .plan-header-consultancy h3 {
-  font-size: 24px;
+  font-size: 34px;
   font-weight: 700;
   margin-bottom: 10px;
   color: var(--default-lemon);
@@ -2974,16 +2979,16 @@ section,
 }
 
 .pricing .plan-pricing-consultancy .currency {
-  font-size: 24px;
+  font-size: 34px;
   vertical-align: top;
   line-height: 1;
+  font-family: FiraMono-Regular;
   color: var(--default-lemon);
-  font-weight: 600;
 }
 
 .pricing .plan-pricing-consultancy .amount {
   font-size: 60px;
-  font-weight: 700;
+  font-family: Benzin-Regular;
   color: var(--default-lemon);
   line-height: 1;
 }
@@ -2991,6 +2996,7 @@ section,
 .pricing .plan-pricing-consultancy .period {
   font-size: 16px;
   color: var(--default-beige);
+  font-family: Benzin-Regular;
 }
 
 .pricing .plan-features-consultancy {
@@ -3064,7 +3070,7 @@ section,
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--default-pink);
+  border: 1px solid var(--default-lemon);
 }
 
 .pricing .pricing-card-onetime:hover {
@@ -3073,7 +3079,7 @@ section,
 }
 
 .pricing .pricing-card-onetime.popular {
-  border: 2px solid var(--default-pink);
+  border: 2px solid var(--default-lemon);
 }
 
 .pricing .pricing-card-onetime.popular .plan-cta .btn-plan {
@@ -3103,14 +3109,14 @@ section,
 }
 
 .pricing .plan-header-onetime .plan-icon {
-  width: 70px;
-  height: 70px;
+  width: 200px;
+  height: 200px;
   margin: 0 auto 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background-color: var(--default-beige);
+  background-color: var(--default-green);
 }
 
 .pricing .plan-header-onetime .plan-icon i {
@@ -3126,10 +3132,10 @@ section,
 }
 
 .pricing .plan-header-onetime h3 {
-  font-size: 24px;
+  font-size: 34px;
   font-weight: 700;
   margin-bottom: 10px;
-  color: var(--default-lemon);
+  color: var(--default-beige);
 }
 
 .pricing .plan-header-onetime p {
@@ -3145,22 +3151,23 @@ section,
 }
 
 .pricing .plan-pricing-onetime .currency {
-  font-size: 24px;
+  font-size: 34px;
   vertical-align: top;
   line-height: 1;
-  color: var(--default-lemon);
-  font-weight: 600;
+  font-family: FiraMono-Regular;
+  color: var(--default-beige);
 }
 
 .pricing .plan-pricing-onetime .amount {
   font-size: 60px;
-  font-weight: 700;
-  color: var(--default-lemon);
+  font-family: Benzin-Regular;
+  color: var(--default-beige);
   line-height: 1;
 }
 
 .pricing .plan-pricing-onetime .period {
   font-size: 16px;
+  font-family: Benzin-Regular;
   color: var(--default-black);
 }
 
@@ -3193,7 +3200,7 @@ section,
 }
 
 .pricing .plan-features-onetime ul li i.bi-check-circle-fill {
-  color: var(--default-lemon);
+  color: var(--default-beige);
 }
 
 .pricing .plan-features-onetime ul li i.bi-x-circle-fill {
@@ -3219,7 +3226,8 @@ section,
 }
 
 .pricing .plan-cta-onetime .btn-plan:hover {
-  background-color: var(--default-pink);
+  background-color: var(--default-beige);
+  color: var(--default-black);
 }
 
 /* PRICING SUBSCRIPTION CARD */
@@ -3274,8 +3282,8 @@ section,
 }
 
 .pricing .plan-header-subscription .plan-icon {
-  width: 70px;
-  height: 70px;
+  width: 200px;
+  height: 200px;
   margin: 0 auto 20px;
   display: flex;
   align-items: center;
@@ -3296,7 +3304,7 @@ section,
 }
 
 .pricing .plan-header-subscription h3 {
-  font-size: 24px;
+  font-size: 34px;
   font-weight: 700;
   margin-bottom: 10px;
   color: var(--default-black);
@@ -3315,16 +3323,16 @@ section,
 }
 
 .pricing .plan-pricing-subscription .currency {
-  font-size: 24px;
+  font-size: 34px;
   vertical-align: top;
   line-height: 1;
   color: var(--default-green);
-  font-weight: 600;
+  font-family: FiraMono-Regular;
 }
 
 .pricing .plan-pricing-subscription .amount {
   font-size: 60px;
-  font-weight: 700;
+  font-family: Benzin-Regular;
   color: var(--default-green);
   line-height: 1;
 }
@@ -3332,6 +3340,7 @@ section,
 .pricing .plan-pricing-subscription .period {
   font-size: 16px;
   color: var(--default-black);
+  font-family: Benzin-Regular;
 }
 
 .pricing .plan-features-subscription {
