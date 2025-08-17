@@ -1607,12 +1607,162 @@ section,
 
 .services .service-card {
   padding: 20px;
-  /* padding: 40px 40px 40px 40px; */
   margin-bottom: 30px;
   border-radius: 20px;
-  /* border: 3px solid var(--default-green); */
-  /* border: 4px solid color-mix(in srgb, var(--default-color), transparent 90%); */
+  background-color: var(--default-beige);
+  transition: all 0.3s ease;
+  overflow: hidden; /* Add this to prevent layout shifts */
+}
+
+.services .service-card .service-icon {
+  margin-bottom: 25px;
+  background-color: var(--default-lemon);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  width: 23rem;
+  height: 8rem; /* Increased initial height */
+  transition: all 0.4s ease; /* Add smooth transition */
+}
+
+.services .service-card .service-icon i {
+  font-size: 32px;
+  color: var(--default-black);
+  transition: all 0.3s ease;
+}
+
+.services .service-card .service-icon img {
+  width: 23rem;
+  height: 8rem; /* Increased initial height to match container */
+  object-fit: fill;
+  transition: all 0.4s ease; /* Add smooth transition */
+}
+
+.services .service-card h3 {
+  font-size: 40px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  transition: all 0.4s ease; /* Add smooth transition */
+}
+
+.services .service-card h3 a {
+  color: var(--default-black);
+  transition: color 0.3s ease;
+}
+
+.services .service-card h3 a span {
+  display: block;
+}
+
+.services .service-card h3 a:hover {
+  color: var(--accent-color);
+}
+
+.services .service-card p {
+  color: var(--default-black); /* Changed to visible color for hover state */
+  transition: all 0.4s ease;
+  margin-bottom: 0;
+  opacity: 0; /* Initially invisible */
+  visibility: hidden; /* Completely hidden */
+  max-height: 0; /* No height initially */
+  overflow: hidden; /* Hide overflow */
+  transform: translateY(-10px); /* Slight upward position initially */
+}
+
+/* Hover states */
+.services .service-card:hover .service-icon {
+  height: 5rem; /* Shrink to smaller height on hover */
+}
+
+.services .service-card:hover .service-icon img {
+  height: 5rem; /* Shrink to match container */
+}
+
+.services .service-card:hover p {
+  opacity: 1; /* Make visible */
+  visibility: visible; /* Show the element */
+  max-height: 100px; /* Allow height for content */
+  transform: translateY(0); /* Move to normal position */
+  margin-top: 15px; /* Add some spacing */
+}
+
+/* Existing hover states for the card background and other elements */
+.services .service-card .card-action {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--default-lemon);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+.services .service-card .card-action i {
+  font-size: 24px;
+  color: var(--default-black);
+  transition: transform 0.3s ease;
+}
+
+.services .service-card .card-action:hover i {
+  transform: rotate(45deg);
+}
+
+.services .service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background-color: var(--default-green); */
   /* clip-path: polygon(70% 0, 100% 30%, 100% 100%, 0 100%, 0 0); */
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease; /* Increased duration to match other transitions */
+}
+
+.services .service-card:hover {
+  border-color: transparent;
+}
+
+.services .service-card:hover::before {
+  opacity: 1;
+  visibility: visible;
+  background-color: var(--default-green);
+}
+
+.services .service-card:hover h3 a {
+  color: var(--default-lemon);
+}
+
+.services .service-card:hover h3 a:hover {
+  color: var(--default-lemon);
+}
+
+.services .service-card:hover .card-action {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.services .service-card:hover .service-icon i {
+  transform: scale(1.1);
+}
+
+
+/* 
+.services .service-card {
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 20px;
   background-color: var(--default-beige);
   transition: all 0.3s ease;
 }
@@ -1624,7 +1774,7 @@ section,
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  width: 21rem;
+  width: 23rem;
   height: 5rem;
 }
 
@@ -1635,13 +1785,13 @@ section,
 }
 
 .services .service-card .service-icon img {
-  width: 21rem;
+  width: 23rem;
   height: 5rem;
   object-fit: fill;
 }
 
 .services .service-card h3 {
-  font-size: 28px;
+  font-size: 40px;
   margin-bottom: 15px;
   font-weight: 700;
 }
@@ -1736,7 +1886,7 @@ section,
 
 .services .service-card:hover .service-icon i {
   transform: scale(1.1);
-}
+} */
 
 @media (max-width: 768px) {
   .services .service-card {
