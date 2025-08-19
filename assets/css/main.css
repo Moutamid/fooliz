@@ -3753,7 +3753,7 @@ section,
 }
 
 .faq .faq-container .faq-item {
-  background-color: var(--surface-color);
+  background-color: var(--default-green);
   position: relative;
   padding: 20px;
   margin-bottom: 15px;
@@ -3773,16 +3773,17 @@ section,
   transition: 0.3s;
   cursor: pointer;
   display: flex;
+  color: var(--default-beige);
   align-items: center;
 }
 
 .faq .faq-container .faq-item h3 .num {
-  color: var(--accent-color);
+  color: var(--default-green);
   padding-right: 5px;
 }
 
 .faq .faq-container .faq-item h3:hover {
-  color: var(--accent-color);
+  color: var(--default-lemon);
 }
 
 .faq .faq-container .faq-item .faq-content {
@@ -3809,11 +3810,11 @@ section,
 }
 
 .faq .faq-container .faq-item .faq-toggle:hover {
-  color: var(--accent-color);
+  color: var(--default-beige);
 }
 
 .faq .faq-container .faq-active h3 {
-  color: var(--accent-color);
+  color: var(--default-lemon);
 }
 
 .faq .faq-container .faq-active .faq-content {
@@ -3825,7 +3826,7 @@ section,
 
 .faq .faq-container .faq-active .faq-toggle {
   transform: rotate(90deg);
-  color: var(--accent-color);
+  color: var(--default-lemon);
 }
 
 /*--------------------------------------------------------------
