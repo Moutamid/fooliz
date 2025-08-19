@@ -1653,6 +1653,10 @@ section,
   /* No size transitions */
 }
 
+:root {
+  --transition-time: 0.6s;
+}
+
 .services .service-card .content-area {
   height: 50%; /* Always 50% of card height */
   padding: 20px;
@@ -1661,22 +1665,21 @@ section,
   justify-content: center; /* Center content initially */
   align-items: flex-start; /* Left align horizontally */
   text-align: left; /* Left align text */
-  transition: all 0.4s ease;
+  transition: all var(--transition-time) ease;
   flex-grow: 1;
 }
 
 .services .service-card h3 {
   font-size: 38px; /* Keep same size for both states */
   margin-bottom: 0; /* Remove margin initially */
-  font-weight: 700;
-  transition: all 0.4s ease;
+  transition: all var(--transition-time) ease;
   transform: translateY(0);
   flex-shrink: 0;
 }
 
 .services .service-card h3 a {
   color: var(--default-black);
-  transition: color 0.3s ease;
+  transition: color 0.6s ease;
 }
 
 .services .service-card h3 a span {
@@ -1689,7 +1692,7 @@ section,
 
 .services .service-card p {
   color: var(--default-black);
-  transition: all 0.4s ease;
+  transition: all var(--transition-time) ease;
   margin-bottom: 0;
   opacity: 0; /* Initially invisible */
   visibility: hidden; /* Completely hidden */
@@ -1709,8 +1712,8 @@ section,
 
 .services .service-card:hover h3 {
   font-size: 38px; /* Keep same size on hover */
-  transform: translateY(-10px); /* Move h3 up smoothly */
-  margin-bottom: 10px; /* Add margin to make space for p */
+  transform: translateY(-8px); /* Move h3 up smoothly */
+  margin-bottom: 5px; /* Add margin to make space for p */
 }
 
 .services .service-card:hover p {
@@ -1718,7 +1721,7 @@ section,
   visibility: visible; /* Show the element */
   max-height: 100px; /* Allow height for content */
   transform: translateY(0); /* Move to normal position */
-  margin-top: 5px; /* Small spacing from h3 */
+  margin-top: 2px; /* Small spacing from h3 */
 }
 
 /* Background and other hover effects */
@@ -1732,12 +1735,12 @@ section,
   z-index: -1;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.4s ease;
+  transition: all var(--transition-time) ease;
 }
 
 .services .service-card:hover {
   border-color: transparent;
-  transform: translateY(-5px);
+  /* transform: translateY(-5px); */
   /* Subtle lift effect */
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
