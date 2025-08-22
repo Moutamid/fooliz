@@ -65,7 +65,7 @@
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: var(--default-green);
+  --background-color: var(--default-pink);
   --surface-color: var(--default-black);
   /* --background-color: #0d1d26; */
   /* --surface-color: #16262f; */
@@ -1525,6 +1525,12 @@ section,
   color: var(--default-black);
 }
 
+@media (max-width: 768px) {
+  .about .testimonial-section .testimonial-item {
+    margin-top: 1rem;
+  }
+}
+
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
@@ -1611,7 +1617,6 @@ section,
   }
 }
 
-
 .services .service-card {
   padding: 0;
   /* Remove padding to control space precisely */
@@ -1664,20 +1669,26 @@ section,
 }
 
 .services .service-card .content-area {
-  height: 50%; /* Always 50% of card height */
+  height: 50%;
+  /* Always 50% of card height */
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center content initially */
-  align-items: flex-start; /* Left align horizontally */
-  text-align: left; /* Left align text */
+  justify-content: center;
+  /* Center content initially */
+  align-items: flex-start;
+  /* Left align horizontally */
+  text-align: left;
+  /* Left align text */
   transition: all var(--transition-time) ease;
   flex-grow: 1;
 }
 
 .services .service-card h3 {
-  font-size: 38px; /* Keep same size for both states */
-  margin-bottom: 0; /* Remove margin initially */
+  font-size: 38px;
+  /* Keep same size for both states */
+  margin-bottom: 0;
+  /* Remove margin initially */
   transition: all var(--transition-time) ease;
   transform: translateY(0);
   flex-shrink: 0;
@@ -1700,34 +1711,50 @@ section,
   color: var(--default-black);
   transition: all var(--transition-time) ease;
   margin-bottom: 0;
-  opacity: 0; /* Initially invisible */
-  visibility: hidden; /* Completely hidden */
-  max-height: 0; /* No height initially */
-  overflow: hidden; /* Hide overflow */
-  transform: translateY(10px); /* Slight downward position initially */
+  opacity: 0;
+  /* Initially invisible */
+  visibility: hidden;
+  /* Completely hidden */
+  max-height: 0;
+  /* No height initially */
+  overflow: hidden;
+  /* Hide overflow */
+  transform: translateY(10px);
+  /* Slight downward position initially */
   font-size: 14px;
   line-height: 1.5;
 }
 
 /* Hover states */
 .services .service-card:hover .content-area {
-  justify-content: flex-start; /* Move content to top on hover */
-  align-items: flex-start; /* Keep left aligned on hover */
-  text-align: left; /* Keep left aligned text on hover */
+  justify-content: flex-start;
+  /* Move content to top on hover */
+  align-items: flex-start;
+  /* Keep left aligned on hover */
+  text-align: left;
+  /* Keep left aligned text on hover */
 }
 
 .services .service-card:hover h3 {
-  font-size: 38px; /* Keep same size on hover */
-  transform: translateY(-8px); /* Move h3 up smoothly */
-  margin-bottom: 5px; /* Add margin to make space for p */
+  font-size: 38px;
+  /* Keep same size on hover */
+  transform: translateY(-8px);
+  /* Move h3 up smoothly */
+  margin-bottom: 5px;
+  /* Add margin to make space for p */
 }
 
 .services .service-card:hover p {
-  opacity: 1; /* Make visible */
-  visibility: visible; /* Show the element */
-  max-height: 100px; /* Allow height for content */
-  transform: translateY(0); /* Move to normal position */
-  margin-top: 2px; /* Small spacing from h3 */
+  opacity: 1;
+  /* Make visible */
+  visibility: visible;
+  /* Show the element */
+  max-height: 100px;
+  /* Allow height for content */
+  transform: translateY(0);
+  /* Move to normal position */
+  margin-top: 2px;
+  /* Small spacing from h3 */
 }
 
 /* Background and other hover effects */
@@ -1767,6 +1794,244 @@ section,
 
 .services .service-card:hover p {
   color: var(--default-lemon);
+}
+
+
+/* Remove the problematic mobile overrides and replace with responsive scaling */
+@media (max-width: 768px) {
+  .services {
+    padding: 60px 0 50px;
+    /* Reduced padding */
+  }
+
+  .services .service-card {
+    /* Keep the same structure as desktop but with adjusted dimensions */
+    height: 320px;
+    /* Smaller height for mobile */
+    margin-bottom: 25px;
+  }
+
+  .services .service-card .service-icon {
+    /* Keep the same 50% height behavior */
+    height: 50%;
+    /* This will be 160px (50% of 320px) */
+  }
+
+  .services .service-card .service-icon img {
+    /* Image stays responsive within its container */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .services .service-card .content-area {
+    /* Keep the same 50% height behavior */
+    height: 50%;
+    /* This will be 160px (50% of 320px) */
+    padding: 15px;
+    /* Reduced padding for mobile */
+    /* Center content initially on mobile */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Center content initially */
+    align-items: flex-start;
+    /* Left align horizontally */
+    text-align: left;
+    /* Left align text */
+    transition: all 0.4s ease;
+  }
+
+  .services .service-card h3 {
+    font-size: 34px;
+    /* Increased by 10px from 24px */
+    line-height: 1.1;
+    /* Tighter line height */
+    margin-bottom: 0;
+    /* Remove margin initially */
+    transition: all 0.4s ease;
+    transform: translateY(0);
+  }
+
+  .services .service-card h3 a span {
+    /* Keep spans on separate lines with same sizing as h3 */
+    display: block;
+    font-size: 34px;
+    /* Same size as h3 - no reduction */
+  }
+
+  .services .service-card p {
+    font-size: 13px;
+    /* Smaller paragraph text */
+    line-height: 1.4;
+    /* Adjusted line height */
+    max-height: 80px;
+    /* Smaller max height for mobile */
+  }
+
+  /* Hover states - exact same behavior as desktop */
+  .services .service-card:hover .content-area {
+    justify-content: flex-start;
+    /* Move content to top on hover */
+    align-items: flex-start;
+    /* Keep left aligned on hover */
+    text-align: left;
+    /* Keep left aligned text on hover */
+  }
+
+  .services .service-card:hover h3 {
+    font-size: 34px;
+    /* Keep same size on hover - no change */
+    transform: translateY(-10px);
+    /* Same movement as desktop */
+    margin-bottom: 2px;
+    /* Reduced margin between h3 and p */
+  }
+
+  .services .service-card:hover p {
+    opacity: 1;
+    /* Make visible */
+    visibility: visible;
+    /* Show the element */
+    max-height: 80px;
+    /* Consistent with static max-height */
+    transform: translateY(0);
+    /* Move to normal position */
+    /* margin-top: 5px;  */
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .services .service-card {
+    height: 280px;
+    /* Even smaller for very small screens */
+  }
+
+  .services .service-card .content-area {
+    padding: 12px;
+    /* Even smaller padding */
+    /* Center content initially on mobile */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Center content initially */
+    align-items: flex-start;
+    /* Left align horizontally */
+    text-align: left;
+    /* Left align text */
+    transition: all 0.4s ease;
+  }
+
+  .services .service-card h3 {
+    font-size: 30px;
+    /* Increased by 10px from 20px */
+    margin-bottom: 0;
+    /* Remove margin initially */
+    transition: all 0.4s ease;
+    transform: translateY(0);
+  }
+
+  .services .service-card h3 a span {
+    font-size: 30px;
+    /* Same size as h3 */
+  }
+
+  .services .service-card p {
+    font-size: 12px;
+    /* Smaller text */
+    max-height: 70px;
+    /* Smaller max height */
+  }
+
+  /* Hover states - exact same behavior as desktop */
+  .services .service-card:hover .content-area {
+    justify-content: flex-start;
+    /* Move content to top on hover */
+    align-items: flex-start;
+    /* Keep left aligned on hover */
+    text-align: left;
+    /* Keep left aligned text on hover */
+  }
+
+  .services .service-card:hover h3 {
+    font-size: 30px;
+    /* Keep same size on hover - no change */
+    transform: translateY(-10px);
+    /* Same movement as desktop */
+    margin-bottom: 2px;
+    /* Reduced margin between h3 and p */
+  }
+
+  .services .service-card:hover p {
+    opacity: 1;
+    /* Make visible */
+    visibility: visible;
+    /* Show the element */
+    max-height: 70px;
+    /* Consistent with static max-height */
+    transform: translateY(0);
+    /* Move to normal position */
+    /* margin-top: 5px; */
+  }
+}
+
+/* Landscape mobile phones */
+@media (max-width: 768px) and (orientation: landscape) {
+  .services .service-card {
+    height: 260px;
+    /* Shorter height for landscape */
+  }
+
+  .services .service-card h3 {
+    font-size: 28px;
+    /* Increased by 10px from 18px */
+    margin-bottom: 0;
+    /* Remove margin initially */
+    transition: all 0.4s ease;
+    transform: translateY(0);
+  }
+
+  .services .service-card h3 a span {
+    font-size: 28px;
+    /* Same size as h3 */
+  }
+
+  .services .service-card p {
+    font-size: 12px;
+    max-height: 60px;
+  }
+
+  /* Hover states - exact same behavior as desktop */
+  .services .service-card:hover .content-area {
+    justify-content: flex-start;
+    /* Move content to top on hover */
+    align-items: flex-start;
+    /* Keep left aligned on hover */
+    text-align: left;
+    /* Keep left aligned text on hover */
+  }
+
+  .services .service-card:hover h3 {
+    font-size: 28px;
+    /* Keep same size on hover - no change */
+    transform: translateY(-10px);
+    /* Same movement as desktop */
+    margin-bottom: 2px;
+    /* Reduced margin between h3 and p */
+  }
+
+  .services .service-card:hover p {
+    opacity: 1;
+    /* Make visible */
+    visibility: visible;
+    /* Show the element */
+    max-height: 60px;
+    /* Consistent with static max-height */
+    transform: translateY(0);
+    /* Move to normal position */
+    /* margin-top: 5px;  */
+  }
 }
 
 /* 
@@ -2050,7 +2315,11 @@ section,
   transform: scale(1.1);
 } */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
+  .services {
+    padding: 70px 0 50px;
+  }
+
   .services .service-card {
     padding: 150px 25px 25px;
   }
@@ -2064,13 +2333,7 @@ section,
     top: 40px;
     left: 25px;
   }
-}
-
-@media (max-width: 768px) {
-  .services {
-    padding: 70px 0 50px;
-  }
-}
+} */
 
 /*--------------------------------------------------------------
 # Steps Section
@@ -2437,7 +2700,10 @@ section,
 
 @media (max-width: 991.98px) {
   .call-to-action {
-    padding: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 
   .call-to-action .content-right {
@@ -2635,8 +2901,8 @@ section,
 } */
 
 .portfolio .portfolio-filters .portfolio-icon-img {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2rem;
+  height: 2rem;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -2656,51 +2922,51 @@ section,
 }
 
 .portfolio .portfolio-filters .development-icon {
-  background-image: url('../img/icons/web-p-w.png');
+  background-image: url('../img/icons/web1.png');
 }
 
 .portfolio .portfolio-filters li:hover .development-icon {
-  background-image: url('../img/icons/strategy.png');
+  background-image: url('../img/icons/web2.png');
 }
 
 .portfolio .portfolio-filters li.filter-active .development-icon {
-  background-image: url('../img/icons/strategy.png');
+  background-image: url('../img/icons/web2.png');
 }
 
 .portfolio .portfolio-filters .ui-icon {
-  background-image: url('../img/icons/ui-uix-p.png');
+  background-image: url('../img/icons/uiux1.png');
 }
 
 .portfolio .portfolio-filters li:hover .ui-icon {
-  background-image: url('../img/icons/strategy.png');
+  background-image: url('../img/icons/uiux2.png');
 }
 
 .portfolio .portfolio-filters li.filter-active .ui-icon {
-  background-image: url('../img/icons/strategy.png');
+  background-image: url('../img/icons/uiux2.png');
 }
 
 .portfolio .portfolio-filters .creative-icon {
-  background-image: url('../img/icons/ui-uix-p.png');
+  background-image: url('../img/icons/creative1.png');
 }
 
 .portfolio .portfolio-filters li:hover .creative-icon {
-  background-image: url('../img/icons/strategy.png');
+  background-image: url('../img/icons/creative2.png');
 }
 
 .portfolio .portfolio-filters li.filter-active .creative-icon {
-  background-image: url('../img/icons/strategy.png');
+  background-image: url('../img/icons/creative2.png');
 }
 
 .portfolio .portfolio-filters .marketing-icon {
-  background-image: url('../img/icons/ui-uix-p.png');
+  background-image: url('../img/icons/marketing1.png');
 }
 
 .portfolio .portfolio-filters li:hover .marketing-icon {
-  background-image: url('../img/icons/strategy.png');
+  background-image: url('../img/icons/marketing2.png');
 }
 
 .portfolio .portfolio-filters li.filter-active .marketing-icon {
-  background-image: url('../img/icons/strategy.png');
+  background-image: url('../img/icons/marketing2.png');
 }
 
 @media (max-width: 768px) {
@@ -3758,6 +4024,25 @@ section,
   }
 }
 
+@media (max-width: 430px) {
+
+  .pricing .plan-header-consultancy h3,
+  .pricing .plan-header-onetime h3,
+  .pricing .plan-header-subscription h3 {
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+  .pricing .plan-cta-consultancy .btn-plan,
+  .pricing .plan-cta-onetime .btn-plan,
+  .pricing .plan-cta-subscription .btn-plan {
+    font-size: 18px;
+    font-weight: 600;
+
+  }
+
+}
+
 /*--------------------------------------------------------------
 # Faq Section
 --------------------------------------------------------------*/
@@ -3774,8 +4059,12 @@ section,
   margin-bottom: 2rem;
 }
 
-.faq .faq-arrow {
-  color: var(--accent-color);
+@media (max-width: 768px) {
+  .faq-icon-img {
+    width: 0px;
+    height: 0px;
+  }
+
 }
 
 .faq .faq-container .faq-item {
@@ -3996,12 +4285,12 @@ section,
   color: var(--default-lemon);
   background-color: var(--default-black);
   font-size: 15px;
-  border: 2px solid var(--default-pink);
+  border: 2px solid var(--default-green);
 }
 
 .contact .contact-form-wrapper .form-group .input-with-icon .form-control:focus {
-  border-color: var(--default-green);
-  box-shadow: 0 0 0 0.25rem color-mix(in srgb, var(--default-green), transparent 90%);
+  border-color: var(--default-pink);
+  box-shadow: 0 0 0 0.25rem color-mix(in srgb, var(--default-pink), transparent 90%);
 }
 
 .contact .contact-form-wrapper .form-group .input-with-icon .form-control::placeholder {
@@ -4027,7 +4316,7 @@ section,
   font-family: Benzin-Bold;
   letter-spacing: 1.2px;
   transition: all 0.3s ease;
-  box-shadow: 0 5px 15px color-mix(in srgb, var(--accent-color), transparent 70%);
+  /* box-shadow: 0 5px 15px color-mix(in srgb, var(--accent-color), transparent 70%); */
 }
 
 @media (max-width: 450px) {
@@ -4038,17 +4327,17 @@ section,
 }
 
 .contact .contact-form-wrapper .btn-submit:hover {
-  background-color: var(--default-lemon);
-  color: var(--default-black);
+  background-color: var(--default-black);
+  color: var(--default-beige);
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px color-mix(in srgb, var(--accent-color), transparent 60%);
+  /* box-shadow: 0 8px 20px color-mix(in srgb, var(--accent-color), transparent 60%); */
 }
 
 .contact .contact-form-wrapper .btn-submit:active {
   background-color: var(--default-lemon);
   color: var(--default-black);
   transform: translateY(0);
-  box-shadow: 0 3px 10px color-mix(in srgb, var(--accent-color), transparent 70%);
+  /* box-shadow: 0 3px 10px color-mix(in srgb, var(--accent-color), transparent 70%); */
 }
 
 .contact .contact-form-wrapper .loading,
@@ -4091,6 +4380,31 @@ section,
 }
 
 @media (max-width: 576px) {
+  .contact .contact-info-box {
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .contact .contact-info-box .icon-box {
+    width: 20px;
+    height: 20px;
+
+  }
+
+  .contact .contact-info-box .icon-box img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .contact .contact-info-box .info-content h4 {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+
+  .contact .contact-info-box .info-content p {
+    font-size: 13px;
+  }
+
   .contact .form-container-overlap {
     margin-top: -80px;
   }
