@@ -15,7 +15,7 @@
     // Update mouse position
     document.addEventListener('mousemove', (e) => {
       mouseX = e.clientX;
-      mouseY = e.clientY;
+      mouseY = e.clientY + 25;
     });
 
     // Smooth cursor animation
@@ -32,7 +32,7 @@
     animateCursor();
 
     // Add hover states
-    const hoverElements = document.querySelectorAll('a, button, .btn, .service-card, .portfolio-entry');
+    const hoverElements = document.querySelectorAll('a, button, .btn, .service-card, .portfolio-entry, .faq-item, .faq-item h3, .faq-toggle, .team-member, .pricing-card, .scroll-top, .mobile-nav-toggle, .navmenu a, .show-more-button, .portfolio-filters li, .swiper-button-prev, .swiper-button-next, .contact-info-box, input[type="submit"], textarea, input, .feature-item, .step-item, .cta-button, .social-links a, .footer-links a, .testimonial-intro button, .accordion-button, .badge, .project-badge, .btn-view-project, .btn-next-project, .isotope-filters, .glightbox, [data-bs-toggle]');
 
     hoverElements.forEach(element => {
       element.addEventListener('mouseenter', () => {
@@ -120,7 +120,7 @@
   const preloader = document.querySelector('#preloader');
   if (preloader) {
     const startTime = Date.now();
-    const minDisplayTime = 0; // 4 seconds minimum display time
+    const minDisplayTime = 4000; // 4 seconds minimum display time
 
     window.addEventListener('load', () => {
       const elapsedTime = Date.now() - startTime;
