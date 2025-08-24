@@ -1,6 +1,61 @@
 (function () {
   "use strict";
 
+  // Custom cursor implementation
+  function initCustomCursor() {
+    const cursor = document.createElement('div');
+    cursor.classList.add('custom-cursor');
+    document.body.appendChild(cursor);
+
+    let mouseX = 0;
+    let mouseY = 0;
+    let cursorX = 0;
+    let cursorY = 0;
+
+    // Update mouse position
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+
+    // Smooth cursor animation
+    function animateCursor() {
+      const speed = 1;
+      cursorX += (mouseX - cursorX) * speed;
+      cursorY += (mouseY - cursorY) * speed;
+
+      cursor.style.left = cursorX + 'px';
+      cursor.style.top = cursorY + 'px';
+
+      requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+
+    // Add hover states
+    const hoverElements = document.querySelectorAll('a, button, .btn, .service-card, .portfolio-entry');
+
+    hoverElements.forEach(element => {
+      element.addEventListener('mouseenter', () => {
+        cursor.classList.add('cursor-hover');
+      });
+
+      element.addEventListener('mouseleave', () => {
+        cursor.classList.remove('cursor-hover');
+      });
+
+      element.addEventListener('mousedown', () => {
+        cursor.classList.add('cursor-click');
+      });
+
+      element.addEventListener('mouseup', () => {
+        cursor.classList.remove('cursor-click');
+      });
+    });
+  }
+
+  // Initialize custom cursor when page loads
+  document.addEventListener('DOMContentLoaded', initCustomCursor);
+
   /**
    * Apply .scrolled class to the body as the page is scrolled down
    */
@@ -154,19 +209,19 @@
       initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
         itemSelector: '.isotope-item',
         layoutMode: layout,
-        filter: function(itemElem) {
+        filter: function (itemElem) {
           // Custom filter function that respects both isotope filters and hidden state
           const item = itemElem;
           const hasHiddenClass = item.classList.contains('hidden');
-          
+
           console.log('Filtering item:', item.className, 'hasHidden:', hasHiddenClass, 'showMore:', showMoreState.expanded, 'currentFilter:', currentFilter);
-          
+
           // If item has hidden class and show more is not expanded, hide it
           if (hasHiddenClass && !showMoreState.expanded) {
             console.log('Hiding hidden item because showMore is false');
             return false;
           }
-          
+
           // If show more is expanded but item doesn't match current filter, check filter
           if (currentFilter === '*') {
             console.log('Showing item - filter is *');
@@ -174,20 +229,20 @@
           } else {
             const filterClass = currentFilter.replace('.', '');
             const matchesFilter = item.classList.contains(filterClass);
-            
+
             // If it's a hidden item, only show if it matches the current filter
             if (hasHiddenClass) {
               console.log('Hidden item filter check:', matchesFilter, 'for filter:', filterClass);
               return matchesFilter;
             }
-            
+
             console.log('Regular item filter check:', matchesFilter, 'for filter:', filterClass);
             return matchesFilter;
           }
         },
         sortBy: sort
       });
-      
+
       isotopeInstance = initIsotope; // Store reference globally
       console.log('Isotope initialized');
     });
@@ -196,17 +251,17 @@
       filters.addEventListener('click', function () {
         isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
         this.classList.add('filter-active');
-        
+
         // Update current filter
         currentFilter = this.getAttribute('data-filter');
         console.log('Filter changed to:', currentFilter);
-        
+
         // Reset show more state when filter changes
         resetShowMoreState();
-        
+
         // Re-arrange with custom filter
         initIsotope.arrange();
-        
+
         if (typeof aosInit === 'function') {
           aosInit();
         }
@@ -248,13 +303,13 @@
    */
   function resetShowMoreState() {
     const ShowMoreBtn = document.querySelector('.show-more-button');
-    
+
     if (ShowMoreBtn) {
       // Reset button state
       ShowMoreBtn.innerText = "show more";
       showMoreState.expanded = false;
       console.log('Show More state reset due to filter change');
-      
+
       // Re-arrange isotope to apply the new filter state
       if (isotopeInstance) {
         setTimeout(() => {
@@ -272,18 +327,18 @@
     HiddenItems.forEach((item, index) => {
       console.log(`Hidden item ${index}: classes =`, item.className); // Debug log
     });
-    
+
     ShowMoreBtn.addEventListener('click', () => {
       console.log('Button clicked, current filter:', currentFilter, 'expanded state:', showMoreState.expanded); // Debug log
-      
+
       // Toggle the expanded state
       showMoreState.expanded = !showMoreState.expanded;
-      
+
       // Update button text
       ShowMoreBtn.innerText = showMoreState.expanded ? "show less" : "show more";
-      
+
       console.log('Show more state changed to:', showMoreState.expanded);
-      
+
       // Re-arrange isotope with the new show more state
       if (isotopeInstance) {
         console.log('About to rearrange isotope...');
@@ -295,7 +350,7 @@
       } else {
         console.log('Isotope instance not available');
       }
-      
+
       console.log('Button click handler completed');
     });
   } else {

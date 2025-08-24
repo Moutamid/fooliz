@@ -62,8 +62,44 @@
   /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
+/* Hide default cursor */
+* {
+  cursor: none !important;
+}
+
+/* Custom cursor element */
+.custom-cursor {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  background: url('../img/misc/mouse-normal.png') no-repeat center;
+  background-size: contain;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: all 0.1s ease;
+}
+
+/* Hover state */
+.custom-cursor.cursor-hover {
+  width: 100px;
+  height: 100px;
+  background: url('../img/misc/mouse-hover.png') no-repeat center;
+  background-size: contain;
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* Click state */
+.custom-cursor.cursor-click {
+  width: 100px;
+  height: 100px;
+  background: url('../img/misc/mouse-clicked.png') no-repeat center;
+  background-size: contain;
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 .light-background {
   --background-color: var(--default-pink);
   --surface-color: var(--default-black);
@@ -2619,7 +2655,7 @@ section,
 .call-to-action .content-right img {
   width: 100%;
   height: auto;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); */
 }
 
 .call-to-action .content-right .floating-card {
@@ -2678,8 +2714,8 @@ section,
 .call-to-action .decoration .circle-1,
 .call-to-action .decoration .circle-2 {
   position: absolute;
-  border-radius: 50%;
-  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  /* border-radius: 50%; */
+  /* background-color: color-mix(in srgb, var(--accent-color), transparent 90%); */
 }
 
 .call-to-action .decoration .circle-1 {
