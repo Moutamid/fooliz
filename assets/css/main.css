@@ -380,11 +380,11 @@ h6 {
 .header .btn-getstarted:focus {
   color: var(--default-black);
   background: var(--default-lemon);
-  font-size: 16px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 2px;
-  padding-bottom: 4px;
+  font-size: 18px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 3px;
+  padding-bottom: 5px;
   font-family: Benzin-Bold;
   margin: 0 0 0 30px;
   border-radius: 50px;
