@@ -1327,7 +1327,14 @@ section,
   font-size: 2.2rem;
   margin-bottom: 1.25rem;
   font-weight: 700;
+}
+
+.about-title-font .font-clean-code {
   color: var(--default-lemon);
+}
+
+.about-title-font .font-wild-design {
+  color: var(--default-beige);
 }
 
 @media (max-width: 768px) {
@@ -1481,7 +1488,7 @@ section,
   border-radius: 50%;
   background-color: var(--default-lemon);
   color: var(--default-black);
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: 1px solid transparent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1491,7 +1498,7 @@ section,
 
 .about .testimonial-section .testimonial-intro .swiper-nav-buttons button:hover {
   background-color: var(--default-pink);
-  border-color: var(--accent-color);
+  border-color: transparent;
   color: var(--default-beige);
 }
 
@@ -2532,7 +2539,7 @@ section,
   padding-top: 80px;
   position: relative;
   background-color: var(--default-beige);
-  border-radius: 1rem;
+  /* border-radius: 1rem; */
   overflow: hidden;
   padding-bottom: 80px;
 }

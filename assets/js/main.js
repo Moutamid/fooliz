@@ -120,7 +120,8 @@
   const preloader = document.querySelector('#preloader');
   if (preloader) {
     const startTime = Date.now();
-    const minDisplayTime = 9000; // 4 seconds minimum display time
+    const minDisplayTime = 100; // 4 seconds minimum display time
+    // const minDisplayTime = 9000; // 4 seconds minimum display time
 
     window.addEventListener('load', () => {
       const elapsedTime = Date.now() - startTime;
