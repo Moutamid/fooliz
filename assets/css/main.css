@@ -1347,6 +1347,7 @@ section,
   font-size: 1.15rem;
   margin-bottom: 1.25rem;
   color: var(--default-beige);
+  font-family: Benzin-Regular;
 }
 
 .about .about-content p {
@@ -1604,6 +1605,8 @@ section,
 .services .service-header .service-summary p {
   margin-bottom: 25px;
   color: var(--default-beige);
+  font-family: Benzin-Regular;
+  text-align: justify;
 }
 
 .services .service-header .service-summary .service-btn {
