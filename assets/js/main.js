@@ -53,8 +53,26 @@
     });
   }
 
-  // Initialize custom cursor when page loads
-  document.addEventListener('DOMContentLoaded', initCustomCursor);
+  // Initialize custom cursor only on desktop (fine pointer & large viewport)
+  function shouldUseCustomCursor() {
+    return window.matchMedia('(pointer:fine)').matches && window.innerWidth >= 992;
+  }
+  document.addEventListener('DOMContentLoaded', () => {
+    if (shouldUseCustomCursor()) {
+      initCustomCursor();
+    }
+  });
+  // Re-evaluate on resize (e.g., rotating tablet or resizing window)
+  window.addEventListener('resize', () => {
+    const existing = document.querySelector('.custom-cursor');
+    if (shouldUseCustomCursor()) {
+      if (!existing) initCustomCursor();
+    } else if (existing) {
+      existing.remove();
+      // Restore native cursor
+      document.querySelectorAll('*').forEach(el => { el.style.cursor = ''; });
+    }
+  });
 
   /**
    * Apply .scrolled class to the body as the page is scrolled down

@@ -63,9 +63,15 @@
 }
 
 
-/* Hide default cursor */
-* {
-  cursor: none !important;
+/* Hide default cursor ONLY on desktop (fine pointer + min-width) */
+/* Mobile & tablets keep native cursor/touch interactions */
+.custom-cursor { display: none; }
+@media (pointer: fine) and (min-width: 992px) {
+  * { cursor: none !important; }
+  .custom-cursor { display: block; }
+}
+@media (pointer: coarse), (max-width: 991.98px) {
+  .custom-cursor { display: none !important; }
 }
 
 /* Custom cursor element */
