@@ -4475,6 +4475,20 @@ section,
 --------------------------------------------------------------*/
 
 
+/* Full-bleed long image inside #portfolio-details */
+#portfolio-details {
+  position: relative;
+}
+#portfolio-details .portfolio-long-image {
+  display: block;
+  width: 100vw;            /* span full viewport width */
+  max-width: 100vw;
+  height: auto;            /* keep image aspect ratio */
+  object-fit: contain;     /* never crop long image */
+  object-position: center;
+  margin-left: calc(-50vw + 50%); /* break out of centered container to full-bleed */
+}
+
 /* Portfolio Details Hero Image */
 .first-layout-portfolio {
   position: relative;
@@ -4491,8 +4505,8 @@ section,
 
 .first-layout-portfolio img {
   width: 100%;
-  height: 100vh;
-  object-fit: cover;
+  height: auto; /* Show full image, no cropping */
+  object-fit: contain; /* Keep entire image visible */
   object-position: center;
   display: block;
 }
@@ -4525,8 +4539,8 @@ section,
   }
 
   .first-layout-portfolio img {
-    height: 50vh;
-    object-fit: cover;
+  height: auto; /* Keep full image on smaller screens */
+  object-fit: contain;
   }
 
   .first-layout-portfolio h1 {

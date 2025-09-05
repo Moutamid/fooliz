@@ -399,3 +399,75 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+// Portfolio linking (index and other listing pages) and dynamic hydration (detail page)
+(function () {
+  // Attach dataset from portfolio links and append URL params for shareability
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('a[href$="portfolio-item.html"]').forEach(a => {
+      a.addEventListener('click', function () {
+        const ds = a.dataset || {};
+        const title = ds.title;
+        const hero = ds.hero;
+        const longImg = ds.long;
+        const live = ds.live;
+
+        if (!title && !hero && !longImg && !live) return;
+
+        // Persist to sessionStorage as a fallback
+        if (title) sessionStorage.setItem('pf_title', title);
+        if (hero) sessionStorage.setItem('pf_hero', hero);
+        if (longImg) sessionStorage.setItem('pf_long', longImg);
+        if (live) sessionStorage.setItem('pf_live', live);
+
+        // Append params for shareability
+        try {
+          const url = new URL(a.href, window.location.origin);
+          if (title) url.searchParams.set('title', title);
+          if (hero) url.searchParams.set('hero', hero);
+          if (longImg) url.searchParams.set('long', longImg);
+          if (live) url.searchParams.set('live', live);
+          a.href = url.toString();
+        } catch (err) {
+          // Ignore; sessionStorage still allows hydration on same-session navigation
+        }
+      }, { passive: true });
+    });
+  });
+
+  // Hydrate portfolio details page from URL or sessionStorage
+  document.addEventListener('DOMContentLoaded', function () {
+    if (!document.body.classList.contains('portfolio-details-page')) return;
+
+    function getParam(name) {
+      try {
+        const u = new URL(window.location.href);
+        return u.searchParams.get(name);
+      } catch (_) {
+        return null;
+      }
+    }
+
+    const title = getParam('title') || sessionStorage.getItem('pf_title');
+    const hero = getParam('hero') || sessionStorage.getItem('pf_hero');
+    const longImg = getParam('long') || sessionStorage.getItem('pf_long');
+    const live = getParam('live') || sessionStorage.getItem('pf_live');
+
+    if (title) {
+      const t = document.getElementById('portfolio-title');
+      if (t) t.textContent = title;
+    }
+    if (hero) {
+      const h = document.getElementById('portfolio-hero');
+      if (h) h.src = hero;
+    }
+    if (longImg) {
+      const l = document.getElementById('portfolio-long');
+      if (l) l.src = longImg;
+    }
+    if (live) {
+      const a = document.getElementById('portfolio-live-link');
+      if (a) a.href = live.startsWith('http') ? live : ('https://' + live);
+    }
+  });
+})();
