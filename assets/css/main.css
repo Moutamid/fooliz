@@ -65,13 +65,25 @@
 
 /* Hide default cursor ONLY on desktop (fine pointer + min-width) */
 /* Mobile & tablets keep native cursor/touch interactions */
-.custom-cursor { display: none; }
-@media (pointer: fine) and (min-width: 992px) {
-  * { cursor: none !important; }
-  .custom-cursor { display: block; }
+.custom-cursor {
+  display: none;
 }
-@media (pointer: coarse), (max-width: 991.98px) {
-  .custom-cursor { display: none !important; }
+
+@media (pointer: fine) and (min-width: 992px) {
+  * {
+    cursor: none !important;
+  }
+
+  .custom-cursor {
+    display: block;
+  }
+}
+
+@media (pointer: coarse),
+(max-width: 991.98px) {
+  .custom-cursor {
+    display: none !important;
+  }
 }
 
 /* Custom cursor element */
@@ -107,10 +119,14 @@
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 .light-background {
-  --background-color: var(--default-pink);
+  /* --background-color: var(--default-pink); */
   --surface-color: var(--default-black);
   /* --background-color: #0d1d26; */
   /* --surface-color: #16262f; */
+  background: url('../img/abstract/pinky-background.jpg') no-repeat center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .dark-background {
@@ -3289,6 +3305,12 @@ section,
   color: var(--default-beige);
 }
 
+.team .team-member .member-info h4 .founder-text {
+  color: var(--default-lemon);
+  display: inline;
+  white-space: nowrap;
+}
+
 .team .team-member .member-info span {
   font-size: 0.9rem;
   font-weight: 400;
@@ -3616,7 +3638,7 @@ section,
 
 .pricing .plan-pricing-consultancy {
   text-align: center;
-  padding: 10px 30px 20px;
+  padding: 0px;
   position: relative;
 }
 
@@ -3790,7 +3812,7 @@ section,
 
 .pricing .plan-pricing-onetime {
   text-align: center;
-  padding: 10px 30px 20px;
+  padding: 0px;
   position: relative;
 }
 
@@ -3812,7 +3834,7 @@ section,
 .pricing .plan-pricing-onetime .period {
   font-size: 16px;
   font-family: Benzin-Regular;
-  color: var(--default-black);
+  color: var(--default-beige);
 }
 
 .pricing .plan-features-onetime {
@@ -3950,7 +3972,7 @@ section,
 
 .pricing .plan-header-subscription h3 {
   font-size: 34px;
-  margin-top: 3rem;
+  margin-top: 2.5rem;
   font-weight: 700;
   margin-bottom: 10px;
   color: var(--default-black);
@@ -3964,7 +3986,7 @@ section,
 
 .pricing .plan-pricing-subscription {
   text-align: center;
-  padding: 10px 30px 20px;
+  padding: 0px;
   position: relative;
 }
 
@@ -4479,14 +4501,19 @@ section,
 #portfolio-details {
   position: relative;
 }
+
 #portfolio-details .portfolio-long-image {
   display: block;
-  width: 100vw;            /* span full viewport width */
+  width: 100vw;
+  /* span full viewport width */
   max-width: 100vw;
-  height: auto;            /* keep image aspect ratio */
-  object-fit: contain;     /* never crop long image */
+  height: auto;
+  /* keep image aspect ratio */
+  object-fit: contain;
+  /* never crop long image */
   object-position: center;
-  margin-left: calc(-50vw + 50%); /* break out of centered container to full-bleed */
+  margin-left: calc(-50vw + 50%);
+  /* break out of centered container to full-bleed */
 }
 
 /* Portfolio Details Hero Image */
@@ -4505,8 +4532,10 @@ section,
 
 .first-layout-portfolio img {
   width: 100%;
-  height: auto; /* Show full image, no cropping */
-  object-fit: contain; /* Keep entire image visible */
+  height: auto;
+  /* Show full image, no cropping */
+  object-fit: contain;
+  /* Keep entire image visible */
   object-position: center;
   display: block;
 }
@@ -4539,8 +4568,9 @@ section,
   }
 
   .first-layout-portfolio img {
-  height: auto; /* Keep full image on smaller screens */
-  object-fit: contain;
+    height: auto;
+    /* Keep full image on smaller screens */
+    object-fit: contain;
   }
 
   .first-layout-portfolio h1 {
@@ -5620,4 +5650,4 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
-}
+}  /* Add your styles here */
