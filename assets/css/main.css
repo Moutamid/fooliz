@@ -841,6 +841,40 @@ h6 {
   align-items: center;
 }
 
+/* Responsive Preloader Animations */
+/* Hide all preloaders by default */
+#preloader lottie-player {
+  display: none;
+}
+
+/* Small Mobile (up to 480px) */
+@media (max-width: 480px) {
+  #preloader .preloader-small-mobile {
+    display: block;
+  }
+}
+
+/* Large Mobile (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  #preloader .preloader-large-mobile {
+    display: block;
+  }
+}
+
+/* Tablet (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  #preloader .preloader-tablet {
+    display: block;
+  }
+}
+
+/* Laptop/Desktop (1025px and above) */
+@media (min-width: 1025px) {
+  #preloader .preloader-laptop {
+    display: block;
+  }
+}
+
 /* Remove the old GIF background - now using Lottie player directly in HTML */
 
 /* #preloader:before {
@@ -3305,18 +3339,18 @@ section,
   color: var(--default-beige);
 }
 
-.team .team-member .member-info h4 .founder-text {
-  color: var(--default-lemon);
-  display: inline;
-  white-space: nowrap;
-}
-
 .team .team-member .member-info span {
   font-size: 0.9rem;
   font-weight: 400;
   color: var(--default-beige);
   display: block;
   margin-bottom: 15px;
+}
+
+.team .team-member .member-info span .founder-text {
+  color: var(--default-lemon);
+  display: inline;
+  white-space: nowrap;
 }
 
 .team .team-member .member-info p {

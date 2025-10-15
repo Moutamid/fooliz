@@ -138,7 +138,7 @@
   const preloader = document.querySelector('#preloader');
   if (preloader) {
     const startTime = Date.now();
-    const minDisplayTime = 50; // 4 seconds minimum display time
+    const minDisplayTime = 8000; // 4 seconds minimum display time
     // const minDisplayTime = 4250; // 4 seconds minimum display time
     // const minDisplayTime = 9000; // 4 seconds minimum display time
 

@@ -729,7 +729,7 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-card position-relative z-1">
               <div class="service-icon">
-                <img src="assets/img/services/marketing.gif" alt="Mobile Apps Icon" class="service-icon-img">
+                <img src="assets/img/services/content-strategy.gif" alt="Mobile Apps Icon" class="service-icon-img">
               </div>
               <div class="content-area">
                 <h3>
@@ -747,7 +747,7 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-card position-relative z-1">
               <div class="service-icon">
-                <img src="assets/img/services/ui-ux.gif" alt="Mobile Apps Icon" class="service-icon-img">
+                <img src="assets/img/services/branding.gif" alt="Mobile Apps Icon" class="service-icon-img">
               </div>
               <div class="content-area">
                 <h3>
@@ -1205,7 +1205,7 @@
             <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-creative">
               <article class="portfolio-entry">
                 <figure class="entry-image">
-                  <img src="assets/img/portfolio/thumbnail-trip4pet.png" class="img-fluid" alt="" loading="lazy">
+                  <img src="assets/img/portfolio/place-holder.jpg" class="img-fluid" alt="" loading="lazy">
                   <div class="entry-overlay">
                     <div class="overlay-content">
                       <div class="entry-meta">Creative</div>
@@ -1231,7 +1231,7 @@
             <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-marketing">
               <article class="portfolio-entry">
                 <figure class="entry-image">
-                  <img src="assets/img/portfolio/thumbnail-pro-vpn.png" class="img-fluid" alt="" loading="lazy">
+                  <img src="assets/img/portfolio/place-holder.jpg" class="img-fluid" alt="" loading="lazy">
                   <div class="entry-overlay">
                     <div class="overlay-content">
                       <div class="entry-meta">Marketing</div>
@@ -1311,7 +1311,7 @@
             <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-creative">
               <article class="portfolio-entry">
                 <figure class="entry-image">
-                  <img src="assets/img/portfolio/thumbnail-whatzboost.png" class="img-fluid" alt="" loading="lazy">
+                  <img src="assets/img/portfolio/place-holder.jpg" class="img-fluid" alt="" loading="lazy">
                   <div class="entry-overlay">
                     <div class="overlay-content">
                       <div class="entry-meta">Creative</div>
@@ -1337,7 +1337,7 @@
             <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-marketing">
               <article class="portfolio-entry">
                 <figure class="entry-image">
-                  <img src="assets/img/portfolio/thumbnail-talk-togather.png" class="img-fluid" alt="" loading="lazy">
+                  <img src="assets/img/portfolio/place-holder.jpg" class="img-fluid" alt="" loading="lazy">
                   <div class="entry-overlay">
                     <div class="overlay-content">
                       <div class="entry-meta">Marketing</div>
@@ -1423,7 +1423,7 @@
               style="display: none !important;">
               <article class="portfolio-entry">
                 <figure class="entry-image">
-                  <img src="assets/img/portfolio/thumbnail-type-king.png" class="img-fluid" alt="" loading="lazy">
+                  <img src="assets/img/portfolio/place-holder.jpg" class="img-fluid" alt="" loading="lazy">
                   <div class="entry-overlay">
                     <div class="overlay-content">
                       <div class="entry-meta">Creative</div>
@@ -1450,7 +1450,7 @@
               style="display: none !important;">
               <article class="portfolio-entry">
                 <figure class="entry-image">
-                  <img src="assets/img/portfolio/thumbnail-type-king.png" class="img-fluid" alt="" loading="lazy">
+                  <img src="assets/img/portfolio/place-holder.jpg" class="img-fluid" alt="" loading="lazy">
                   <div class="entry-overlay">
                     <div class="overlay-content">
                       <div class="entry-meta">Marketing</div>
@@ -1947,11 +1947,11 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div class="team-member d-flex">
               <div class="member-img">
-                <img src="assets/img/person/moutamid.png" class="img-fluid" alt="" loading="lazy">
+                <img src="assets/img/person/moutamid.jpg" class="img-fluid" alt="" loading="lazy">
               </div>
               <div class="member-info flex-grow-1">
-                <h4>Moutamid Monim <span class="founder-text">(Founder)</span></h4>
-                <span>Tech Lead</span>
+                <h4>Moutamid Monim</h4>
+                <span>Tech Lead <span class="founder-text">(Founder)</span></span>
                 <p>Aliquam iure quaerat voluptatem praesentium possimus unde laudantium vel dolorum distinctio dire flow
                 </p>
                 <div class="social">
@@ -2475,7 +2475,23 @@
 
   <!-- Preloader -->
   <div id="preloader">
-    <lottie-player src="assets/img/misc/intro-illustration.json" background="transparent" speed="1"
+    <!-- Small Mobile (up to 480px) -->
+    <lottie-player class="preloader-small-mobile" src="assets/img/misc/intro-illustration-small-mobile.json" background="transparent" speed="1"
+      style="width: 100vw; height: 100vh;" loop autoplay>
+    </lottie-player>
+    
+    <!-- Large Mobile (481px to 768px) -->
+    <lottie-player class="preloader-large-mobile" src="assets/img/misc/intro-illustration-large-mobile.json" background="transparent" speed="1"
+      style="width: 100vw; height: 100vh;" loop autoplay>
+    </lottie-player>
+    
+    <!-- Tablet (769px to 1024px) -->
+    <lottie-player class="preloader-tablet" src="assets/img/misc/intro-illustration-tablet.json" background="transparent" speed="1"
+      style="width: 100vw; height: 100vh;" loop autoplay>
+    </lottie-player>
+    
+    <!-- Laptop/Desktop (1025px and above) -->
+    <lottie-player class="preloader-laptop" src="assets/img/misc/intro-illustration-laptop.json" background="transparent" speed="1"
       style="width: 100vw; height: 100vh;" loop autoplay>
     </lottie-player>
   </div>
