@@ -770,7 +770,7 @@
               <div class="content-area">
                 <h3>
                   <a>
-                    Content<span> Strategy</span>
+                    AI Content<span> Strategy</span>
                   </a>
                 </h3>
                 <p>
@@ -2074,13 +2074,13 @@
                 <h3>Discovery Call</h3>
                 <p>For individuals just getting started</p>
               </div>
-              <div class="plan-pricing-consultancy">
+              <!-- <div class="plan-pricing-consultancy">
                 <div class="price">
                   <span class="currency">$</span>
                   <span class="amount">36</span>
                   <span class="period"></span>
                 </div>
-              </div>
+              </div> -->
               <div class="plan-features-consultancy">
                 <ul>
                   <li><i class="bi bi-check-circle-fill"></i> 45-60 min introductory call.</li>
@@ -2094,7 +2094,7 @@
                 </ul>
               </div>
               <div class="plan-cta-consultancy">
-                <a href="#" class="btn-plan">Choose Plan</a>
+                <a href="#contact" class="btn-plan" data-plan="Consultancy">Choose Plan</a>
               </div>
             </div>
           </div><!-- End Basic Plan -->
@@ -2112,13 +2112,13 @@
                 <h3>Creator's Club</h3>
                 <p>For small businesses</p>
               </div>
-              <div class="plan-pricing-onetime">
+              <!-- <div class="plan-pricing-onetime">
                 <div class="price">
                   <span class="currency">$</span>
                   <span class="amount">673+</span>
                   <span class="period">/month</span>
                 </div>
-              </div>
+              </div> -->
               <div class="plan-features-onetime">
                 <ul>
                   <li><i class="bi bi-check-circle-fill"></i> Ongoing design support tailored to content creators.</li>
@@ -2131,7 +2131,7 @@
                 </ul>
               </div>
               <div class="plan-cta-onetime">
-                <a href="#" class="btn-plan">Choose Plan</a>
+                <a href="#contact" class="btn-plan" data-plan="One-time Project">Choose Plan</a>
               </div>
             </div>
           </div><!-- End Professional Plan -->
@@ -2148,13 +2148,13 @@
                 <h3>The Build</h3>
                 <p>For websites, apps, or full builds</p>
               </div>
-              <div class="plan-pricing-subscription">
+              <!-- <div class="plan-pricing-subscription">
                 <div class="price">
                   <span class="currency">$</span>
                   <span class="amount">1167+</span>
                   <span class="period"></span>
                 </div>
-              </div>
+              </div> -->
               <div class="plan-features-subscription">
                 <ul>
                   <li><i class="bi bi-check-circle-fill"></i> End-to-end development of major projects (apps, websites,
@@ -2168,7 +2168,7 @@
                 </ul>
               </div>
               <div class="plan-cta-subscription">
-                <a href="#" class="btn-plan">Choose Plan</a>
+                <a href="#contact" class="btn-plan" data-plan="Subscription">Choose Plan</a>
               </div>
             </div>
           </div><!-- End Enterprise Plan -->
@@ -2334,7 +2334,7 @@
       <div class="container form-container-overlap">
         <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="300">
           <div class="col-lg-10">
-            <div class="contact-form-wrapper">
+            <div id="get-in-touch" class="contact-form-wrapper">
               <h2 class="text-center mb-4">Get in Touch</h2>
 
               <form action="https://api.web3forms.com/submit" method="POST" class="php-email-form">
@@ -2362,8 +2362,13 @@
                   <div class="col-md-12">
                     <div class="form-group">
                       <div class="input-with-icon">
-                        <i class="bi bi-text-left"></i>
-                        <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                        <i class="bi bi-list-ul"></i>
+                        <select class="form-control" name="subject" id="plan-selector" required="">
+                          <option value="" disabled selected>Select a Plan</option>
+                          <option value="Consultancy">Consultancy</option>
+                          <option value="One-time Project">One-time Project</option>
+                          <option value="Subscription">Subscription</option>
+                        </select>
                       </div>
                     </div>
                   </div>
@@ -2475,23 +2480,7 @@
 
   <!-- Preloader -->
   <div id="preloader">
-    <!-- Small Mobile (up to 480px) -->
-    <lottie-player class="preloader-small-mobile" src="assets/img/misc/intro-illustration-small-mobile.json" background="transparent" speed="1"
-      style="width: 100vw; height: 100vh;" loop autoplay>
-    </lottie-player>
-    
-    <!-- Large Mobile (481px to 768px) -->
-    <lottie-player class="preloader-large-mobile" src="assets/img/misc/intro-illustration-large-mobile.json" background="transparent" speed="1"
-      style="width: 100vw; height: 100vh;" loop autoplay>
-    </lottie-player>
-    
-    <!-- Tablet (769px to 1024px) -->
-    <lottie-player class="preloader-tablet" src="assets/img/misc/intro-illustration-tablet.json" background="transparent" speed="1"
-      style="width: 100vw; height: 100vh;" loop autoplay>
-    </lottie-player>
-    
-    <!-- Laptop/Desktop (1025px and above) -->
-    <lottie-player class="preloader-laptop" src="assets/img/misc/intro-illustration-laptop.json" background="transparent" speed="1"
+    <lottie-player class="preloader-laptop" src="assets/img/misc/intro-illustration.json" background="transparent" speed="1"
       style="width: 100vw; height: 100vh;" loop autoplay>
     </lottie-player>
   </div>

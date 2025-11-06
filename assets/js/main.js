@@ -138,9 +138,7 @@
   const preloader = document.querySelector('#preloader');
   if (preloader) {
     const startTime = Date.now();
-    const minDisplayTime = 8000; // 4 seconds minimum display time
-    // const minDisplayTime = 4250; // 4 seconds minimum display time
-    // const minDisplayTime = 9000; // 4 seconds minimum display time
+    const minDisplayTime = 7000; // 4 seconds minimum display time
 
     window.addEventListener('load', () => {
       const elapsedTime = Date.now() - startTime;
@@ -470,5 +468,46 @@
       const a = document.getElementById('portfolio-live-link');
       if (a) a.href = live.startsWith('http') ? live : ('https://' + live);
     }
+  });
+})();
+
+// Plan selector functionality
+(function () {
+  document.addEventListener('DOMContentLoaded', function () {
+    // Get all Choose Plan buttons
+    const planButtons = document.querySelectorAll('.btn-plan[data-plan]');
+    const planSelector = document.getElementById('plan-selector');
+
+    planButtons.forEach(button => {
+      button.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        // Get the plan type from data attribute
+        const planType = this.getAttribute('data-plan');
+        
+        // Set the dropdown value
+        if (planSelector && planType) {
+          planSelector.value = planType;
+          
+          // Add a visual indicator that the selection was made
+          planSelector.style.borderColor = 'var(--accent-color)';
+          setTimeout(() => {
+            planSelector.style.borderColor = '';
+          }, 2000);
+        }
+        
+        // Scroll to contact section
+        const contactSection = document.querySelector('#contact');
+        if (contactSection) {
+          const headerHeight = document.querySelector('#header')?.offsetHeight || 0;
+          const targetPosition = contactSection.offsetTop - headerHeight - 20;
+          
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
   });
 })();

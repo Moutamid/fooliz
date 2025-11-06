@@ -847,32 +847,8 @@ h6 {
   display: none;
 }
 
-/* Small Mobile (up to 480px) */
-@media (max-width: 480px) {
-  #preloader .preloader-small-mobile {
-    display: block;
-  }
-}
-
-/* Large Mobile (481px to 768px) */
-@media (min-width: 481px) and (max-width: 768px) {
-  #preloader .preloader-large-mobile {
-    display: block;
-  }
-}
-
-/* Tablet (769px to 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-  #preloader .preloader-tablet {
-    display: block;
-  }
-}
-
-/* Laptop/Desktop (1025px and above) */
-@media (min-width: 1025px) {
-  #preloader .preloader-laptop {
-    display: block;
-  }
+#preloader .preloader-laptop {
+  display: block;
 }
 
 /* Remove the old GIF background - now using Lottie player directly in HTML */
@@ -5684,4 +5660,6 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
-}  /* Add your styles here */
+}
+
+/* Add your styles here */
