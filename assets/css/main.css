@@ -3275,6 +3275,12 @@ section,
   /* box-shadow: 0 3px 10px color-mix(in srgb, var(--accent-color), transparent 70%); */
 }
 
+/* Portfolio button hidden state */
+.portfolio-button-hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
 /*--------------------------------------------------------------
 # Team Section
 --------------------------------------------------------------*/

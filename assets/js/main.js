@@ -464,9 +464,29 @@
       const l = document.getElementById('portfolio-long');
       if (l) l.src = longImg;
     }
-    if (live) {
-      const a = document.getElementById('portfolio-live-link');
-      if (a) a.href = live.startsWith('http') ? live : ('https://' + live);
+    
+    // Handle the live link button visibility
+    const liveButton = document.getElementById('portfolio-live-link');
+    if (liveButton) {
+      console.log('Live button found. Live value:', live);
+      console.log('Live type:', typeof live);
+      console.log('Live trimmed length:', live ? live.trim().length : 'null/undefined');
+      
+      // Check if live link exists and is not empty
+      if (live && live.trim() !== '' && live !== '""' && live !== "''") {
+        // Show button and set the href
+        console.log('Showing live button');
+        liveButton.classList.remove('portfolio-button-hidden');
+        liveButton.style.cssText = 'display: block !important; visibility: visible !important;';
+        liveButton.href = live.startsWith('http') ? live : ('https://' + live);
+      } else {
+        // Hide button if no valid link
+        console.log('Hiding live button');
+        liveButton.classList.add('portfolio-button-hidden');
+        liveButton.style.cssText = 'display: none !important; visibility: hidden !important;';
+      }
+    } else {
+      console.log('Live button not found!');
     }
   });
 })();
