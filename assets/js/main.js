@@ -128,26 +128,43 @@
   /**
    * Preloader
    */
-  // const preloader = document.querySelector('#preloader');
-  // if (preloader) {
-  //   window.addEventListener('load', () => {
-  //     preloader.remove();
-  //   });
-  // }
-
   const preloader = document.querySelector('#preloader');
   if (preloader) {
-    const startTime = Date.now();
-    const minDisplayTime = 7000; // 4 seconds minimum display time
+    // Check if we should show the preloader based on time
+    function shouldShowPreloader() {
+      const now = Date.now();
+      const lastShown = localStorage.getItem('preloader_last_shown');
+      const oneHour = 60 * 60 * 1000; // 1 hour in milliseconds
+      
+      // If no previous record or more than 1 hour has passed, show preloader
+      if (!lastShown || (now - parseInt(lastShown)) > oneHour) {
+        localStorage.setItem('preloader_last_shown', now.toString());
+        return true;
+      }
+      
+      return false;
+    }
 
-    window.addEventListener('load', () => {
-      const elapsedTime = Date.now() - startTime;
-      const remainingTime = Math.max(0, minDisplayTime - elapsedTime);
+    // Only show preloader if enough time has passed
+    if (shouldShowPreloader()) {
+      console.log('Showing preloader - enough time has passed');
+      const startTime = Date.now();
+      const minDisplayTime = 7000; // 7 seconds minimum display time
 
-      setTimeout(() => {
-        preloader.remove();
-      }, remainingTime);
-    });
+      window.addEventListener('load', () => {
+        const elapsedTime = Date.now() - startTime;
+        const remainingTime = Math.max(0, minDisplayTime - elapsedTime);
+
+        setTimeout(() => {
+          preloader.remove();
+        }, remainingTime);
+      });
+    } else {
+      // Hide preloader immediately if not enough time has passed
+      console.log('Hiding preloader - not enough time has passed since last shown');
+      preloader.style.display = 'none';
+      preloader.remove();
+    }
   }
 
   /**
@@ -516,11 +533,11 @@
           }, 2000);
         }
         
-        // Scroll to contact section
-        const contactSection = document.querySelector('#contact');
-        if (contactSection) {
+        // Scroll to contact form instead of contact section
+        const contactForm = document.querySelector('.form-container-overlap');
+        if (contactForm) {
           const headerHeight = document.querySelector('#header')?.offsetHeight || 0;
-          const targetPosition = contactSection.offsetTop - headerHeight - 20;
+          const targetPosition = contactForm.offsetTop - headerHeight - 20;
           
           window.scrollTo({
             top: targetPosition,
@@ -529,5 +546,161 @@
         }
       });
     });
+  });
+})();
+
+// Budget Range Slider functionality
+(function () {
+  document.addEventListener('DOMContentLoaded', function () {
+    const budgetMin = document.getElementById('budget-min');
+    const budgetMax = document.getElementById('budget-max');
+    const budgetMinValue = document.querySelector('.budget-min-value');
+    const budgetMaxValue = document.querySelector('.budget-max-value');
+    const sliderRange = document.querySelector('.slider-range');
+    const budgetRangeInput = document.getElementById('budget-range-input');
+
+    if (!budgetMin || !budgetMax || !budgetMinValue || !budgetMaxValue || !sliderRange || !budgetRangeInput) {
+      return; // Exit if elements don't exist
+    }
+
+    // Convert slider value to budget amount
+    function sliderToBudget(value) {
+      const numValue = parseInt(value);
+      if (numValue >= 100) return 100000; // 100K+
+      return numValue * 1000; // Convert to thousands
+    }
+
+    // Format budget for display
+    function formatBudgetDisplay(value) {
+      const numValue = parseInt(value);
+      if (numValue >= 100) return '$100K+';
+      return `$${numValue}K`;
+    }
+
+    // Update slider range visual
+    function updateSliderRange() {
+      const minVal = parseInt(budgetMin.value);
+      const maxVal = parseInt(budgetMax.value);
+      const minPercent = ((minVal - 5) / (100 - 5)) * 100;
+      const maxPercent = ((maxVal - 5) / (100 - 5)) * 100;
+      
+      sliderRange.style.left = `${minPercent}%`;
+      sliderRange.style.width = `${maxPercent - minPercent}%`;
+    }
+
+    // Update budget values and hidden input
+    function updateBudgetValues() {
+      const minVal = parseInt(budgetMin.value);
+      const maxVal = parseInt(budgetMax.value);
+      
+      // Ensure min is always less than max
+      if (minVal >= maxVal) {
+        if (budgetMin === document.activeElement) {
+          budgetMax.value = minVal + 1;
+        } else {
+          budgetMin.value = maxVal - 1;
+        }
+      }
+      
+      const finalMinVal = parseInt(budgetMin.value);
+      const finalMaxVal = parseInt(budgetMax.value);
+      
+      // Update display values
+      budgetMinValue.textContent = formatBudgetDisplay(finalMinVal);
+      budgetMaxValue.textContent = formatBudgetDisplay(finalMaxVal);
+      
+      // Update hidden input for form submission
+      const minBudget = sliderToBudget(finalMinVal);
+      const maxBudget = sliderToBudget(finalMaxVal);
+      budgetRangeInput.value = `${minBudget}-${maxBudget}`;
+      
+      // Update slider range visual
+      updateSliderRange();
+    }
+
+    // Add event listeners
+    budgetMin.addEventListener('input', updateBudgetValues);
+    budgetMax.addEventListener('input', updateBudgetValues);
+
+    // Initialize the slider
+    updateBudgetValues();
+  });
+})();
+
+// Budget Range Slider functionality
+(function () {
+  document.addEventListener('DOMContentLoaded', function () {
+    const budgetMin = document.getElementById('budget-min');
+    const budgetMax = document.getElementById('budget-max');
+    const budgetMinValue = document.querySelector('.budget-min-value');
+    const budgetMaxValue = document.querySelector('.budget-max-value');
+    const sliderRange = document.querySelector('.slider-range');
+    const budgetRangeInput = document.getElementById('budget-range-input');
+
+    if (!budgetMin || !budgetMax || !budgetMinValue || !budgetMaxValue || !sliderRange || !budgetRangeInput) {
+      return; // Exit if elements don't exist
+    }
+
+    // Convert slider value to budget amount
+    function sliderToBudget(value) {
+      const numValue = parseInt(value);
+      if (numValue >= 100) return 100000; // 100K+
+      return numValue * 1000; // Convert to thousands
+    }
+
+    // Format budget for display
+    function formatBudgetDisplay(value) {
+      const numValue = parseInt(value);
+      if (numValue >= 100) return '$100K+';
+      return `$${numValue}K`;
+    }
+
+    // Update slider range visual
+    function updateSliderRange() {
+      const minVal = parseInt(budgetMin.value);
+      const maxVal = parseInt(budgetMax.value);
+      const minPercent = ((minVal - 5) / (100 - 5)) * 100;
+      const maxPercent = ((maxVal - 5) / (100 - 5)) * 100;
+      
+      sliderRange.style.left = `${minPercent}%`;
+      sliderRange.style.width = `${maxPercent - minPercent}%`;
+    }
+
+    // Update budget values and hidden input
+    function updateBudgetValues() {
+      const minVal = parseInt(budgetMin.value);
+      const maxVal = parseInt(budgetMax.value);
+      
+      // Ensure min is always less than max
+      if (minVal >= maxVal) {
+        if (budgetMin === document.activeElement) {
+          budgetMax.value = minVal + 1;
+        } else {
+          budgetMin.value = maxVal - 1;
+        }
+      }
+      
+      const finalMinVal = parseInt(budgetMin.value);
+      const finalMaxVal = parseInt(budgetMax.value);
+      
+      // Update display values
+      budgetMinValue.textContent = formatBudgetDisplay(finalMinVal);
+      budgetMaxValue.textContent = formatBudgetDisplay(finalMaxVal);
+      
+      // Update hidden input for form submission
+      const minBudget = sliderToBudget(finalMinVal);
+      const maxBudget = sliderToBudget(finalMaxVal);
+      budgetRangeInput.value = `${minBudget}-${maxBudget}`;
+      
+      // Update slider range visual
+      updateSliderRange();
+    }
+
+    // Add event listeners
+    budgetMin.addEventListener('input', updateBudgetValues);
+    budgetMax.addEventListener('input', updateBudgetValues);
+
+    // Initialize the slider
+    updateBudgetValues();
   });
 })();
