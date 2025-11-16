@@ -130,26 +130,50 @@
    */
   const preloader = document.querySelector('#preloader');
   if (preloader) {
-    // Check if we should show the preloader based on time
-    function shouldShowPreloader() {
-      const now = Date.now();
-      const lastShown = localStorage.getItem('preloader_last_shown');
-      const oneHour = 60 * 60 * 1000; // 1 hour in milliseconds
-      
-      // If no previous record or more than 1 hour has passed, show preloader
-      if (!lastShown || (now - parseInt(lastShown)) > oneHour) {
-        localStorage.setItem('preloader_last_shown', now.toString());
-        return true;
+    // Check if this is the home page by looking for preloader-home class
+    const isHomePage = preloader.querySelector('.preloader-home');
+    
+    if (isHomePage) {
+      // Home page logic - time-based showing
+      function shouldShowPreloader() {
+        const now = Date.now();
+        const lastShown = localStorage.getItem('preloader_last_shown');
+        const oneHour = 60 * 60 * 1000; // 1 hour in milliseconds
+        
+        // If no previous record or more than 1 hour has passed, show preloader
+        if (!lastShown || (now - parseInt(lastShown)) > oneHour) {
+          localStorage.setItem('preloader_last_shown', now.toString());
+          return true;
+        }
+        
+        return false;
       }
-      
-      return false;
-    }
 
-    // Only show preloader if enough time has passed
-    if (shouldShowPreloader()) {
-      console.log('Showing preloader - enough time has passed');
+      // Only show preloader if enough time has passed
+      if (shouldShowPreloader()) {
+        console.log('Showing home preloader - enough time has passed');
+        const startTime = Date.now();
+        const minDisplayTime = 7000; // 7 seconds minimum display time
+
+        window.addEventListener('load', () => {
+          const elapsedTime = Date.now() - startTime;
+          const remainingTime = Math.max(0, minDisplayTime - elapsedTime);
+
+          setTimeout(() => {
+            preloader.remove();
+          }, remainingTime);
+        });
+      } else {
+        // Hide preloader immediately if not enough time has passed
+        console.log('Hiding home preloader - not enough time has passed since last shown');
+        preloader.style.display = 'none';
+        preloader.remove();
+      }
+    } else {
+      // Portfolio or other pages - always show preloader
+      console.log('Showing portfolio/other page preloader - always show');
       const startTime = Date.now();
-      const minDisplayTime = 7000; // 7 seconds minimum display time
+      const minDisplayTime = 3000; // 3 seconds for portfolio pages
 
       window.addEventListener('load', () => {
         const elapsedTime = Date.now() - startTime;
@@ -159,11 +183,6 @@
           preloader.remove();
         }, remainingTime);
       });
-    } else {
-      // Hide preloader immediately if not enough time has passed
-      console.log('Hiding preloader - not enough time has passed since last shown');
-      preloader.style.display = 'none';
-      preloader.remove();
     }
   }
 
