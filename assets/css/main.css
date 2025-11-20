@@ -1605,6 +1605,127 @@ section,
 }
 
 /*--------------------------------------------------------------
+# Brands Section
+--------------------------------------------------------------*/
+.brands {
+  padding: 80px 0;
+  background: var(--surface-color);
+  overflow: hidden;
+}
+
+.brands .section-title {
+  margin-bottom: 60px;
+}
+
+.brands-carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  mask: linear-gradient(
+    to right,
+    transparent,
+    white 10%,
+    white 90%,
+    transparent
+  );
+  -webkit-mask: linear-gradient(
+    to right,
+    transparent,
+    white 10%,
+    white 90%,
+    transparent
+  );
+}
+
+.brands-track {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  width: fit-content;
+  animation: scroll-brands 30s linear infinite;
+}
+
+.brands-track:hover {
+  animation-play-state: paused;
+}
+
+.brand-item {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+  height: 80px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.brand-item:hover {
+  transform: scale(1.1);
+}
+
+.brand-logo {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  filter: grayscale(100%) opacity(0.6);
+  transition: all 0.3s ease;
+  object-fit: contain;
+}
+
+.brand-item:hover .brand-logo {
+  filter: grayscale(0%) opacity(1);
+}
+
+@keyframes scroll-brands {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .brands {
+    padding: 60px 0;
+  }
+
+  .brands-track {
+    gap: 40px;
+    animation: scroll-brands 20s linear infinite;
+  }
+
+  .brand-item {
+    min-width: 120px;
+    height: 60px;
+    padding: 15px;
+  }
+
+  .brands .section-title {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brands {
+    padding: 40px 0;
+  }
+
+  .brands-track {
+    gap: 30px;
+  }
+
+  .brand-item {
+    min-width: 100px;
+    height: 50px;
+    padding: 10px;
+  }
+}
+
+/*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
 .services .service-header {
