@@ -1729,9 +1729,16 @@ section,
 # Mobile Mockup Section
 --------------------------------------------------------------*/
 .mobile-mockup {
-  padding: 80px 0;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
   background: var(--default-green);
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
 /* Mobile Mockup Container */
@@ -1825,12 +1832,47 @@ section,
   z-index: 10;
 }
 
+/* Progress indicator for scroll lock */
+.mobile-mockup .progress-hint {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  text-align: center;
+  z-index: 20;
+  opacity: 0;
+  animation: fadeInOut 3s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+.mobile-mockup .progress-bar {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 1px;
+  z-index: 20;
+}
+
+.mobile-mockup .progress-fill {
+  height: 100%;
+  background: var(--accent-color);
+  border-radius: 1px;
+  transition: width 0.6s ease;
+  width: 0%;
+}
+
 /* Responsive Design */
 @media (max-width: 991px) {
-  .mobile-mockup {
-    padding: 60px 0;
-  }
-
   .mobile-mockup-container {
     max-width: 300px;
   }
@@ -1842,10 +1884,6 @@ section,
 }
 
 @media (max-width: 768px) {
-  .mobile-mockup {
-    padding: 50px 0;
-  }
-
   .mobile-frame {
     width: 220px;
     height: 450px;
@@ -1856,12 +1894,20 @@ section,
   .mobile-screen {
     border-radius: 22px;
   }
+
+  .mobile-mockup .progress-bar {
+    width: 150px;
+  }
 }
 
 @media (max-width: 480px) {
   .mobile-frame {
     width: 200px;
     height: 410px;
+  }
+
+  .mobile-mockup .progress-bar {
+    width: 120px;
   }
 }
 
