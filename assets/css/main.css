@@ -8,21 +8,25 @@
 @font-face {
   font-family: Benzin-Bold;
   src: url("../fonts/Benzin-Bold.ttf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: Benzin-Regular;
   src: url("../fonts/Benzin-Regular.ttf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: FiraSans-Italic;
   src: url("../fonts/FiraSansExtraCondensed-LightItalic.ttf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: FiraMono-Regular;
   src: url("../fonts/FiraMono-Regular.ttf");
+  font-display: swap;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
