@@ -95,7 +95,7 @@
   position: fixed;
   width: 100px;
   height: 100px;
-  background: url('../img/misc/mouse-normal.png') no-repeat center;
+  background: url('../img/misc/mouse-normal.webp') no-repeat center;
   background-size: contain;
   pointer-events: none;
   z-index: 9999;
@@ -107,7 +107,7 @@
 .custom-cursor.cursor-hover {
   width: 100px;
   height: 100px;
-  background: url('../img/misc/mouse-hover.png') no-repeat center;
+  background: url('../img/misc/mouse-hover.webp') no-repeat center;
   background-size: contain;
   transform: translate(-50%, -50%);
 }
@@ -116,7 +116,7 @@
 .custom-cursor.cursor-click {
   width: 100px;
   height: 100px;
-  background: url('../img/misc/mouse-clicked.png') no-repeat center;
+  background: url('../img/misc/mouse-clicked.webp') no-repeat center;
   background-size: contain;
   transform: translate(-50%, -50%) scale(0.9);
 }
@@ -127,7 +127,7 @@
   --surface-color: var(--default-black);
   /* --background-color: #0d1d26; */
   /* --surface-color: #16262f; */
-  background: url('../img/abstract/pinky-background.jpg') no-repeat center;
+  background: url('../img/abstract/pinky-background.webp') no-repeat center;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -3297,63 +3297,63 @@ section,
 }
 
 .portfolio .portfolio-filters .all-projects-icon {
-  background-image: url('../img/icons/all-projects.png');
+  background-image: url('../img/icons/all-projects.webp');
 }
 
 .portfolio .portfolio-filters li:hover .all-projects-icon {
-  background-image: url('../img/icons/all-projects1.png');
+  background-image: url('../img/icons/all-projects1.webp');
 }
 
 .portfolio .portfolio-filters li.filter-active .all-projects-icon {
-  background-image: url('../img/icons/all-projects1.png');
+  background-image: url('../img/icons/all-projects1.webp');
 }
 
 .portfolio .portfolio-filters .development-icon {
-  background-image: url('../img/icons/web1.png');
+  background-image: url('../img/icons/web1.webp');
 }
 
 .portfolio .portfolio-filters li:hover .development-icon {
-  background-image: url('../img/icons/web2.png');
+  background-image: url('../img/icons/web2.webp');
 }
 
 .portfolio .portfolio-filters li.filter-active .development-icon {
-  background-image: url('../img/icons/web2.png');
+  background-image: url('../img/icons/web2.webp');
 }
 
 .portfolio .portfolio-filters .ui-icon {
-  background-image: url('../img/icons/uiux1.png');
+  background-image: url('../img/icons/uiux1.webp');
 }
 
 .portfolio .portfolio-filters li:hover .ui-icon {
-  background-image: url('../img/icons/uiux2.png');
+  background-image: url('../img/icons/uiux2.webp');
 }
 
 .portfolio .portfolio-filters li.filter-active .ui-icon {
-  background-image: url('../img/icons/uiux2.png');
+  background-image: url('../img/icons/uiux2.webp');
 }
 
 .portfolio .portfolio-filters .creative-icon {
-  background-image: url('../img/icons/creative1.png');
+  background-image: url('../img/icons/creative1.webp');
 }
 
 .portfolio .portfolio-filters li:hover .creative-icon {
-  background-image: url('../img/icons/creative2.png');
+  background-image: url('../img/icons/creative2.webp');
 }
 
 .portfolio .portfolio-filters li.filter-active .creative-icon {
-  background-image: url('../img/icons/creative2.png');
+  background-image: url('../img/icons/creative2.webp');
 }
 
 .portfolio .portfolio-filters .marketing-icon {
-  background-image: url('../img/icons/marketing1.png');
+  background-image: url('../img/icons/marketing1.webp');
 }
 
 .portfolio .portfolio-filters li:hover .marketing-icon {
-  background-image: url('../img/icons/marketing2.png');
+  background-image: url('../img/icons/marketing2.webp');
 }
 
 .portfolio .portfolio-filters li.filter-active .marketing-icon {
-  background-image: url('../img/icons/marketing2.png');
+  background-image: url('../img/icons/marketing2.webp');
 }
 
 @media (max-width: 768px) {
