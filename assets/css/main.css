@@ -463,11 +463,28 @@ h6 {
   }
 }
 
-@media (max-width: 325px) {
+/* Small mobile */
+@media (max-width: 400px) {
   .header .btn-getstarted {
-    font-size: 14px;
+    font-size: 10px;
+  }
+
+  .header .logo img {
+    max-height: 13px;
   }
 }
+
+/* Large mobile */
+@media (min-width: 401px) and (max-width: 450px) {}
+
+/* Tablet */
+@media (min-width: 451px) and (max-width: 800px) {}
+
+/* Small laptop */
+@media (min-width: 801px) and (max-width: 1024px) {}
+
+/* Large screens */
+@media (min-width: 1025px) {}
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -854,6 +871,7 @@ h6 {
 #preloader .preloader-home {
   display: block;
 }
+
 #preloader .preloader-portfolio {
   display: block;
   width: 200px !important;
@@ -861,31 +879,6 @@ h6 {
   max-width: 200px;
   max-height: 200px;
 }
-
-/* Remove the old GIF background - now using Lottie player directly in HTML */
-
-/* #preloader:before {
-  content: "";
-  position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  border: 6px solid #ffffff;
-  border-color: var(--accent-color) transparent var(--accent-color) transparent;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: animate-preloader 1.5s linear infinite;
-} */
-
-/* @keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-} */
 
 /*--------------------------------------------------------------
 # Scroll Top Button
@@ -1053,6 +1046,21 @@ section,
   font-family: Benzin-Bold;
 }
 
+/* Small mobile */
+@media (max-width: 400px) {}
+
+/* Large mobile */
+@media (min-width: 401px) and (max-width: 450px) {}
+
+/* Tablet */
+@media (min-width: 451px) and (max-width: 800px) {}
+
+/* Small laptop */
+@media (min-width: 801px) and (max-width: 1024px) {}
+
+/* Large screens */
+@media (min-width: 1025px) {}
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -1160,8 +1168,6 @@ section,
 .hero .description p {
   font-size: 1.2rem;
   line-height: 1.7;
-  /* font-family: Benzin-Regular; */
-  /* color: var(--default-beige); */
   margin: 0;
 }
 
@@ -1202,7 +1208,7 @@ section,
 
 @media (max-width: 450px) {
   .hero .cta-button .btn {
-    padding-top: 0.4rem;
+    padding-top: 0.3rem;
     padding-bottom: 0.1rem;
 
   }
@@ -1313,6 +1319,30 @@ section,
   transform: translateY(-3px);
   background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
+
+/* Small mobile */
+@media (max-width: 400px) {
+  .hero .description p {
+    font-size: 1rem;
+  }
+
+  .hero .cta-button .btn {
+    font-size: 1rem;
+  }
+}
+
+/* Large mobile */
+@media (min-width: 401px) and (max-width: 450px) {}
+
+/* Tablet */
+@media (min-width: 451px) and (max-width: 800px) {}
+
+/* Small laptop */
+@media (min-width: 801px) and (max-width: 1024px) {}
+
+/* Large screens */
+@media (min-width: 1025px) {}
+
 
 /*--------------------------------------------------------------
 # About Section
@@ -1619,26 +1649,24 @@ section,
 
 .brands .section-title {
   margin-bottom: 60px;
+  font-size: 0.1;
 }
 
 .brands-carousel-container {
   position: relative;
   overflow: hidden;
+  margin-top: -90px;
   width: 100%;
-  mask: linear-gradient(
-    to right,
-    transparent,
-    white 10%,
-    white 90%,
-    transparent
-  );
-  -webkit-mask: linear-gradient(
-    to right,
-    transparent,
-    white 10%,
-    white 90%,
-    transparent
-  );
+  mask: linear-gradient(to right,
+      transparent,
+      white 10%,
+      white 90%,
+      transparent);
+  -webkit-mask: linear-gradient(to right,
+      transparent,
+      white 10%,
+      white 90%,
+      transparent);
 }
 
 .brands-track {
@@ -1686,19 +1714,24 @@ section,
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
+/* Small mobile */
+@media (max-width: 400px) {
+  .brands .section-title span {
+    font-size: 1.1rem;
+  }
+
   .brands {
-    padding: 60px 0;
+    padding: 0px 0;
   }
 
   .brands-track {
-    gap: 40px;
+    gap: 10px;
     animation: scroll-brands 20s linear infinite;
   }
 
@@ -1709,25 +1742,26 @@ section,
   }
 
   .brands .section-title {
-    margin-bottom: 40px;
+    margin-bottom: 0px;
+    margin-top: -30px;
+  }
+
+  .brands-carousel-container {
+    margin-top: -90px;
   }
 }
 
-@media (max-width: 480px) {
-  .brands {
-    padding: 40px 0;
-  }
+/* Large mobile */
+@media (min-width: 401px) and (max-width: 450px) {}
 
-  .brands-track {
-    gap: 30px;
-  }
+/* Tablet */
+@media (min-width: 451px) and (max-width: 800px) {}
 
-  .brand-item {
-    min-width: 100px;
-    height: 50px;
-    padding: 10px;
-  }
-}
+/* Small laptop */
+@media (min-width: 801px) and (max-width: 1024px) {}
+
+/* Large screens */
+@media (min-width: 1025px) {}
 
 /*--------------------------------------------------------------
 # Mobile Mockup Section
@@ -1763,7 +1797,7 @@ section,
   /* background: linear-gradient(145deg, #2a2a2a, #1a1a1a); */
   border-radius: 35px;
   padding: 12px;
-  box-shadow: 
+  box-shadow:
     0 25px 60px rgba(0, 0, 0, 0.3),
     0 0 0 2px rgba(255, 255, 255, 0.1),
     inset 0 2px 4px rgba(255, 255, 255, 0.1);
@@ -1786,7 +1820,8 @@ section,
 
 .screenshots-container {
   position: relative;
-  width: 500%; /* 5 screenshots * 100% */
+  width: 500%;
+  /* 5 screenshots * 100% */
   height: 100%;
   display: flex;
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1794,7 +1829,8 @@ section,
 }
 
 .screenshot {
-  width: 20%; /* 100% / 5 screenshots */
+  width: 20%;
+  /* 100% / 5 screenshots */
   height: 100%;
   flex-shrink: 0;
   opacity: 0.7;
@@ -1852,8 +1888,15 @@ section,
 }
 
 @keyframes fadeInOut {
-  0%, 100% { opacity: 0; }
-  50% { opacity: 1; }
+
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
 }
 
 .mobile-mockup .progress-bar {
@@ -2420,307 +2463,6 @@ section,
     /* margin-top: 5px;  */
   }
 }
-
-/* 
-.services .service-card {
-  padding: 20px;
-  margin-bottom: 30px;
-  border-radius: 20px;
-  background-color: var(--default-beige);
-  transition: all 0.3s ease;
-  overflow: hidden; /* Add this to prevent layout shifts
-}
-
-.services .service-card .service-icon {
-  margin-bottom: 25px;
-  background-color: var(--default-lemon);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  width: 23rem;
-  height: 8rem; /* Increased initial height 
-  transition: all 0.4s ease; /* Add smooth transition 
-}
-
-.services .service-card .service-icon i {
-  font-size: 32px;
-  color: var(--default-black);
-  transition: all 0.3s ease;
-}
-
-.services .service-card .service-icon img {
-  width: 23rem;
-  height: 8rem; /* Increased initial height to match container 
-  object-fit: fill;
-  transition: all 0.4s ease; /* Add smooth transition 
-}
-
-.services .service-card h3 {
-  font-size: 40px;
-  margin-bottom: 15px;
-  font-weight: 700;
-  transition: all 0.4s ease; /* Add smooth transition 
-}
-
-.services .service-card h3 a {
-  color: var(--default-black);
-  transition: color 0.3s ease;
-}
-
-.services .service-card h3 a span {
-  display: block;
-}
-
-.services .service-card h3 a:hover {
-  color: var(--accent-color);
-}
-
-.services .service-card p {
-  color: var(--default-black); /* Changed to visible color for hover state 
-  transition: all 0.4s ease;
-  margin-bottom: 0;
-  opacity: 0; /* Initially invisible 
-  visibility: hidden; /* Completely hidden 
-  max-height: 0; /* No height initially 
-  overflow: hidden; /* Hide overflow 
-  transform: translateY(-10px); /* Slight upward position initially 
-}
-
-/* Hover states 
-.services .service-card:hover .service-icon {
-  height: 5rem; /* Shrink to smaller height on hover 
-}
-
-.services .service-card:hover .service-icon img {
-  height: 5rem; /* Shrink to match container 
-}
-
-.services .service-card:hover p {
-  opacity: 1; /* Make visible 
-  visibility: visible; /* Show the element 
-  max-height: 100px; /* Allow height for content 
-  transform: translateY(0); /* Move to normal position 
-  margin-top: 15px; /* Add some spacing 
-}
-
-.services .service-card .card-action {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 80px;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--default-lemon);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(20px);
-  transition: all 0.3s ease;
-}
-
-.services .service-card .card-action i {
-  font-size: 24px;
-  color: var(--default-black);
-  transition: transform 0.3s ease;
-}
-
-.services .service-card .card-action:hover i {
-  transform: rotate(45deg);
-}
-
-.services .service-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.4s ease;
-}
-
-.services .service-card:hover {
-  border-color: transparent;
-}
-
-.services .service-card:hover::before {
-  opacity: 1;
-  visibility: visible;
-  background-color: var(--default-green);
-}
-
-.services .service-card:hover h3 a {
-  color: var(--default-lemon);
-}
-
-.services .service-card:hover h3 a:hover {
-  color: var(--default-lemon);
-}
-
-.services .service-card:hover .card-action {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.services .service-card:hover .service-icon i {
-  transform: scale(1.1);
-} */
-
-
-/* 
-.services .service-card {
-  padding: 20px;
-  margin-bottom: 30px;
-  border-radius: 20px;
-  background-color: var(--default-beige);
-  transition: all 0.3s ease;
-}
-
-.services .service-card .service-icon {
-  margin-bottom: 25px;
-  background-color: var(--default-lemon);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  width: 23rem;
-  height: 5rem;
-}
-
-.services .service-card .service-icon i {
-  font-size: 32px;
-  color: var(--default-black);
-  transition: all 0.3s ease;
-}
-
-.services .service-card .service-icon img {
-  width: 23rem;
-  height: 5rem;
-  object-fit: fill;
-}
-
-.services .service-card h3 {
-  font-size: 40px;
-  margin-bottom: 15px;
-  font-weight: 700;
-}
-
-.services .service-card h3 a {
-  color: var(--default-black);
-  transition: color 0.3s ease;
-}
-
-.services .service-card h3 a span {
-  display: block;
-}
-
-.services .service-card h3 a:hover {
-  color: var(--accent-color);
-}
-
-.services .service-card p {
-  color: var(--default-beige);
-  transition: color 0.3s ease;
-  margin-bottom: 0;
-}
-
-.services .service-card .card-action {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 80px;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--default-lemon);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(20px);
-  transition: all 0.3s ease;
-}
-
-.services .service-card .card-action i {
-  font-size: 24px;
-  color: var(--default-black);
-  transition: transform 0.3s ease;
-}
-
-.services .service-card .card-action:hover i {
-  transform: rotate(45deg);
-}
-
-.services .service-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--default-green);
-  clip-path: polygon(70% 0, 100% 30%, 100% 100%, 0 100%, 0 0);
-  z-index: -1;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-}
-
-.services .service-card:hover {
-  border-color: transparent;
-}
-
-.services .service-card:hover::before {
-  opacity: 1;
-  visibility: visible;
-  background-color: var(--default-green);
-}
-
-.services .service-card:hover h3 a {
-  color: var(--default-lemon);
-}
-
-.services .service-card:hover h3 a:hover {
-  color: var(--default-lemon);
-}
-
-.services .service-card:hover p {
-  color: var(--default-lemon)
-}
-
-.services .service-card:hover .card-action {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.services .service-card:hover .service-icon i {
-  transform: scale(1.1);
-} */
-
-/* @media (max-width: 768px) {
-  .services {
-    padding: 70px 0 50px;
-  }
-
-  .services .service-card {
-    padding: 150px 25px 25px;
-  }
-
-  .services .service-card h3 {
-    font-size: 24px;
-  }
-
-  .services .service-card .service-icon {
-    position: absolute;
-    top: 40px;
-    left: 25px;
-  }
-} */
 
 /*--------------------------------------------------------------
 # Steps Section
@@ -6122,11 +5864,11 @@ section,
   .budget-slider-container {
     padding: 15px 5px;
   }
-  
+
   .budget-values {
     font-size: 14px;
   }
-  
+
   .budget-min-value,
   .budget-max-value {
     padding: 6px 12px;

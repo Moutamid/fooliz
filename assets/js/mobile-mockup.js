@@ -21,7 +21,6 @@
     const totalScreens = screenshots.length;
     const maxIndex = totalScreens - 1;
 
-    console.log('Mobile mockup script initialized with', totalScreens, 'screenshots');
 
     // Update active screenshot and progress
     function updateActiveScreen(index) {
@@ -48,7 +47,6 @@
         }
       }
       
-      console.log('Updated to screen', index + 1, 'of', totalScreens);
     }
 
     // Lock/unlock page scrolling
@@ -69,7 +67,6 @@
         }, 50);
       }
       
-      console.log('🔒 Scroll locked');
     }
 
     function unlockScroll() {
@@ -78,7 +75,6 @@
       isScrollLocked = false;
       hasEnteredSection = false;
       lastUnlockTime = Date.now(); // Track when we unlocked
-      console.log('🔓 Scroll unlocked');
       
       // Don't reset screen index - keep current position
     }
@@ -110,7 +106,6 @@
       const approaching = isApproachingMockup();
       const rect = mockupSection.getBoundingClientRect();
       
-      console.log('Wheel event - scrollingDown:', scrollingDown, 'shouldLock:', shouldLock, 'approaching:', approaching);
       
       // Mark that user has scrolled (not auto-scroll)
       if (!userHasScrolledToSection && window.pageYOffset > 50) {
@@ -121,7 +116,6 @@
       if (approaching && shouldLock && !isScrollLocked && userHasScrolledToSection && scrollingDown) {
         const timeSinceUnlock = Date.now() - lastUnlockTime;
         if (timeSinceUnlock > 1000) { // Wait at least 1 second after unlock
-          console.log('🔒 LOCKING SCROLL - Scrolling down to section (90%)');
           event.preventDefault();
           lockScroll();
           hasEnteredSection = true;
@@ -134,24 +128,20 @@
         event.preventDefault();
         
         if (isScrolling) {
-          console.log('Already scrolling, ignoring event');
           return false;
         }
         
         const delta = event.deltaY;
         let newIndex = currentScreenIndex;
         
-        console.log('🎮 Handling locked scroll - delta:', delta, 'current index:', currentScreenIndex);
         
         // Determine scroll direction and update index
         if (delta > 0) {
           // Scrolling down - move to next screen
           if (currentScreenIndex < maxIndex) {
             newIndex = currentScreenIndex + 1;
-            console.log('➡️ Moving to next screen:', newIndex);
           } else {
             // At last screen, unlock scroll and continue naturally
-            console.log('🔓 At last screen, unlocking and continuing naturally');
             unlockScroll();
             // Don't prevent the event, let natural scrolling continue
             // This allows the user's scroll momentum to naturally move to the next section
@@ -160,10 +150,8 @@
           // Scrolling up - move to previous screen
           if (currentScreenIndex > 0) {
             newIndex = currentScreenIndex - 1;
-            console.log('⬅️ Moving to previous screen:', newIndex);
           } else {
             // At first screen, unlock scroll and allow going back naturally
-            console.log('🔓 At first screen, unlocking and going back naturally');
             unlockScroll();
             // Don't prevent the event, let natural scrolling continue
             // This allows the user's scroll momentum to naturally move to the previous section
@@ -188,7 +176,6 @@
       
       // If we're not in the section anymore and scroll was locked, unlock but keep position
       if (!approaching && isScrollLocked) {
-        console.log('🔓 Left section area, unlocking scroll');
         unlockScroll();
       }
     }
@@ -214,7 +201,6 @@
         
         // Force lock ONLY when scrolling down and conditions are met
         if (approaching && shouldLock && !isScrollLocked && userHasScrolledToSection && scrollingDown && timeSinceUnlock > 2000) {
-          console.log('🔒 FORCED LOCK via interval check - scrolling down to section');
           lockScroll();
         }
         
@@ -223,7 +209,6 @@
           // Only set this flag if the user has actually scrolled (not on initial page load)
           if (window.pageYOffset > 150) { // User has scrolled at least 150px
             userHasScrolledToSection = true;
-            console.log('📍 User has scrolled near mockup section');
           }
         }
       }, 100); // Check every 100ms
@@ -291,7 +276,6 @@
             newIndex = currentScreenIndex + 1;
           } else {
             // At last screen, unlock scroll and continue naturally (like mouse scroll)
-            console.log('🔓 At last screen (touch), unlocking and continuing naturally');
             unlockScroll();
             return;
           }
@@ -301,7 +285,6 @@
             newIndex = currentScreenIndex - 1;
           } else {
             // At first screen, unlock scroll and allow going back naturally (like mouse scroll)
-            console.log('🔓 At first screen (touch), unlocking and going back naturally');
             unlockScroll();
             return;
           }
@@ -310,7 +293,6 @@
         if (newIndex !== currentScreenIndex) {
           currentScreenIndex = newIndex;
           updateActiveScreen(currentScreenIndex);
-          console.log('Touch swipe to screen', currentScreenIndex);
         }
       }
     }
@@ -324,14 +306,12 @@
         if (currentScreenIndex < maxIndex) {
           currentScreenIndex++;
           updateActiveScreen(currentScreenIndex);
-          console.log('Keyboard navigation to screen', currentScreenIndex);
         }
       } else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
         event.preventDefault();
         if (currentScreenIndex > 0) {
           currentScreenIndex--;
           updateActiveScreen(currentScreenIndex);
-          console.log('Keyboard navigation to screen', currentScreenIndex);
         }
       }
     }
@@ -358,6 +338,5 @@
       }
     });
     
-    console.log('Mobile mockup controller fully initialized');
   });
 })();
