@@ -462,12 +462,34 @@ h6 {
 /* Large mobile */
 @media (min-width: 401px) and (max-width: 450px) {
   .header .btn-getstarted {
-    font-size: 10px;
+    font-size: 12px;
     padding-top: 4px;
     padding-bottom: 2px;
     order: 2;
     margin: 0 10px 0 0;
     padding: 6px 15px;
+  }
+
+  .header .logo img {
+    max-height: 15px;
+  }
+
+  .header {
+    padding-top: 12px;
+  }
+
+  .header .header-container {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px 5px 10px 15px;
+  }
+
+  .header .logo {
+    order: 1;
+  }
+
+  .header .navmenu {
+    order: 3;
   }
 }
 
@@ -845,18 +867,28 @@ h6 {
   margin-top: 6px;
   font-size: 13px;
 }
+
 /* Small mobile */
 @media (max-width: 400px) {
   .footer .footer-about .logo span {
     font-size: 24px;
   }
+
   .footer .footer-about p {
     font-size: 12px;
   }
 }
 
 /* Large mobile */
-@media (min-width: 401px) and (max-width: 450px) {}
+@media (min-width: 401px) and (max-width: 450px) {
+  .footer .footer-about .logo span {
+    font-size: 24px;
+  }
+
+  .footer .footer-about p {
+    font-size: 12px;
+  }
+}
 
 /* Tablet */
 @media (min-width: 451px) and (max-width: 800px) {}
@@ -1335,6 +1367,22 @@ section,
 
 /* Large mobile */
 @media (min-width: 401px) and (max-width: 450px) {
+  .hero .description p {
+    font-size: 0.9rem;
+  }
+
+  .hero .visual-content {
+    flex-direction: column;
+  }
+
+  .hero .divider {
+    width: 100%;
+  }
+
+  .hero .cta-button .btn i {
+    font-size: 1.2rem;
+  }
+
   .hero .stats-card {
     position: relative;
     bottom: auto;
@@ -1343,21 +1391,14 @@ section,
     width: 90%;
   }
 
-  .hero .visual-content {
-    flex-direction: column;
-  }
-
   .hero .cta-button .btn {
+    font-size: 1.2rem;
     padding-top: 0.3rem;
-    padding-bottom: 0.1rem;
-  }
-
-  .hero .divider {
-    width: 100%;
+    padding-bottom: 0.3rem;
   }
 
   .hero .main-heading h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   .hero .content-col {
@@ -1758,6 +1799,30 @@ section,
 
 /* Large mobile */
 @media (min-width: 401px) and (max-width: 450px) {
+
+  /* Meet the Nerds */
+  .about .section-title span {
+    font-size: 28px;
+  }
+
+  /* Testimonial quotes and feedback */
+  .about .testimonial-section .testimonial-item p {
+    font-size: 0.8rem;
+  }
+
+  .about .testimonial-section .testimonial-item .rating {
+    font-size: 0.1rem;
+  }
+
+  /* Client names in testimonials */
+  .about .testimonial-section .testimonial-item .client-info h6 {
+    font-size: 0.9rem;
+  }
+
+  .about .testimonial-section .testimonial-item .client-info span {
+    font-size: 0.7rem;
+  }
+
   .about .about-image .experience-badge {
     right: 0;
     bottom: 20px;
@@ -1770,7 +1835,11 @@ section,
   }
 
   .about .about-content h2 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
+  }
+
+  .about .about-content .lead {
+    font-size: 0.9rem;
   }
 
   .about .about-content .btn-primary {
@@ -1780,6 +1849,14 @@ section,
 
   .about .testimonial-section .testimonial-item {
     margin-top: 1rem;
+  }
+
+  .about .testimonial-section .testimonial-intro h3 {
+    font-size: 1.4rem;
+  }
+
+  .about .testimonial-section .testimonial-intro p {
+    font-size: 0.9rem;
   }
 }
 
@@ -1928,7 +2005,36 @@ section,
 }
 
 /* Large mobile */
-@media (min-width: 401px) and (max-width: 450px) {}
+@media (min-width: 401px) and (max-width: 450px) {
+   /* Some of Our Clients */
+  .brands .section-title span {
+    font-size: 1.3rem;
+  }
+
+  .brands {
+    padding: 0px 0;
+  }
+
+  .brands-track {
+    gap: 6px;
+    animation: scroll-brands 20s linear infinite;
+  }
+
+  .brand-item {
+    min-width: 120px;
+    height: 60px;
+    padding: 15px;
+  }
+
+  .brands .section-title {
+    margin-bottom: 0px;
+    margin-top: -30px;
+  }
+
+  .brands-carousel-container {
+    margin-top: -90px;
+  }
+}
 
 /* Tablet */
 @media (min-width: 451px) and (max-width: 800px) {}
@@ -2646,9 +2752,23 @@ section,
 
 /* Large mobile */
 @media (min-width: 401px) and (max-width: 450px) {
+   /* The Fooliz Menu */
+  .services .section-title span {
+    font-size: 31px;
+  }
+
+  /* Hand Crafted Brands, Engineered Apps */
+  .services .service-header .service-intro .service-heading {
+    font-size: 25px;
+  }
+
   .services .service-card {
     height: 280px;
     /* Even smaller for very small screens */
+  }
+
+  .services .service-header .service-summary p {
+    font-size: 13px;
   }
 
   .services .service-card .content-area {
@@ -3554,6 +3674,11 @@ section,
 
 /* Large mobile */
 @media (min-width: 401px) and (max-width: 450px) {
+    /* Stuff we built */
+  .portfolio .section-title span {
+    font-size: 32px;
+  }
+
   .portfolio .portfolio-filters {
     gap: 10px;
   }
@@ -3580,7 +3705,7 @@ section,
 
   .show-more-button {
     padding-top: 12px;
-    padding-bottom: 9px;
+    padding-bottom: 12px;
   }
 
   .portfolio .entry-overlay {
@@ -3814,6 +3939,12 @@ section,
 
 /* Large mobile */
 @media (min-width: 401px) and (max-width: 450px) {
+  
+  /* Humans of Fooliz */
+  .team .section-title span {
+    font-size: 27px;
+  }
+
   .team .team-member {
     flex-direction: column;
   }
@@ -4632,7 +4763,42 @@ section,
 }
 
 /* Large mobile */
-@media (min-width: 401px) and (max-width: 450px) {}
+@media (min-width: 401px) and (max-width: 450px) {
+   .pricing .section-title span {
+    font-size: 27px;
+  }
+
+  .pricing .plan-header-consultancy h3,
+  .pricing .plan-header-onetime h3,
+  .pricing .plan-header-subscription h3 {
+    font-size: 22px;
+  }
+
+  .pricing .plan-header-consultancy p,
+  .pricing .plan-header-onetime p,
+  .pricing .plan-header-subscription p {
+    font-size: 14px;
+  }
+
+  .pricing .plan-cta-consultancy .btn-plan,
+  .pricing .plan-cta-onetime .btn-plan,
+  .pricing .plan-cta-subscription .btn-plan {
+    font-size: 18px;
+  }
+
+  .pricing .plan-features-consultancy ul li,
+  .pricing .plan-features-onetime ul li,
+  .pricing .plan-features-subscription ul li {
+    font-size: 13px;
+  }
+
+  .pricing .plan-header-consultancy .plan-icon img,
+  .pricing .plan-header-onetime .plan-icon img,
+  .pricing .plan-header-subscription .plan-icon img {
+    width: 16rem;
+    height: 16rem;
+  }
+}
 
 /* Tablet */
 @media (min-width: 451px) and (max-width: 800px) {}
@@ -4756,16 +4922,42 @@ section,
     width: 0px;
     height: 0px;
   }
+
   .faq .faq-container .faq-item h3 {
     font-size: 12px;
   }
+
   .faq .faq-container .faq-item .faq-content p {
     font-size: 12px;
   }
 }
 
 /* Large mobile */
-@media (min-width: 401px) and (max-width: 450px) {}
+@media (min-width: 401px) and (max-width: 450px) {
+  
+  /* Got questions? We've got answers */
+  .faq .faq-title {
+    font-size: 1.7rem;
+  }
+
+  /* We appreciate clarity. If you don't find your question here, feel free to ask (we're here to help) */
+  .faq .faq-description {
+    font-size: 0.9rem;
+  }
+
+  .faq .faq-arrow img {
+    width: 0px;
+    height: 0px;
+  }
+
+  .faq .faq-container .faq-item h3 {
+    font-size: 14px;
+  }
+
+  .faq .faq-container .faq-item .faq-content p {
+    font-size: 14px;
+  }
+}
 
 /* Tablet */
 @media (min-width: 451px) and (max-width: 800px) {}
@@ -5064,13 +5256,22 @@ section,
   .contact .section-title span {
     font-size: 20px;
   }
+
   .contact .contact-info-box .info-content h4 {
     font-size: 14px;
   }
 }
 
 /* Large mobile */
-@media (min-width: 401px) and (max-width: 450px) {}
+@media (min-width: 401px) and (max-width: 450px) {
+   .contact .section-title span {
+    font-size: 27px;
+  }
+
+  .contact .contact-info-box .info-content h4 {
+    font-size: 15px;
+  }
+}
 
 /* Tablet */
 @media (min-width: 451px) and (max-width: 800px) {}
