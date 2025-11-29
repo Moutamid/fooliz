@@ -393,6 +393,7 @@ h6 {
   margin-right: 8px;
 }
 
+/* Fooliz Studio */
 .header .logo h1 {
   font-size: 20px;
   margin: 0;
@@ -402,6 +403,7 @@ h6 {
   color: var(--heading-color);
 }
 
+/* okay i'm curious */
 .header .btn-getstarted,
 .header .btn-getstarted:focus {
   color: var(--default-black);
@@ -417,23 +419,27 @@ h6 {
   transition: 0.3s;
 }
 
-@media (max-width: 450px) {
-
-  .header .btn-getstarted {
-    padding-top: 4px;
-    padding-bottom: 2px;
-  }
-}
-
 .header .btn-getstarted:hover,
 .header .btn-getstarted:focus:hover {
   color: var(--default-beige);
   background: var(--default-pink);
-
-  /* background: color-mix(in srgb, var(--accent-color), transparent 15%); */
 }
 
-@media (max-width: 1200px) {
+/* Small mobile */
+@media (max-width: 400px) {
+  .header .btn-getstarted {
+    font-size: 10px;
+    padding-top: 4px;
+    padding-bottom: 2px;
+    order: 2;
+    margin: 0 10px 0 0;
+    padding: 6px 15px;
+  }
+
+  .header .logo img {
+    max-height: 13px;
+  }
+
   .header {
     padding-top: 10px;
   }
@@ -448,34 +454,22 @@ h6 {
     order: 1;
   }
 
-  .header .logo img {
-    max-height: 18px;
-  }
-
-  .header .btn-getstarted {
-    order: 2;
-    margin: 0 10px 0 0;
-    padding: 6px 15px;
-  }
-
   .header .navmenu {
     order: 3;
   }
 }
 
-/* Small mobile */
-@media (max-width: 400px) {
+/* Large mobile */
+@media (min-width: 401px) and (max-width: 450px) {
   .header .btn-getstarted {
     font-size: 10px;
-  }
-
-  .header .logo img {
-    max-height: 13px;
+    padding-top: 4px;
+    padding-bottom: 2px;
+    order: 2;
+    margin: 0 10px 0 0;
+    padding: 6px 15px;
   }
 }
-
-/* Large mobile */
-@media (min-width: 401px) and (max-width: 450px) {}
 
 /* Tablet */
 @media (min-width: 451px) and (max-width: 800px) {}
@@ -507,6 +501,7 @@ h6 {
     position: relative;
   }
 
+  /* Navigation links: Home, Services, Portfolio, About, Team, Contact */
   .navmenu a,
   .navmenu a:focus {
     color: var(--default-black);
@@ -728,6 +723,7 @@ h6 {
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
+/* Fooliz Studio - A design-driven dev studio */
 .footer {
   color: var(--default-color);
   background-color: var(--background-color);
@@ -751,6 +747,7 @@ h6 {
   margin-right: 6px;
 }
 
+/* Fooliz Studio */
 .footer .footer-about .logo span {
   color: var(--default-lemon);
   font-size: 30px;
@@ -783,6 +780,7 @@ h6 {
   border-color: var(--default-lemon);
 }
 
+/* Useful Links, Our Services, Contact Us */
 .footer h4 {
   font-size: 16px;
   font-weight: bold;
@@ -791,6 +789,7 @@ h6 {
   color: var(--default-lemon);
 }
 
+/* Services list: Mobile Apps Development, Websites Development, Branding & Identity Design, Content Marketing & Management, UI & UX Design, Content Strategy */
 .footer .footer-links {
   margin-bottom: 30px;
 }
@@ -846,6 +845,27 @@ h6 {
   margin-top: 6px;
   font-size: 13px;
 }
+/* Small mobile */
+@media (max-width: 400px) {
+  .footer .footer-about .logo span {
+    font-size: 24px;
+  }
+  .footer .footer-about p {
+    font-size: 12px;
+  }
+}
+
+/* Large mobile */
+@media (min-width: 401px) and (max-width: 450px) {}
+
+/* Tablet */
+@media (min-width: 451px) and (max-width: 800px) {}
+
+/* Small laptop */
+@media (min-width: 801px) and (max-width: 1024px) {}
+
+/* Large screens */
+@media (min-width: 1025px) {}
 
 /*--------------------------------------------------------------
 # Preloader
@@ -1008,11 +1028,13 @@ section,
 /*--------------------------------------------------------------
 # Global Section Titles
 --------------------------------------------------------------*/
+/* Section title styling for all main sections */
 .section-title {
   padding-bottom: 60px;
   position: relative;
 }
 
+/* Section headings: Brands, Portfolio, Services, About, Team, Pricing, Contact */
 .section-title h2 {
   font-size: 14px;
   font-weight: 500;
@@ -1036,6 +1058,7 @@ section,
   margin: 4px 10px;
 }
 
+/* Description titles: Our Clients, built, Menu, Nerds, Fooliz, Plan, Build */
 .section-title div {
   color: var(--default-beige);
   margin: 0;
@@ -1098,20 +1121,15 @@ section,
   padding-right: 3rem;
 }
 
-@media (max-width: 991px) {
-  .hero .content-col {
-    padding-right: 15px;
-    margin-bottom: 3rem;
-  }
-}
 
 .hero .agency-name {
   margin-bottom: 1.5rem;
 }
 
+/* FOOLIZ STUDIO */
 .hero .agency-name h5 {
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 0rem;
+  font-weight: 0;
   letter-spacing: 1px;
   color: var(--contrast-color);
   margin: 0;
@@ -1121,31 +1139,13 @@ section,
   margin-bottom: 2rem;
 }
 
+/* DESIGN THAT SLAPS, Apps that work! */
 .hero .main-heading h1 {
   font-size: 3rem;
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -1px;
   margin: 0;
-}
-
-/* 1200px */
-@media (max-width: 1395px) {
-  .hero .main-heading h1 {
-    font-size: 2.3rem;
-  }
-}
-
-@media (max-width: 767px) {
-  .hero .main-heading h1 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero .main-heading h1 {
-    font-size: 1.8rem;
-  }
 }
 
 .hero .divider {
@@ -1155,16 +1155,11 @@ section,
   margin-bottom: 2rem;
 }
 
-@media (max-width: 767px) {
-  .hero .divider {
-    width: 100%;
-  }
-}
-
 .hero .description {
   margin-bottom: 2.5rem;
 }
 
+/* Hero description text */
 .hero .description p {
   font-size: 1.2rem;
   line-height: 1.7;
@@ -1193,7 +1188,7 @@ section,
 }
 
 .hero .cta-button .btn i {
-  font-size: 1.2rem;
+  font-size: 0.2rem;
   transition: transform 0.3s ease;
 }
 
@@ -1206,14 +1201,6 @@ section,
   transform: translateX(5px);
 }
 
-@media (max-width: 450px) {
-  .hero .cta-button .btn {
-    padding-top: 0.3rem;
-    padding-bottom: 0.1rem;
-
-  }
-}
-
 .hero .visual-content {
   position: relative;
   width: 100%;
@@ -1221,12 +1208,6 @@ section,
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-@media (max-width: 991px) {
-  .hero .visual-content {
-    flex-direction: column;
-  }
 }
 
 .hero .fluid-shape {
@@ -1268,16 +1249,6 @@ section,
   display: flex;
   flex-direction: column;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-@media (max-width: 991px) {
-  .hero .stats-card {
-    position: relative;
-    bottom: auto;
-    right: auto;
-    margin-top: 2rem;
-    width: 90%;
-  }
 }
 
 .hero .stats-card .stats-number h2 {
@@ -1323,25 +1294,136 @@ section,
 /* Small mobile */
 @media (max-width: 400px) {
   .hero .description p {
-    font-size: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .hero .stats-card {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-top: 2rem;
+    width: 90%;
+  }
+
+  .hero .visual-content {
+    flex-direction: column;
   }
 
   .hero .cta-button .btn {
+    font-size: 1rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.1rem;
+  }
+
+  .hero .divider {
+    width: 100%;
+  }
+
+  .hero .main-heading h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero .content-col {
+    padding-right: 15px;
+    margin-bottom: 3rem;
+  }
+
+  .hero .cta-button .btn i {
     font-size: 1rem;
   }
 }
 
 /* Large mobile */
-@media (min-width: 401px) and (max-width: 450px) {}
+@media (min-width: 401px) and (max-width: 450px) {
+  .hero .stats-card {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-top: 2rem;
+    width: 90%;
+  }
+
+  .hero .visual-content {
+    flex-direction: column;
+  }
+
+  .hero .cta-button .btn {
+    padding-top: 0.3rem;
+    padding-bottom: 0.1rem;
+  }
+
+  .hero .divider {
+    width: 100%;
+  }
+
+  .hero .main-heading h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero .content-col {
+    padding-right: 15px;
+    margin-bottom: 3rem;
+  }
+}
 
 /* Tablet */
-@media (min-width: 451px) and (max-width: 800px) {}
+@media (min-width: 451px) and (max-width: 800px) {
+  .hero .stats-card {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-top: 2rem;
+    width: 90%;
+  }
+
+  .hero .visual-content {
+    flex-direction: column;
+  }
+
+  .hero .divider {
+    width: 100%;
+  }
+
+  .hero .main-heading h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero .content-col {
+    padding-right: 15px;
+    margin-bottom: 3rem;
+  }
+}
 
 /* Small laptop */
-@media (min-width: 801px) and (max-width: 1024px) {}
+@media (min-width: 801px) and (max-width: 1024px) {
+  .hero .stats-card {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-top: 2rem;
+    width: 90%;
+  }
+
+  .hero .visual-content {
+    flex-direction: column;
+  }
+
+  .hero .main-heading h1 {
+    font-size: 2.3rem;
+  }
+
+  .hero .content-col {
+    padding-right: 15px;
+    margin-bottom: 3rem;
+  }
+}
 
 /* Large screens */
-@media (min-width: 1025px) {}
+@media (min-width: 1025px) {
+  .hero .main-heading h1 {
+    font-size: 2.3rem;
+  }
+}
 
 
 /*--------------------------------------------------------------
@@ -1384,19 +1466,7 @@ section,
   letter-spacing: 1px;
 }
 
-@media (max-width: 768px) {
-  .about .about-image .experience-badge {
-    right: 0;
-    bottom: 20px;
-    padding: 1rem;
-    min-width: 120px;
-  }
-
-  .about .about-image .experience-badge .years {
-    font-size: 2rem;
-  }
-}
-
+/* Clean Code, Wild Design */
 .about .about-content h2 {
   font-size: 2.2rem;
   margin-bottom: 1.25rem;
@@ -1409,12 +1479,6 @@ section,
 
 .about-title-font .font-wild-design {
   color: var(--default-beige);
-}
-
-@media (max-width: 768px) {
-  .about .about-content h2 {
-    font-size: 1.8rem;
-  }
 }
 
 .about .about-content .lead {
@@ -1449,6 +1513,7 @@ section,
   display: block;
 }
 
+/* Feature item titles and descriptions */
 .about .about-content .feature-item-green h5 {
   font-size: 1.15rem;
   margin-bottom: 0.75rem;
@@ -1530,17 +1595,11 @@ section,
   color: var(--default-black);
 }
 
-@media (max-width: 450px) {
-  .about .about-content .btn-primary {
-    padding-top: 0.7rem;
-    padding-bottom: 0.5rem;
-  }
-}
-
 .about .testimonial-section {
   border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
+/* What people say about us */
 .about .testimonial-section .testimonial-intro h3 {
   font-size: 1.75rem;
   margin-bottom: 1.25rem;
@@ -1599,9 +1658,10 @@ section,
 
 .about .testimonial-section .testimonial-item .rating {
   color: #ffc107;
-  font-size: 1rem;
+  font-size: 0.1rem;
 }
 
+/* Testimonial quotes and feedback */
 .about .testimonial-section .testimonial-item p {
   font-style: italic;
   margin-bottom: 0;
@@ -1622,6 +1682,7 @@ section,
   object-fit: cover;
 }
 
+/* Client names in testimonials */
 .about .testimonial-section .testimonial-item .client-info h6 {
   font-weight: 600;
   color: var(--default-green);
@@ -1632,24 +1693,117 @@ section,
   color: var(--default-black);
 }
 
-@media (max-width: 768px) {
+/* Small mobile */
+@media (max-width: 400px) {
+
+  /* Meet the Nerds */
+  .about .section-title span {
+    font-size: 24px;
+  }
+
+  /* Testimonial quotes and feedback */
+  .about .testimonial-section .testimonial-item p {
+    font-size: 0.8rem;
+  }
+
+  .about .testimonial-section .testimonial-item .rating {
+    font-size: 0.1rem;
+  }
+
+  /* Client names in testimonials */
+  .about .testimonial-section .testimonial-item .client-info h6 {
+    font-size: 0.7rem;
+  }
+
+  .about .testimonial-section .testimonial-item .client-info span {
+    font-size: 0.6rem;
+  }
+
+  .about .about-image .experience-badge {
+    right: 0;
+    bottom: 20px;
+    padding: 1rem;
+    min-width: 120px;
+  }
+
+  .about .about-image .experience-badge .years {
+    font-size: 2rem;
+  }
+
+  .about .about-content h2 {
+    font-size: 1.9rem;
+  }
+
+  .about .about-content .lead {
+    font-size: 0.9rem;
+  }
+
+  .about .about-content .btn-primary {
+    padding-top: 0.7rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .about .testimonial-section .testimonial-item {
+    margin-top: 1rem;
+  }
+
+  .about .testimonial-section .testimonial-intro h3 {
+    font-size: 1.2rem;
+  }
+
+  .about .testimonial-section .testimonial-intro p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Large mobile */
+@media (min-width: 401px) and (max-width: 450px) {
+  .about .about-image .experience-badge {
+    right: 0;
+    bottom: 20px;
+    padding: 1rem;
+    min-width: 120px;
+  }
+
+  .about .about-image .experience-badge .years {
+    font-size: 2rem;
+  }
+
+  .about .about-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .about .about-content .btn-primary {
+    padding-top: 0.7rem;
+    padding-bottom: 0.5rem;
+  }
+
   .about .testimonial-section .testimonial-item {
     margin-top: 1rem;
   }
 }
 
-/* Small mobile */
-@media (max-width: 400px) {
-  .about .section-title span {
-    font-size: 27px;
+/* Tablet */
+@media (min-width: 451px) and (max-width: 800px) {
+  .about .about-image .experience-badge {
+    right: 0;
+    bottom: 20px;
+    padding: 1rem;
+    min-width: 120px;
+  }
+
+  .about .about-image .experience-badge .years {
+    font-size: 2rem;
+  }
+
+  .about .about-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .about .testimonial-section .testimonial-item {
+    margin-top: 1rem;
   }
 }
-
-/* Large mobile */
-@media (min-width: 401px) and (max-width: 450px) {}
-
-/* Tablet */
-@media (min-width: 451px) and (max-width: 800px) {}
 
 /* Small laptop */
 @media (min-width: 801px) and (max-width: 1024px) {}
@@ -1660,6 +1814,7 @@ section,
 /*--------------------------------------------------------------
 # Brands Section
 --------------------------------------------------------------*/
+/* Some of Our Clients */
 .brands {
   padding: 80px 0;
   background: var(--default-black);
@@ -1741,6 +1896,8 @@ section,
 
 /* Small mobile */
 @media (max-width: 400px) {
+
+  /* Some of Our Clients */
   .brands .section-title span {
     font-size: 1.1rem;
   }
@@ -1808,6 +1965,7 @@ section,
   margin: 0 auto;
 }
 
+/* Mobile mockup frame with iOS style elements */
 .mobile-frame {
   position: relative;
   width: 280px;
@@ -2006,6 +2164,7 @@ section,
 .services .service-header .service-summary p {
   margin-bottom: 25px;
   color: var(--default-beige);
+  font-size: 13px;
   font-family: Benzin-Regular;
   text-align: justify;
 }
@@ -2053,6 +2212,7 @@ section,
   }
 }
 
+/* Service cards - Mobile Apps, Websites, Branding, Content Marketing, UI/UX, Content Strategy */
 .services .service-card {
   padding: 0;
   /* Remove padding to control space precisely */
@@ -2120,6 +2280,7 @@ section,
   flex-grow: 1;
 }
 
+/* Service titles: Mobile Apps Development, Websites Development, Branding & Identity Design, Content Marketing & Management, UI & UX Design, Content Strategy */
 .services .service-card h3 {
   font-size: 38px;
   /* Keep same size for both states */
@@ -2335,8 +2496,156 @@ section,
   }
 }
 
-/* Extra small screens */
-@media (max-width: 480px) {
+/* Landscape mobile phones */
+@media (max-width: 768px) and (orientation: landscape) {
+  .services .service-card {
+    height: 260px;
+    /* Shorter height for landscape */
+  }
+
+  .services .service-card h3 {
+    font-size: 28px;
+    /* Increased by 10px from 18px */
+    margin-bottom: 0;
+    /* Remove margin initially */
+    transition: all 0.4s ease;
+    transform: translateY(0);
+  }
+
+  .services .service-card h3 a span {
+    font-size: 28px;
+    /* Same size as h3 */
+  }
+
+  .services .service-card p {
+    font-size: 12px;
+    max-height: 60px;
+  }
+
+  /* Hover states - exact same behavior as desktop */
+  .services .service-card:hover .content-area {
+    justify-content: flex-start;
+    /* Move content to top on hover */
+    align-items: flex-start;
+    /* Keep left aligned on hover */
+    text-align: left;
+    /* Keep left aligned text on hover */
+  }
+
+  .services .service-card:hover h3 {
+    font-size: 28px;
+    /* Keep same size on hover - no change */
+    transform: translateY(-10px);
+    /* Same movement as desktop */
+    margin-bottom: 2px;
+    /* Reduced margin between h3 and p */
+  }
+
+  .services .service-card:hover p {
+    opacity: 1;
+    /* Make visible */
+    visibility: visible;
+    /* Show the element */
+    max-height: 60px;
+    /* Consistent with static max-height */
+    transform: translateY(0);
+    /* Move to normal position */
+    /* margin-top: 5px;  */
+  }
+}
+
+/* Small mobile */
+@media (max-width: 400px) {
+
+  /* The Fooliz Menu */
+  .services .section-title span {
+    font-size: 23px;
+  }
+
+  /* Hand Crafted Brands, Engineered Apps */
+  .services .service-header .service-intro .service-heading {
+    font-size: 18px;
+  }
+
+  .services .service-card {
+    height: 280px;
+    /* Even smaller for very small screens */
+  }
+
+  .services .service-header .service-summary p {
+    font-size: 13px;
+  }
+
+  .services .service-card .content-area {
+    padding: 12px;
+    /* Even smaller padding */
+    /* Center content initially on mobile */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Center content initially */
+    align-items: flex-start;
+    /* Left align horizontally */
+    text-align: left;
+    /* Left align text */
+    transition: all 0.4s ease;
+  }
+
+  .services .service-card h3 {
+    font-size: 30px;
+    /* Increased by 10px from 20px */
+    margin-bottom: 0;
+    /* Remove margin initially */
+    transition: all 0.4s ease;
+    transform: translateY(0);
+  }
+
+  .services .service-card h3 a span {
+    font-size: 30px;
+    /* Same size as h3 */
+  }
+
+  .services .service-card p {
+    font-size: 12px;
+    /* Smaller text */
+    max-height: 70px;
+    /* Smaller max height */
+  }
+
+  /* Hover states - exact same behavior as desktop */
+  .services .service-card:hover .content-area {
+    justify-content: flex-start;
+    /* Move content to top on hover */
+    align-items: flex-start;
+    /* Keep left aligned on hover */
+    text-align: left;
+    /* Keep left aligned text on hover */
+  }
+
+  .services .service-card:hover h3 {
+    font-size: 30px;
+    /* Keep same size on hover - no change */
+    transform: translateY(-10px);
+    /* Same movement as desktop */
+    margin-bottom: 2px;
+    /* Reduced margin between h3 and p */
+  }
+
+  .services .service-card:hover p {
+    opacity: 1;
+    /* Make visible */
+    visibility: visible;
+    /* Show the element */
+    max-height: 70px;
+    /* Consistent with static max-height */
+    transform: translateY(0);
+    /* Move to normal position */
+    /* margin-top: 5px; */
+  }
+}
+
+/* Large mobile */
+@media (min-width: 401px) and (max-width: 450px) {
   .services .service-card {
     height: 280px;
     /* Even smaller for very small screens */
@@ -2409,78 +2718,6 @@ section,
     /* margin-top: 5px; */
   }
 }
-
-/* Landscape mobile phones */
-@media (max-width: 768px) and (orientation: landscape) {
-  .services .service-card {
-    height: 260px;
-    /* Shorter height for landscape */
-  }
-
-  .services .service-card h3 {
-    font-size: 28px;
-    /* Increased by 10px from 18px */
-    margin-bottom: 0;
-    /* Remove margin initially */
-    transition: all 0.4s ease;
-    transform: translateY(0);
-  }
-
-  .services .service-card h3 a span {
-    font-size: 28px;
-    /* Same size as h3 */
-  }
-
-  .services .service-card p {
-    font-size: 12px;
-    max-height: 60px;
-  }
-
-  /* Hover states - exact same behavior as desktop */
-  .services .service-card:hover .content-area {
-    justify-content: flex-start;
-    /* Move content to top on hover */
-    align-items: flex-start;
-    /* Keep left aligned on hover */
-    text-align: left;
-    /* Keep left aligned text on hover */
-  }
-
-  .services .service-card:hover h3 {
-    font-size: 28px;
-    /* Keep same size on hover - no change */
-    transform: translateY(-10px);
-    /* Same movement as desktop */
-    margin-bottom: 2px;
-    /* Reduced margin between h3 and p */
-  }
-
-  .services .service-card:hover p {
-    opacity: 1;
-    /* Make visible */
-    visibility: visible;
-    /* Show the element */
-    max-height: 60px;
-    /* Consistent with static max-height */
-    transform: translateY(0);
-    /* Move to normal position */
-    /* margin-top: 5px;  */
-  }
-}
-
-/* Small mobile */
-@media (max-width: 400px) {
-  .services .section-title span {
-    font-size: 27px;
-  }
-
-   .services .service-header .service-intro .service-heading {
-    font-size: 22px;
-  }
-}
-
-/* Large mobile */
-@media (min-width: 401px) and (max-width: 450px) {}
 
 /* Tablet */
 @media (min-width: 451px) and (max-width: 800px) {}
@@ -3006,6 +3243,7 @@ section,
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
+/* Portfolio filters - All Projects, Development, UI & UX, Creative, Marketing */
 .portfolio .portfolio-filters {
   display: flex;
   justify-content: center;
@@ -3169,6 +3407,7 @@ section,
   margin-bottom: 10px;
 }
 
+/* Portfolio project titles */
 .portfolio .portfolio-entry .entry-image .entry-overlay .entry-title {
   color: var(--default-beige);
   font-size: 24px;
@@ -3233,6 +3472,7 @@ section,
   aspect-ratio: 4/3;
 }
 
+/* show more */
 .show-more-button {
   background-color: var(--default-pink);
   color: var(--default-beige);
@@ -3273,8 +3513,9 @@ section,
 /* Small mobile */
 @media (max-width: 400px) {
 
+  /* Stuff we built */
   .portfolio .section-title span {
-    font-size: 27px;
+    font-size: 25px;
   }
 
   .portfolio .portfolio-filters {
@@ -3439,6 +3680,7 @@ section,
 /*--------------------------------------------------------------
 # Team Section
 --------------------------------------------------------------*/
+/* Humans of Fooliz */
 .team .team-member {
   position: relative;
   background-color: var(--default-black);
@@ -3469,6 +3711,7 @@ section,
   text-align: left;
 }
 
+/* Team member names - Moutamid Monim, Mhnooor Taariq, Muzna Farid */
 .team .team-member .member-info h4 {
   font-size: 1.2rem;
   font-weight: 700;
@@ -3484,6 +3727,7 @@ section,
   margin-bottom: 15px;
 }
 
+/* Tech Lead (Founder) */
 .team .team-member .member-info span .founder-text {
   color: var(--default-lemon);
   display: inline;
@@ -3520,7 +3764,56 @@ section,
   background: var(--default-black);
 }
 
-@media (max-width: 767px) {
+/* Small mobile */
+@media (max-width: 400px) {
+
+  /* Humans of Fooliz */
+  .team .section-title span {
+    font-size: 22px;
+  }
+
+  .team .team-member {
+    flex-direction: column;
+  }
+
+  .team .team-member .member-img {
+    flex: auto;
+  }
+
+  .team .team-member .member-img img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .team .team-member .member-info {
+    text-align: center;
+  }
+
+  .team .team-member .member-info .social {
+    justify-content: center;
+  }
+
+  /* Team member names - Moutamid Monim, Mhnooor Taariq, Muzna Farid */
+  .team .team-member .member-info h4 {
+    font-size: 1rem;
+  }
+
+  .team .team-member .member-info span {
+    font-size: 0.8rem;
+  }
+
+  /* Tech Lead (Founder) */
+  .team .team-member .member-info span .founder-text {
+    font-size: 0.8rem;
+  }
+
+  .team .team-member .member-info p {
+    font-size: 0.7rem;
+  }
+}
+
+/* Large mobile */
+@media (min-width: 401px) and (max-width: 450px) {
   .team .team-member {
     flex-direction: column;
   }
@@ -3542,6 +3835,36 @@ section,
     justify-content: center;
   }
 }
+
+/* Tablet */
+@media (min-width: 451px) and (max-width: 800px) {
+  .team .team-member {
+    flex-direction: column;
+  }
+
+  .team .team-member .member-img {
+    flex: auto;
+  }
+
+  .team .team-member .member-img img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .team .team-member .member-info {
+    text-align: center;
+  }
+
+  .team .team-member .member-info .social {
+    justify-content: center;
+  }
+}
+
+/* Small laptop */
+@media (min-width: 801px) and (max-width: 1024px) {}
+
+/* Large screens */
+@media (min-width: 1025px) {}
 
 /*--------------------------------------------------------------
 # Pricing Section
@@ -3625,12 +3948,14 @@ section,
   object-fit: contain;
 }
 
+/* Pricing plan names: Discovery Call, Creator's Club, The Build */
 .pricing .plan-header h3 {
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 10px;
 }
 
+/* Plan descriptions: For individuals just getting started, For small businesses, For websites apps or full builds */
 .pricing .plan-header p {
   font-size: 15px;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
@@ -3721,6 +4046,7 @@ section,
 
 /* PRICING CONSULTANCY CARD */
 
+/* Discovery Call - For individuals just getting started */
 .pricing .pricing-card-consultancy {
   height: 100%;
   background: var(--default-green);
@@ -3802,7 +4128,7 @@ section,
 }
 
 .pricing .plan-header-consultancy p {
-  font-size: 15px;
+  font-size: 13px;
   color: var(--default-beige);
   font-family: Benzin-Regular;
 }
@@ -3894,6 +4220,7 @@ section,
 
 /* PRICING ONE-TIME CARD */
 
+/* Creator's Club - For small businesses */
 .pricing .pricing-card-onetime {
   height: 100%;
   background: var(--default-pink);
@@ -3976,7 +4303,7 @@ section,
 }
 
 .pricing .plan-header-onetime p {
-  font-size: 15px;
+  font-size: 13px;
   color: var(--default-black);
   font-family: Benzin-Regular;
 }
@@ -4069,6 +4396,7 @@ section,
 
 /* PRICING SUBSCRIPTION CARD */
 
+/* The Build - For websites, apps, or full builds */
 .pricing .pricing-card-subscription {
   height: 100%;
   background: var(--default-beige);
@@ -4265,28 +4593,60 @@ section,
   }
 }
 
-@media (max-width: 430px) {
+/* Small mobile */
+@media (max-width: 400px) {
+  .pricing .section-title span {
+    font-size: 20px;
+  }
 
   .pricing .plan-header-consultancy h3,
   .pricing .plan-header-onetime h3,
   .pricing .plan-header-subscription h3 {
-    font-size: 28px;
-    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .pricing .plan-header-consultancy p,
+  .pricing .plan-header-onetime p,
+  .pricing .plan-header-subscription p {
+    font-size: 15px;
   }
 
   .pricing .plan-cta-consultancy .btn-plan,
   .pricing .plan-cta-onetime .btn-plan,
   .pricing .plan-cta-subscription .btn-plan {
     font-size: 18px;
-    font-weight: 600;
-
   }
 
+  .pricing .plan-features-consultancy ul li,
+  .pricing .plan-features-onetime ul li,
+  .pricing .plan-features-subscription ul li {
+    font-size: 13px;
+  }
+
+  .pricing .plan-header-consultancy .plan-icon img,
+  .pricing .plan-header-onetime .plan-icon img,
+  .pricing .plan-header-subscription .plan-icon img {
+    width: 13rem;
+    height: 13rem;
+  }
 }
+
+/* Large mobile */
+@media (min-width: 401px) and (max-width: 450px) {}
+
+/* Tablet */
+@media (min-width: 451px) and (max-width: 800px) {}
+
+/* Small laptop */
+@media (min-width: 801px) and (max-width: 1024px) {}
+
+/* Large screens */
+@media (min-width: 1025px) {}
 
 /*--------------------------------------------------------------
 # Faq Section
 --------------------------------------------------------------*/
+/* Got questions? We've got answers */
 .faq .faq-title {
   font-size: 2.5rem;
   font-weight: 700;
@@ -4294,18 +4654,11 @@ section,
   color: var(--default-lemon);
 }
 
+/* We appreciate clarity. If you don't find your question here, feel free to ask (we're here to help) */
 .faq .faq-description {
   font-size: 1rem;
   color: var(--default-beige);
   margin-bottom: 2rem;
-}
-
-@media (max-width: 768px) {
-  .faq-icon-img {
-    width: 0px;
-    height: 0px;
-  }
-
 }
 
 .faq .faq-container .faq-item {
@@ -4321,6 +4674,7 @@ section,
   margin-bottom: 0;
 }
 
+/* FAQ questions: Can you help with branding and visual identity?, How long does app development take?, Do you handle both iOS and Android?, etc. */
 .faq .faq-container .faq-item h3 {
   font-weight: 600;
   font-size: 16px;
@@ -4385,9 +4739,47 @@ section,
   color: var(--default-lemon);
 }
 
+/* Small mobile */
+@media (max-width: 400px) {
+
+  /* Got questions? We've got answers */
+  .faq .faq-title {
+    font-size: 1.3rem;
+  }
+
+  /* We appreciate clarity. If you don't find your question here, feel free to ask (we're here to help) */
+  .faq .faq-description {
+    font-size: 0.9rem;
+  }
+
+  .faq .faq-arrow img {
+    width: 0px;
+    height: 0px;
+  }
+  .faq .faq-container .faq-item h3 {
+    font-size: 12px;
+  }
+  .faq .faq-container .faq-item .faq-content p {
+    font-size: 12px;
+  }
+}
+
+/* Large mobile */
+@media (min-width: 401px) and (max-width: 450px) {}
+
+/* Tablet */
+@media (min-width: 451px) and (max-width: 800px) {}
+
+/* Small laptop */
+@media (min-width: 801px) and (max-width: 1024px) {}
+
+/* Large screens */
+@media (min-width: 1025px) {}
+
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
+/* Let's talk & Build */
 .contact .contact-info-box {
   background-color: var(--default-green);
   border-radius: 10px;
@@ -4427,6 +4819,7 @@ section,
   object-fit: contain;
 }
 
+/* Our Address, Email Address, Hours of Operation */
 .contact .contact-info-box .info-content h4 {
   font-size: 18px;
   font-weight: 600;
@@ -4473,6 +4866,7 @@ section,
   padding: 40px;
 }
 
+/* Get in Touch */
 .contact .contact-form-wrapper h2 {
   font-size: 28px;
   font-weight: 700;
@@ -4519,6 +4913,7 @@ section,
   transform: none;
 }
 
+/* Form input fields: Name, Email Address, Select a Plan, Tell us about your project */
 .contact .contact-form-wrapper .form-group .input-with-icon .form-control {
   border-radius: 8px;
   padding: 12px 15px 12px 45px;
@@ -4544,6 +4939,7 @@ section,
   padding-top: 15px;
 }
 
+/* Send message button for contact form */
 .contact .contact-form-wrapper .btn-submit {
   background-color: var(--default-pink);
   border-radius: 50px;
@@ -4663,11 +5059,31 @@ section,
   }
 }
 
+/* Small mobile */
+@media (max-width: 400px) {
+  .contact .section-title span {
+    font-size: 20px;
+  }
+  .contact .contact-info-box .info-content h4 {
+    font-size: 14px;
+  }
+}
+
+/* Large mobile */
+@media (min-width: 401px) and (max-width: 450px) {}
+
+/* Tablet */
+@media (min-width: 451px) and (max-width: 800px) {}
+
+/* Small laptop */
+@media (min-width: 801px) and (max-width: 1024px) {}
+
+/* Large screens */
+@media (min-width: 1025px) {}
+
 /*--------------------------------------------------------------
 # Portfolio Details Section
 --------------------------------------------------------------*/
-
-
 /* Full-bleed long image inside #portfolio-details */
 #portfolio-details {
   position: relative;
@@ -5843,6 +6259,7 @@ section,
 /*--------------------------------------------------------------
 # Budget Range Slider
 --------------------------------------------------------------*/
+/* Budget Range */
 .budget-label {
   font-weight: 600;
   color: var(--default-black);
