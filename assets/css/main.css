@@ -373,16 +373,7 @@ h6 {
   background: var(--default-beige);
   border-radius: 50px;
   padding: 5px 25px 5px 30px;
-  /* box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1); */
-  /* opacity: 1; */
-  /* transition: opacity 0.3s ease; */
 }
-
-/* When scrolled, make header fully visible */
-/* body.scrolled .header .header-container {
-   opacity: 1;
-  background: var(--default-beige);
-} */
 
 .header .logo {
   line-height: 1;
@@ -494,7 +485,38 @@ h6 {
 }
 
 /* Tablet */
-@media (min-width: 451px) and (max-width: 800px) {}
+@media (min-width: 451px) and (max-width: 800px) {
+  .header .btn-getstarted {
+    font-size: 20px;
+    padding-top: 4px;
+    padding-bottom: 2px;
+    order: 2;
+    margin: 0 10px 0 0;
+    padding: 6px 15px;
+  }
+
+  .header .logo img {
+    max-height: 20px;
+  }
+
+  .header {
+    padding-top: 15px;
+  }
+
+  .header .header-container {
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 10px 5px 10px 15px;
+  }
+
+  .header .logo {
+    order: 1;
+  }
+
+  .header .navmenu {
+    order: 3;
+  }
+}
 
 /* Small laptop */
 @media (min-width: 801px) and (max-width: 1024px) {}
@@ -891,7 +913,21 @@ h6 {
 }
 
 /* Tablet */
-@media (min-width: 451px) and (max-width: 800px) {}
+@media (min-width: 451px) and (max-width: 800px) {
+  .footer .footer-about .logo span {
+    font-size: 26px;
+  }
+
+  .footer .footer-about p {
+    font-size: 15px;
+  }
+
+  .footer h4 {
+    font-size: 17px;
+  }
+
+
+}
 
 /* Small laptop */
 @media (min-width: 801px) and (max-width: 1024px) {}
@@ -1101,21 +1137,6 @@ section,
   font-family: Benzin-Bold;
 }
 
-/* Small mobile */
-@media (max-width: 400px) {}
-
-/* Large mobile */
-@media (min-width: 401px) and (max-width: 450px) {}
-
-/* Tablet */
-@media (min-width: 451px) and (max-width: 800px) {}
-
-/* Small laptop */
-@media (min-width: 801px) and (max-width: 1024px) {}
-
-/* Large screens */
-@media (min-width: 1025px) {}
-
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -1220,7 +1241,7 @@ section,
 }
 
 .hero .cta-button .btn i {
-  font-size: 0.2rem;
+  font-size: 2rem;
   transition: transform 0.3s ease;
 }
 
@@ -1409,12 +1430,8 @@ section,
 
 /* Tablet */
 @media (min-width: 451px) and (max-width: 800px) {
-  .hero .stats-card {
-    position: relative;
-    bottom: auto;
-    right: auto;
-    margin-top: 2rem;
-    width: 90%;
+  .hero .description p {
+    font-size: 1.2rem;
   }
 
   .hero .visual-content {
@@ -1425,8 +1442,26 @@ section,
     width: 100%;
   }
 
+  .hero .cta-button .btn i {
+    font-size: 1.4rem;
+  }
+
+  .hero .stats-card {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-top: 2rem;
+    width: 90%;
+  }
+
+  .hero .cta-button .btn {
+    font-size: 1.2rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+  }
+
   .hero .main-heading h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   .hero .content-col {
@@ -1862,6 +1897,30 @@ section,
 
 /* Tablet */
 @media (min-width: 451px) and (max-width: 800px) {
+
+  /* Meet the Nerds */
+  .about .section-title span {
+    font-size: 28px;
+  }
+
+  /* Testimonial quotes and feedback */
+  .about .testimonial-section .testimonial-item p {
+    font-size: 0.8rem;
+  }
+
+  .about .testimonial-section .testimonial-item .rating {
+    font-size: 0.1rem;
+  }
+
+  /* Client names in testimonials */
+  .about .testimonial-section .testimonial-item .client-info h6 {
+    font-size: 0.9rem;
+  }
+
+  .about .testimonial-section .testimonial-item .client-info span {
+    font-size: 0.7rem;
+  }
+
   .about .about-image .experience-badge {
     right: 0;
     bottom: 20px;
@@ -1874,11 +1933,28 @@ section,
   }
 
   .about .about-content h2 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
+  }
+
+  .about .about-content .lead {
+    font-size: 0.9rem;
+  }
+
+  .about .about-content .btn-primary {
+    padding-top: 0.7rem;
+    padding-bottom: 0.5rem;
   }
 
   .about .testimonial-section .testimonial-item {
     margin-top: 1rem;
+  }
+
+  .about .testimonial-section .testimonial-intro h3 {
+    font-size: 1.4rem;
+  }
+
+  .about .testimonial-section .testimonial-intro p {
+    font-size: 0.9rem;
   }
 }
 
@@ -1903,6 +1979,11 @@ section,
   font-size: 0.1;
 }
 
+/* Some of Our Clients */
+.brands .section-title span {
+  font-size: 1.5rem;
+}
+
 .brands-carousel-container {
   position: relative;
   overflow: hidden;
@@ -1922,7 +2003,7 @@ section,
 
 .brands-track {
   display: flex;
-  gap: 60px;
+  gap: 40px;
   align-items: center;
   width: fit-content;
   animation: scroll-brands 30s linear infinite;
@@ -1938,7 +2019,7 @@ section,
   align-items: center;
   justify-content: center;
   min-width: 180px;
-  height: 80px;
+  height: 90px;
   padding: 20px;
   transition: all 0.3s ease;
 }
@@ -2006,7 +2087,8 @@ section,
 
 /* Large mobile */
 @media (min-width: 401px) and (max-width: 450px) {
-   /* Some of Our Clients */
+
+  /* Some of Our Clients */
   .brands .section-title span {
     font-size: 1.3rem;
   }
@@ -2037,7 +2119,38 @@ section,
 }
 
 /* Tablet */
-@media (min-width: 451px) and (max-width: 800px) {}
+@media (min-width: 451px) and (max-width: 800px) {
+
+  /* Some of Our Clients */
+  .brands .section-title span {
+    font-size: 1.3rem;
+  }
+
+  .brands {
+    padding: 0px 0;
+  }
+
+  .brands-track {
+    gap: 6px;
+    animation: scroll-brands 20s linear infinite;
+  }
+
+  .brand-item {
+    min-width: 120px;
+    height: 60px;
+    padding: 15px;
+  }
+
+  .brands .section-title {
+    margin-bottom: 0px;
+    margin-top: -30px;
+  }
+
+  .brands-carousel-container {
+    margin-top: -90px;
+    margin-bottom: 20px;
+  }
+}
 
 /* Small laptop */
 @media (min-width: 801px) and (max-width: 1024px) {}
@@ -2752,7 +2865,8 @@ section,
 
 /* Large mobile */
 @media (min-width: 401px) and (max-width: 450px) {
-   /* The Fooliz Menu */
+
+  /* The Fooliz Menu */
   .services .section-title span {
     font-size: 31px;
   }
@@ -2840,7 +2954,94 @@ section,
 }
 
 /* Tablet */
-@media (min-width: 451px) and (max-width: 800px) {}
+@media (min-width: 451px) and (max-width: 800px) {
+
+  /* The Fooliz Menu */
+  .services .section-title span {
+    font-size: 31px;
+  }
+
+  /* Hand Crafted Brands, Engineered Apps */
+  .services .service-header .service-intro .service-heading {
+    font-size: 25px;
+  }
+
+  .services .service-card {
+    height: 280px;
+    /* Even smaller for very small screens */
+  }
+
+  .services .service-header .service-summary p {
+    font-size: 13px;
+  }
+
+  .services .service-card .content-area {
+    padding: 12px;
+    /* Even smaller padding */
+    /* Center content initially on mobile */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Center content initially */
+    align-items: flex-start;
+    /* Left align horizontally */
+    text-align: left;
+    /* Left align text */
+    transition: all 0.4s ease;
+  }
+
+  .services .service-card h3 {
+    font-size: 30px;
+    /* Increased by 10px from 20px */
+    margin-bottom: 0;
+    /* Remove margin initially */
+    transition: all 0.4s ease;
+    transform: translateY(0);
+  }
+
+  .services .service-card h3 a span {
+    font-size: 30px;
+    /* Same size as h3 */
+  }
+
+  .services .service-card p {
+    font-size: 12px;
+    /* Smaller text */
+    max-height: 70px;
+    /* Smaller max height */
+  }
+
+  /* Hover states - exact same behavior as desktop */
+  .services .service-card:hover .content-area {
+    justify-content: flex-start;
+    /* Move content to top on hover */
+    align-items: flex-start;
+    /* Keep left aligned on hover */
+    text-align: left;
+    /* Keep left aligned text on hover */
+  }
+
+  .services .service-card:hover h3 {
+    font-size: 30px;
+    /* Keep same size on hover - no change */
+    transform: translateY(-10px);
+    /* Same movement as desktop */
+    margin-bottom: 2px;
+    /* Reduced margin between h3 and p */
+  }
+
+  .services .service-card:hover p {
+    opacity: 1;
+    /* Make visible */
+    visibility: visible;
+    /* Show the element */
+    max-height: 70px;
+    /* Consistent with static max-height */
+    transform: translateY(0);
+    /* Move to normal position */
+    /* margin-top: 5px; */
+  }
+}
 
 /* Small laptop */
 @media (min-width: 801px) and (max-width: 1024px) {}
@@ -3674,7 +3875,8 @@ section,
 
 /* Large mobile */
 @media (min-width: 401px) and (max-width: 450px) {
-    /* Stuff we built */
+
+  /* Stuff we built */
   .portfolio .section-title span {
     font-size: 32px;
   }
@@ -3715,6 +3917,12 @@ section,
 
 /* Tablet */
 @media (min-width: 451px) and (max-width: 800px) {
+
+  /* Stuff we built */
+  .portfolio .section-title span {
+    font-size: 32px;
+  }
+
   .portfolio .portfolio-filters {
     gap: 10px;
   }
@@ -3737,6 +3945,11 @@ section,
     width: 40px;
     height: 40px;
     font-size: 18px;
+  }
+
+  .show-more-button {
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
 
   .portfolio .entry-overlay {
@@ -3939,7 +4152,7 @@ section,
 
 /* Large mobile */
 @media (min-width: 401px) and (max-width: 450px) {
-  
+
   /* Humans of Fooliz */
   .team .section-title span {
     font-size: 27px;
@@ -3969,25 +4182,56 @@ section,
 
 /* Tablet */
 @media (min-width: 451px) and (max-width: 800px) {
+
+  /* Humans of Fooliz */
+  .team .section-title span {
+    font-size: 27px;
+  }
+
+  /* 2x2 Grid Layout for Team Members */
+  .team .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px;
+    justify-content: center;
+  }
+
+  .team .col-lg-6 {
+    width: 100%;
+    max-width: none;
+    flex: none;
+  }
+
   .team .team-member {
-    flex-direction: column;
+    flex-direction: row;
+    height: 100%;
   }
 
   .team .team-member .member-img {
-    flex: auto;
+    flex: 0 0 160px;
+    overflow: hidden;
   }
 
   .team .team-member .member-img img {
-    width: 100%;
-    border-radius: 8px 8px 0 0;
+    width: 160px;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
   }
 
   .team .team-member .member-info {
-    text-align: center;
+    text-align: left;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
   }
 
   .team .team-member .member-info .social {
-    justify-content: center;
+    justify-content: flex-start;
+    margin-top: auto;
   }
 }
 
@@ -4764,7 +5008,7 @@ section,
 
 /* Large mobile */
 @media (min-width: 401px) and (max-width: 450px) {
-   .pricing .section-title span {
+  .pricing .section-title span {
     font-size: 27px;
   }
 
@@ -4801,7 +5045,42 @@ section,
 }
 
 /* Tablet */
-@media (min-width: 451px) and (max-width: 800px) {}
+@media (min-width: 451px) and (max-width: 800px) {
+  .pricing .section-title span {
+    font-size: 27px;
+  }
+
+  .pricing .plan-header-consultancy h3,
+  .pricing .plan-header-onetime h3,
+  .pricing .plan-header-subscription h3 {
+    font-size: 22px;
+  }
+
+  .pricing .plan-header-consultancy p,
+  .pricing .plan-header-onetime p,
+  .pricing .plan-header-subscription p {
+    font-size: 14px;
+  }
+
+  .pricing .plan-cta-consultancy .btn-plan,
+  .pricing .plan-cta-onetime .btn-plan,
+  .pricing .plan-cta-subscription .btn-plan {
+    font-size: 18px;
+  }
+
+  .pricing .plan-features-consultancy ul li,
+  .pricing .plan-features-onetime ul li,
+  .pricing .plan-features-subscription ul li {
+    font-size: 13px;
+  }
+
+  .pricing .plan-header-consultancy .plan-icon img,
+  .pricing .plan-header-onetime .plan-icon img,
+  .pricing .plan-header-subscription .plan-icon img {
+    width: 16rem;
+    height: 16rem;
+  }
+}
 
 /* Small laptop */
 @media (min-width: 801px) and (max-width: 1024px) {}
@@ -4934,7 +5213,7 @@ section,
 
 /* Large mobile */
 @media (min-width: 401px) and (max-width: 450px) {
-  
+
   /* Got questions? We've got answers */
   .faq .faq-title {
     font-size: 1.7rem;
@@ -4960,7 +5239,31 @@ section,
 }
 
 /* Tablet */
-@media (min-width: 451px) and (max-width: 800px) {}
+@media (min-width: 451px) and (max-width: 800px) {
+
+  /* Got questions? We've got answers */
+  .faq .faq-title {
+    font-size: 1.7rem;
+  }
+
+  /* We appreciate clarity. If you don't find your question here, feel free to ask (we're here to help) */
+  .faq .faq-description {
+    font-size: 0.9rem;
+  }
+
+  .faq .faq-arrow img {
+    width: 0px;
+    height: 0px;
+  }
+
+  .faq .faq-container .faq-item h3 {
+    font-size: 15px;
+  }
+
+  .faq .faq-container .faq-item .faq-content p {
+    font-size: 15px;
+  }
+}
 
 /* Small laptop */
 @media (min-width: 801px) and (max-width: 1024px) {}
@@ -5264,7 +5567,7 @@ section,
 
 /* Large mobile */
 @media (min-width: 401px) and (max-width: 450px) {
-   .contact .section-title span {
+  .contact .section-title span {
     font-size: 27px;
   }
 
@@ -5274,7 +5577,15 @@ section,
 }
 
 /* Tablet */
-@media (min-width: 451px) and (max-width: 800px) {}
+@media (min-width: 451px) and (max-width: 800px) {
+  .contact .section-title span {
+    font-size: 27px;
+  }
+
+  .contact .contact-info-box .info-content h4 {
+    font-size: 15px;
+  }
+}
 
 /* Small laptop */
 @media (min-width: 801px) and (max-width: 1024px) {}
