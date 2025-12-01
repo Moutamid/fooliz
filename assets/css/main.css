@@ -2383,7 +2383,7 @@ section,
 .services .service-header .service-summary p {
   margin-bottom: 25px;
   color: var(--default-beige);
-  font-size: 13px;
+  font-size: 16px;
   font-family: Benzin-Regular;
   text-align: justify;
 }
